@@ -1,0 +1,276 @@
+/* src/styles.css */
+
+/* General body styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100vh; /* Full viewport height */
+    background-size: 400% 400%; /* Allow for smooth animation */
+    animation: gradientAnimation 10s ease infinite; /* Animation for the gradient */
+    position: relative;
+    overflow: auto;
+    background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+/* Main title styles */
+h1 {
+    font-weight: bold;
+    font-size: clamp(16px, 2.5vw + 1rem, 18px); /* Responsive font size */
+    margin: 0;
+}
+
+/* Menu toggle button styles */
+.menu-toggle {
+    display: block; /* Hidden by default */
+    font-size: 28px;
+    min-height: 40px;
+    cursor: pointer;
+    margin-left: auto; /* Push the hamburger menu to the right */
+}
+
+/* Close icon styles */
+.close-icon {
+    display: none; /* Hide close icon by default */
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center;
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Full height */
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* Active navigation styles */
+nav.active {
+    display: flex; /* Show nav when active */
+    animation: reveal 0.5s ease-in-out forwards;
+}
+
+/* Reveal animation keyframes */
+@keyframes reveal {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 500px; /* Match this with the max-height in nav.active */
+        opacity: 1;
+    }
+}
+
+/* Navigation title styles */
+.nav-title {
+    font-weight: bold; /* Make the title bold */
+    margin-right: auto; /* Push the title to the left */
+    padding-right: 20px; /* Add some space to the right */
+}
+
+/* Navigation list styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the nav items */
+}
+
+/* Navigation list item styles */
+nav ul li {
+    margin: 0 20px; /* Equal margin on both sides */
+}
+
+/* Link styles */
+#nav-links a {
+    color: inherit; /* Remove color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Navigation link styles */
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Link color */
+    cursor: pointer;
+}
+
+/* Main content styles */
+main {
+    max-width: 900px; /* Adjusted width for better alignment */
+    margin: 10px auto; /* Center the main content */
+    padding: 10px;
+}
+
+/* Subheading styles */
+h2 {
+    font-size: clamp(24px, 3vw + 1rem, 28px); /* Responsive font size */
+    margin-top: 0;
+    text-align: center; /* Center the name */
+}
+
+/* Smaller heading styles */
+h3 {
+    font-size: clamp(20px, 2.5vw + 1rem, 24px); /* Responsive font size */
+}
+
+/* Paragraph styles */
+p {
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.455), 18px); /* Responsive font size */
+    line-height: 1.4; /* Line height */
+}
+
+/* List item styles */
+li {
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.455), 16px); /* Responsive font size */
+    line-height: 1.4; /* Line height */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide nav by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: 0;
+        background-color: #f8f8f8;
+        width: 100%;
+        z-index: 1;
+        transition: max-height 0.3s ease-in-out; /* Smooth transition */
+        overflow: hidden; /* Hide overflow */
+        max-height: 0; /* Start with height 0 */
+    }
+
+    nav.active {
+        display: flex; /* Show nav when active */
+        max-height: 200px; /* Set a max height for the expanded menu */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space between links */
+        text-align: center; /* Center the links */
+    }
+
+    .nav-title {
+        display: block; /* Ensure title is visible in mobile view */
+        text-align: center; /* Center the title */
+        padding: 10px 0; /* Add some padding */
+    }
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 769px) {
+    h1 {
+        font-size: clamp(16px, 2.5vw + 1rem, 18px); /* Larger font size for desktop */
+    }
+
+    h2 {
+        font-size: clamp(28px, 3vw + 1rem, 36px); /* Larger font size for desktop */
+    }
+
+    h3 {
+        font-size: clamp(24px, 2.5vw + 1rem, 28px); /* Larger font size for desktop */
+    }
+
+    p {
+        font-size: clamp(16px, 0.875rem + ((1vw - 3.2px) * 0.455), 20px); /* Larger font size for desktop */
+    }
+
+    .menu-toggle {
+        display: none; /* Hide the hamburger icon on larger screens */
+    }
+}
+
+/* Custom link styles */
+.custom-link {
+    color: #0693e3; /* Set link color to sky blue */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
+}
+
+/* General link styles */
+a {
+    color: #0693e3; /* Set link color */
+    text-decoration: dotted; /* Dotted underline */
+    cursor: pointer;
+}
+
+/* Visited link styles */
+a:visited {
+    color: #0693e3; /* Keep the same color for visited links */
+}
+
+/* Custom link hover styles */
+.custom-link:hover {
+    text-decoration: none; /* Add underline on hover for better UX */
+    cursor: pointer;
+}
+
+/* Avatar styles */
+.avatar {
+    display: block; /* Center the image */
+    margin: 0 auto 20px; /* Center and add space below */
+    width: 112px; /* Set a width for the avatar */
+    height: 112px; /* Set a height for the avatar */
+    border-radius: 50%; /* Make the image rounded */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Responsive image styles */
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Article styles */
+article {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Blockquote styles */
+blockquote {
+    margin: 20px 0; /* Space above and below */
+    padding: 10px 20px; /* Padding inside the blockquote */
+    border-left: 5px solid #007BFF; /* Left border for emphasis */
+    background-color: #f0f8ff; /* Light background color */
+    font-style: italic; /* Italicize the text */
+    color: #555; /* Text color */
+}
