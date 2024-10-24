@@ -116,6 +116,7 @@ main {
 /* Subheading styles */
 h2 {
     font-size: clamp(24px, 3vw + 1rem, 28px); /* Responsive font size */
+    margin-bottom: 0;
     margin-top: 0;
     text-align: center; /* Center the name */
 }
