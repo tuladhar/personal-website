@@ -108,7 +108,7 @@ nav ul li a {
 
 /* Main content styles */
 main {
-    max-width: 600px; /* Adjusted width for better alignment */
+    max-width: 800px; /* Adjusted width for better alignment */
     margin: 10px auto; /* Center the main content */
     padding: 10px;
 }
