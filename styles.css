@@ -242,3 +242,7 @@ a:visited {
     border-radius: 50%; /* Make the image rounded */
     object-fit: cover; /* Ensure the image covers the area */
 }
+
+small {
+    color: grey;
+}
