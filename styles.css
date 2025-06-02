@@ -102,11 +102,19 @@ nav ul li {
 
 /* Link styles */
 #nav-links a {
-    color: inherit; /* Remove color */
+    color: #333; /* Remove color */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Bold text */
     display: flex;
     align-items: center;
+}
+
+#nav-links li .lucide {
+    margin-right: 4px;
+}
+
+#nav-links a:hover {
+    text-decoration: underline;
 }
 
 /* Navigation link styles */
@@ -114,6 +122,7 @@ nav ul li a {
     text-decoration: none;
     color: #007BFF; /* Link color */
     cursor: pointer;
+    text-decoration: underline;
 }
 
 /* Main content styles */
@@ -232,19 +241,31 @@ footer {
 
 /* General link styles */
 a {
-    color: #0693e3; /* Set link color */
-    text-decoration: dotted; /* Dotted underline */
+    /* Set link color */
+    /* color: #0693e3; */
+    color: #333;
+    font-weight: bold;
+    text-decoration: none; /* Dotted underline */
     cursor: pointer;
+}
+a:hover {
+    text-decoration: underline;
 }
 
 /* Visited link styles */
-a:visited {
-    color: #0693e3; /* Keep the same color for visited links */
-}
+/* a:visited { */
+    /* Keep the same color for visited links */
+    /* color: red;  */
+/* } */
 
-/* Custom link hover styles */
-.custom-link:hover {
+/* Custom link styles */
+.custom-link {
+    color: #333;
     text-decoration: none; /* Add underline on hover for better UX */
+}
+.custom-link:hover {
+    text-decoration: underline; /* Add underline on hover for better UX */
+
     cursor: pointer;
 }
 
@@ -258,6 +279,6 @@ a:visited {
     object-fit: cover; /* Ensure the image covers the area */
 }
 
-small {
-    color: grey;
-}
+/* small {
+    color: #3b3b3b;
+} */
