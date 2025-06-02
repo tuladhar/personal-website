@@ -7,6 +7,12 @@
     <title>Puru Tuladhar – Personal Website</title>
     <link rel="stylesheet" href="/styles.css"> <!-- Link to CSS stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <header>
@@ -19,11 +25,10 @@
         <center>
             <nav>
                 <ul id="nav-links">
-                    <li><a href="/index.html">🏠 Home</a></li>
-                    <li><a href="/blogs">✍️ Blogs</a></li>
-                    <li><a href="/books">📚 Books</a></li>
-                    <li><a href="/open-source">🌱 Open-source</a></li>
-                    <!-- <li><a href="resume.html">My Resume</a></li> -->
+                    <li><a href="index.html"><i data-lucide="tent"></i>&nbsp;Home</a></li>
+                    <li><a href="/blogs"><i data-lucide="notebook-pen"></i>&nbsp;Blogs</a></li>
+                    <li><a href="/books"><i data-lucide="book-open"></i>&nbsp;Books</a></li>
+                    <li><a href="/open-source"><i data-lucide="hand-heart"></i>&nbsp;Open-source</a></li>
                 </ul>
             </nav>
         </center>
@@ -72,5 +77,8 @@
     </main>
     
     <script src="script.js"></script> <!-- Link to JavaScript file -->
+    <!-- Lucide icon library for web -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
