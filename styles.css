@@ -91,6 +91,8 @@ nav ul {
 /* Navigation list item styles */
 nav ul li {
     margin: 0 20px; /* Equal margin on both sides */
+    display: flex;
+    align-items: center;
 }
 
 /* Link styles */
