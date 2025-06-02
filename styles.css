@@ -91,6 +91,9 @@ nav ul {
 /* Navigation list item styles */
 nav ul li {
     margin: 0 20px; /* Equal margin on both sides */
+}
+
+#nav-links li {
     display: flex;
     align-items: center;
 }
