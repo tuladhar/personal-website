@@ -125,6 +125,11 @@ h2 {
     text-align: center; /* Center the name */
 }
 
+h2 i {
+    width: 32;
+    height: 32;
+}
+
 /* Smaller heading styles */
 h3 {
     font-size: clamp(20px, 2.5vw + 1rem, 24px); /* Responsive font size */
