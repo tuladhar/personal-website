@@ -97,6 +97,7 @@ nav ul li {
 #nav-links a {
     color: inherit; /* Remove color */
     text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
 }
 
 /* Navigation link styles */
