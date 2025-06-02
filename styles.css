@@ -125,7 +125,7 @@ h2 {
     text-align: center; /* Center the name */
 }
 
-h2 i {
+h2 .lucide {
     width: 48px;
     height: 48px;
 }
