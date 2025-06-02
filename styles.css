@@ -91,6 +91,8 @@ nav ul {
 /* Navigation list item styles */
 nav ul li {
     margin: 0 20px; /* Equal margin on both sides */
+    display: flex;
+    align-items: center;
 }
 
 /* Link styles */
@@ -98,8 +100,6 @@ nav ul li {
     color: inherit; /* Remove color */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Bold text */
-    display: flex;
-    align-items: center;
 }
 
 /* Navigation link styles */
