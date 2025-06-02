@@ -60,6 +60,11 @@ nav.active {
     animation: reveal 0.5s ease-in-out forwards;
 }
 
+nav.active li {
+    display: flex;
+    justify-content: center;
+}
+
 /* Reveal animation keyframes */
 @keyframes reveal {
     from {
