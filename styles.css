@@ -93,16 +93,13 @@ nav ul li {
     margin: 0 20px; /* Equal margin on both sides */
 }
 
-#nav-links li {
-    display: flex;
-    align-items: center;
-}
-
 /* Link styles */
 #nav-links a {
     color: inherit; /* Remove color */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Bold text */
+    display: flex;
+    align-items: center;
 }
 
 /* Navigation link styles */
