@@ -275,7 +275,7 @@ a:hover {
     margin: 0 auto 20px; /* Center and add space below */
     width: 112px; /* Set a width for the avatar */
     height: 112px; /* Set a height for the avatar */
-    border-radius: 50%; /* Make the image rounded */
+    border-radius: 0%; /* Make the image rounded */
     object-fit: cover; /* Ensure the image covers the area */
 }
 
