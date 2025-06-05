@@ -282,3 +282,30 @@ a:hover {
 /* small {
     color: #3b3b3b;
 } */
+
+a.github,a.twitter,a.cks-handbook,a.kubestronaut,a.aws-certified,a.linkedin {
+    padding: 0px 5px 0px 5px;
+    color: white;
+    border-radius: 4px;
+}
+
+a.github,a.twitter {
+    background-color: #444;
+}
+
+a.cks-handbook {
+    /* background: linear-gradient(90deg, #a78bfa, #60a5fa); */
+    background: linear-gradient(90deg, #a78bfa);
+}
+
+a.kubestronaut {
+    background-color: #326CE5;
+}
+
+a.aws-certified {
+    background-color: #FF9900;
+}
+
+a.linkedin {
+    background-color:  #0A66C2;
+}
