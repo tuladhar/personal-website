@@ -133,7 +133,7 @@ main {
 }
 
 /* Subheading styles */
-h2 {
+h2,h3 {
     font-size: clamp(24px, 3vw + 1rem, 28px); /* Responsive font size */
     margin-top: 0;
     text-align: center; /* Center the name */
@@ -308,4 +308,14 @@ a.aws-certified {
 
 a.linkedin {
     background-color:  #0A66C2;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading img {
+    width: 50px;
 }
