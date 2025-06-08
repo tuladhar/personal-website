@@ -1,3 +1,4 @@
+
 /* src/styles.css */
 
 /* General body styles */
@@ -102,7 +103,6 @@ nav ul li {
 
 /* Link styles */
 #nav-links a {
-    color: #333; /* Remove color */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Bold text */
     display: flex;
@@ -120,16 +120,23 @@ nav ul li {
 /* Navigation link styles */
 nav ul li a {
     text-decoration: none;
-    color: #007BFF; /* Link color */
     cursor: pointer;
     text-decoration: underline;
 }
 
 /* Main content styles */
 main {
-    max-width: 800px; /* Adjusted width for better alignment */
+    max-width: 950px; /* Adjusted width for better alignment */
     margin: 10px auto; /* Center the main content */
     padding: 10px;
+}
+
+h3 {
+    color: #5683a2;
+}
+
+h2 {
+    color: #454545;
 }
 
 /* Subheading styles */
@@ -157,7 +164,7 @@ p {
 
 /* List item styles */
 li {
-    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.455), 16px); /* Responsive font size */
+    font-size: clamp(14px, 0.875rem + ((1vw - 3.2px) * 0.455), 20px); /* Responsive font size */
     line-height: 1.4; /* Line height */
 }
 
@@ -243,7 +250,7 @@ footer {
 a {
     /* Set link color */
     /* color: #0693e3; */
-    color: #333;
+    color: #5683a2;
     font-weight: bold;
     text-decoration: none; /* Dotted underline */
     cursor: pointer;
