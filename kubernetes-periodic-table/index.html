@@ -1178,12 +1178,124 @@ sub {
             </nav>
         </center>
     </header>
-    <main style="border: 2px solid #326ce5;padding: 20px; font-family: Arial, sans-serif;background-color: #e9f0ff;border-radius: 8px; padding: 20px 20px 0px 20px;">
+    <main style="border: 2px solid #326ce5; padding: 20px; background-color: #e9f0ff; border-radius: 8px; padding: 20px 20px 0px 20px;">
         <img style="width: 140px; height: 140px; margin-bottom: 10px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/500px-Kubernetes_logo_without_workmark.svg.png" alt="Puru Tuladhar" class="avatar"> <!-- Profile image -->
-        <h1 style="text-align: center; margin-bottom: 10px;"><span class="">Interactive</span>&nbsp;<span class="kubestronaut">Kubernetes</span>&nbsp;<span class="" style="">Periodic Table</span></h1>
-        <p><span class="wave-emoji">🗺️</span></span>&nbsp;<b class="hi">Explore the Kubernetes ecosystem through this interactive periodic table!</b> Each element represents a key Kubernetes concept, resource, or tool. <b>Hover over any item to reveal detailed information.</b></p>
-        <p>This Kubernetes Periodic Table sheds light on the 118 crucial components that make up the Kubernetes ecosystem. Whether you're a developer, system administrator, or cloud enthusiast, this handy resource will help you navigate the complex Kubernetes landscape.</p>
+        <h1 style="text-align: center; margin-bottom: 10px;"><span class="interactive">Interactive</span>&nbsp;<span class="kubestronaut">Kubernetes</span>&nbsp;<span class="periodic-table" style="">Periodic Table</span></h1>
+        <p><span class="wave-emoji">🗺️</span></span>&nbsp;<b class="hi">Explore the Kubernetes ecosystem through this interactive periodic table!</b> Each element represents a key Kubernetes concept, resource, or tool. 💡 <b>Try hovering over any elements to learn about it.</b></p>
+        <p>This periodic table contains <b>118 key components</b> that make up the Kubernetes ecosystem. Whether you're a developer, system administrator, or cloud enthusiast, this resource will help you navigate the complex Kubernetes landscape.</p>
     </main>
+
+    <main id="cks-ad" style="position: fixed; top: 16px; right: 16px; border: 2px solid #ede248; background-color: #f9f3b5; border-radius: 8px; padding: 16px; max-width: 360px; font-family: Arial, sans-serif; z-index: 1000;">
+  <button 
+    id="close-btn" 
+    aria-label="Close ad"
+    style="position: absolute; top: 8px; right: 8px; background: transparent; border: none; font-size: 18px; cursor: pointer; font-weight: bold; color: #444;">
+    &times;
+  </button>
+  <p style="margin: 0 0 8px 0; font-size: 16px; color: #333;">
+    <span class="wave-emoji">🆕</span>&nbsp;
+    <b>Certified Kubernetes Security Specialist (CKS) Handbook</b>
+  </p>
+  <p style="margin: 0 0 12px 0; font-size: 14px; color: #555; display: flex; align-items: center; gap: 6px;">
+    Get 50% off with discount code: 
+    <span 
+      id="discount-code" 
+      style="font-family: 'Courier New', Courier, monospace; background-color: #eaeaea; padding: 2px 6px; border-radius: 4px; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 4px; position: relative; transition: opacity 0.4s ease;"
+      title="Click to copy"
+      onclick="copyDiscountCode()"
+    >
+      TABLE50
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" viewBox="0 0 24 24">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      </svg>
+    </span>
+  </p>
+
+  <button 
+    style="
+      width: 100%; 
+      border: none; 
+      border-radius: 6px; 
+      padding: 10px 0; 
+      font-weight: bold; 
+      color: #444; 
+      cursor: pointer; 
+      font-size: 16px; 
+      background: linear-gradient(270deg, #ede248, #ffa500, #ede248);
+      background-size: 600% 600%;
+      animation: gradientShift 8s ease infinite;
+      transition: box-shadow 0.3s ease;
+      box-shadow: '0 0 2px 3px #f1c40f';
+    "
+    onmouseenter="this.style.boxShadow='0 0 0px 2px #f1c40f';"
+    onmouseleave="this.style.boxShadow='none';"
+    onclick="window.open('https://cks.purutuladhar.com', '_blank')"
+  >
+    I want this!
+  </button>
+  <div style="margin-top: 16px; font-family: Arial, sans-serif; font-size: 13px; color: #555; display: flex; justify-content: space-between; max-width: 360px;">
+  <div style="text-align: center; flex: 1;">
+    <strong style="font-weight: 700; color: #333;">✍️ Written by</strong><br>
+    Kubestronaut
+  </div>
+  <div style="text-align: center; flex: 1;">
+    <strong style="font-weight: 700; color: #333;">🎯 Practical</strong><br>
+    Real exam focus
+  </div>
+  <div style="text-align: center; flex: 1;">
+    <strong style="font-weight: 700; color: #333;">📚️ 300+</strong><br>
+    Copies sold
+  </div>
+</div>
+
+</main>
+
+<style>
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+</style>
+<script>
+  document.getElementById('close-btn').onclick = function() {
+    document.getElementById('cks-ad').style.display = 'none';
+  };
+
+  function copyDiscountCode() {
+    const discountSpan = document.getElementById('discount-code');
+    const originalText = "TABLE50";
+    const copyText = "Copied!";
+
+    navigator.clipboard.writeText(originalText).then(() => {
+      // Fade out current text
+      discountSpan.style.opacity = '0';
+
+      setTimeout(() => {
+        // Change text to "Copied!"
+        discountSpan.childNodes[0].nodeValue = copyText;
+        // Fade in "Copied!"
+        discountSpan.style.opacity = '1';
+
+        // After 2s, revert back with animation
+        setTimeout(() => {
+          discountSpan.style.opacity = '0';
+
+          setTimeout(() => {
+            discountSpan.childNodes[0].nodeValue = originalText;
+            discountSpan.style.opacity = '1';
+          }, 400);
+        }, 1200);
+
+      }, 400);
+    }).catch(() => {
+      console.error('Failed to copy discount code.');
+    });
+  }
+</script>
+
+
     <div class="header">
         <!--<img decoding="async" class="header-img" src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="kubernetes_logo.png" height="100%">-->
     </div>
@@ -5160,4 +5272,12 @@ document.body.onload = function() {dateMonthLoadShort();dateMonthLoadShortmeta()
 
 </script>
 
-</body></html>
+        <main style="border: 2px solid #326ce5;padding: 20px; font-family: Arial, sans-serif;background-color: #e9f0ff;border-radius: 8px; padding: 20px 20px 0px 20px;">
+        <img style="width: 140px; height: 140px; margin-bottom: 10px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/500px-Kubernetes_logo_without_workmark.svg.png" alt="Puru Tuladhar" class="avatar"> <!-- Profile image -->
+        <h1 style="text-align: center; margin-bottom: 10px;"><span class="">Interactive</span>&nbsp;<span class="kubestronaut">Kubernetes</span>&nbsp;<span class="" style="">Periodic Table</span></h1>
+        <p><span class="wave-emoji">🗺️</span></span>&nbsp;<b class="hi">Explore the Kubernetes ecosystem through this interactive periodic table!</b> Each element represents a key Kubernetes concept, resource, or tool. <b>Hover over any item to reveal detailed information.</b></p>
+        <p>This Kubernetes Periodic Table sheds light on the 118 crucial components that make up the Kubernetes ecosystem. Whether you're a developer, system administrator, or cloud enthusiast, this handy resource will help you navigate the complex Kubernetes landscape.</p>
+    </main>
+</body>
+
+</html>
