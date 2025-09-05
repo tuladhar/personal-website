@@ -306,6 +306,7 @@ a.github,a.twitter {
         padding: 0px 5px 0px 5px;
     color: white;
     border-radius: 4px;
+    margin-right: 10px;
 }
 
 .kubestronaut {
