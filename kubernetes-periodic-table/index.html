@@ -1179,7 +1179,21 @@ sub {
         </center>
     </header>
     <main style="border: 2px solid #326ce5; padding: 20px; background-color: #e9f0ff; border-radius: 8px; padding: 20px 20px 0px 20px;">
-        <img style="width: 140px; height: 140px; margin-bottom: 10px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/500px-Kubernetes_logo_without_workmark.svg.png" alt="Puru Tuladhar" class="avatar"> <!-- Profile image -->
+<img style="width: 140px; height: 140px; margin-bottom: 10px" src="assets/k8s-logo.png" alt="Puru Tuladhar" class="avatar">
+<style>
+    .avatar {
+  animation: slow-rotate 10s linear infinite; /* 10s for slow rotation */
+}
+
+@keyframes slow-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
         <h1 style="text-align: center; margin-bottom: 10px;"><span class="interactive">Interactive</span>&nbsp;<span class="kubestronaut">Kubernetes</span>&nbsp;<span class="periodic-table" style="">Periodic Table</span></h1>
         <p><span class="wave-emoji">🗺️</span></span>&nbsp;<b class="hi">Explore the Kubernetes ecosystem through this interactive periodic table!</b> Each element represents a key Kubernetes concept, resource, or tool. 💡 <b>Try hovering over any elements to learn about it.</b></p>
         <p>This periodic table contains <b>118 key components</b> that make up the Kubernetes ecosystem. Whether you're a developer, system administrator, or cloud enthusiast, this resource will help you navigate the complex Kubernetes landscape.</p>
