@@ -355,3 +355,7 @@ a.linkedin {
 .wave-emoji {
     font-size: 30px;
 }
+
+abandoned {
+  text-decoration: line-through;
+}
