@@ -421,53 +421,65 @@
 
     <!-- COMPANY -->
     <div class="form-panel active" id="panel-company">
-      <label>Company name</label>
-      <input type="text" id="c-company" placeholder="Acme Technologies">
+      <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event, this)">
+        <input type="hidden" name="access_key" value="1fff25d6-93ab-4397-b808-1921111e6e8f">
+        <input type="hidden" name="subject" value="DevOps Hiring Inquiry">
+        <input type="hidden" name="from_name" value="purutuladhar.com – Hire">
 
-      <label>Your name &amp; role</label>
-      <input type="text" id="c-name" placeholder="Priya Shrestha, CTO">
+        <label>Company name</label>
+        <input type="text" name="company" placeholder="Acme Technologies">
 
-      <label>Email</label>
-      <input type="email" id="c-email" placeholder="priya@acme.com.np">
+        <label>Your name &amp; role</label>
+        <input type="text" name="name" placeholder="Priya Shrestha, CTO">
 
-      <label>What's your current tech stack?</label>
-      <input type="text" id="c-stack" placeholder="AWS, Kubernetes, Terraform, GitHub Actions...">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="priya@acme.com.np" required>
 
-      <label>What's the biggest DevOps problem you're facing right now?</label>
-      <textarea id="c-problem" placeholder="No CI/CD, manual deployments, scaling issues, no one owns infra..."></textarea>
+        <label>What's your current tech stack?</label>
+        <input type="text" name="stack" placeholder="AWS, Kubernetes, Terraform, GitHub Actions...">
 
-      <label>Which option interests you?</label>
-      <select id="c-option">
-        <option value="">Select...</option>
-        <option>Placement only</option>
-        <option>Placement + Mentorship</option>
-        <option>Not sure yet</option>
-      </select>
+        <label>What's the biggest DevOps problem you're facing right now?</label>
+        <textarea name="problem" placeholder="No CI/CD, manual deployments, scaling issues, no one owns infra..."></textarea>
 
-      <button class="btn" onclick="submitForm('company')">Send →</button>
+        <label>Which option interests you?</label>
+        <select name="option">
+          <option value="">Select...</option>
+          <option>Placement only</option>
+          <option>Placement + Mentorship</option>
+          <option>Not sure yet</option>
+        </select>
+
+        <button type="submit" class="btn">Send →</button>
+      </form>
     </div>
 
     <!-- ENGINEER -->
     <div class="form-panel" id="panel-engineer">
-      <label>Your name</label>
-      <input type="text" id="e-name" placeholder="Bikash Thapa">
+      <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event, this)">
+        <input type="hidden" name="access_key" value="1fff25d6-93ab-4397-b808-1921111e6e8f">
+        <input type="hidden" name="subject" value="DevOps Engineer Application">
+        <input type="hidden" name="from_name" value="purutuladhar.com – Hire">
 
-      <label>Email</label>
-      <input type="email" id="e-email" placeholder="bikash@gmail.com">
+        <label>Your name</label>
+        <input type="text" name="name" placeholder="Bikash Thapa">
 
-      <label>Current role / experience level</label>
-      <input type="text" id="e-role" placeholder="Junior DevOps, 1 yr / transitioning from backend dev">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="bikash@gmail.com" required>
 
-      <label>Tools you're comfortable with</label>
-      <input type="text" id="e-tools" placeholder="Linux, Docker, basic AWS...">
+        <label>Current role / experience level</label>
+        <input type="text" name="role" placeholder="Junior DevOps, 1 yr / transitioning from backend dev">
 
-      <label>What do you want to get better at?</label>
-      <textarea id="e-goal" placeholder="Kubernetes, CI/CD pipelines, Terraform, cloud architecture..."></textarea>
+        <label>Tools you're comfortable with</label>
+        <input type="text" name="tools" placeholder="Linux, Docker, basic AWS...">
 
-      <label>LinkedIn or GitHub (optional)</label>
-      <input type="url" id="e-link" placeholder="https://github.com/...">
+        <label>What do you want to get better at?</label>
+        <textarea name="goals" placeholder="Kubernetes, CI/CD pipelines, Terraform, cloud architecture..."></textarea>
 
-      <button class="btn" onclick="submitForm('engineer')">Send →</button>
+        <label>LinkedIn or GitHub (optional)</label>
+        <input type="url" name="link" placeholder="https://github.com/...">
+
+        <button type="submit" class="btn">Send →</button>
+      </form>
     </div>
   </div>
 
@@ -489,32 +501,22 @@
       document.getElementById('panel-' + tab).classList.add('active');
     }
 
-    function submitForm(type) {
-      let subject, body;
-      if (type === 'company') {
-        subject = 'DevOps Hiring – ' + (document.getElementById('c-company').value || 'Inquiry');
-        body = [
-          'Company: ' + document.getElementById('c-company').value,
-          'Name/Role: ' + document.getElementById('c-name').value,
-          'Email: ' + document.getElementById('c-email').value,
-          'Stack: ' + document.getElementById('c-stack').value,
-          'Problem: ' + document.getElementById('c-problem').value,
-          'Option: ' + document.getElementById('c-option').value,
-        ].join('\n');
+    async function handleSubmit(e, form) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        btn.textContent = 'Sent ✓';
+        form.reset();
       } else {
-        subject = 'DevOps Engineer – ' + (document.getElementById('e-name').value || 'Application');
-        body = [
-          'Name: ' + document.getElementById('e-name').value,
-          'Email: ' + document.getElementById('e-email').value,
-          'Role/Exp: ' + document.getElementById('e-role').value,
-          'Tools: ' + document.getElementById('e-tools').value,
-          'Goals: ' + document.getElementById('e-goal').value,
-          'Link: ' + document.getElementById('e-link').value,
-        ].join('\n');
+        btn.textContent = 'Failed — try again';
+        btn.disabled = false;
       }
-      window.location.href = 'mailto:hello@purutuladhar.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(body);
     }
   </script>
 </body>

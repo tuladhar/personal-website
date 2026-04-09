@@ -453,40 +453,46 @@
     <h2>Get in touch</h2>
     <p>Tell me about your team and what you're aiming for. I'll get back within 24–48 hours.</p>
 
-    <label>Company / Organisation name</label>
-    <input type="text" id="t-company" placeholder="Acme Technologies">
+    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event, this)">
+      <input type="hidden" name="access_key" value="455b3224-96e7-46aa-a2fc-9170c3813b24">
+      <input type="hidden" name="subject" value="Kubernetes Training Inquiry">
+      <input type="hidden" name="from_name" value="purutuladhar.com – Training">
 
-    <label>Your name &amp; role</label>
-    <input type="text" id="t-name" placeholder="Priya Shrestha, CTO">
+      <label>Company / Organisation name</label>
+      <input type="text" name="company" placeholder="Acme Technologies">
 
-    <label>Email</label>
-    <input type="email" id="t-email" placeholder="priya@acme.com.np">
+      <label>Your name &amp; role</label>
+      <input type="text" name="name" placeholder="Priya Shrestha, CTO">
 
-    <label>Team size (approximate)</label>
-    <input type="text" id="t-size" placeholder="5–10 engineers">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="priya@acme.com.np" required>
 
-    <label>Current Kubernetes experience level</label>
-    <select id="t-level">
-      <option value="">Select...</option>
-      <option>Beginner — little to no Kubernetes experience</option>
-      <option>Intermediate — using Kubernetes, want to go deeper</option>
-      <option>Mixed — varies across the team</option>
-    </select>
+      <label>Team size (approximate)</label>
+      <input type="text" name="team_size" placeholder="5–10 engineers">
 
-    <label>Target certification (if any)</label>
-    <select id="t-cert">
-      <option value="">Select...</option>
-      <option>CKA – Certified Kubernetes Administrator</option>
-      <option>CKAD – Certified Kubernetes Application Developer</option>
-      <option>CKS – Certified Kubernetes Security Specialist</option>
-      <option>No certification — production readiness focus</option>
-      <option>Not sure yet</option>
-    </select>
+      <label>Current Kubernetes experience level</label>
+      <select name="experience_level">
+        <option value="">Select...</option>
+        <option>Beginner — little to no Kubernetes experience</option>
+        <option>Intermediate — using Kubernetes, want to go deeper</option>
+        <option>Mixed — varies across the team</option>
+      </select>
 
-    <label>Anything else you'd like me to know?</label>
-    <textarea id="t-notes" placeholder="Timeline, constraints, specific topics you want covered..."></textarea>
+      <label>Target certification (if any)</label>
+      <select name="target_cert">
+        <option value="">Select...</option>
+        <option>CKA – Certified Kubernetes Administrator</option>
+        <option>CKAD – Certified Kubernetes Application Developer</option>
+        <option>CKS – Certified Kubernetes Security Specialist</option>
+        <option>No certification — production readiness focus</option>
+        <option>Not sure yet</option>
+      </select>
 
-    <button class="btn" onclick="submitForm()">Send →</button>
+      <label>Anything else you'd like me to know?</label>
+      <textarea name="notes" placeholder="Timeline, constraints, specific topics you want covered..."></textarea>
+
+      <button type="submit" class="btn">Send →</button>
+    </form>
   </div>
 
   <footer>
@@ -500,20 +506,22 @@
 
   <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <script>
-    function submitForm() {
-      const subject = 'Kubernetes Training – ' + (document.getElementById('t-company').value || 'Inquiry');
-      const body = [
-        'Company: ' + document.getElementById('t-company').value,
-        'Name/Role: ' + document.getElementById('t-name').value,
-        'Email: ' + document.getElementById('t-email').value,
-        'Team size: ' + document.getElementById('t-size').value,
-        'Experience level: ' + document.getElementById('t-level').value,
-        'Target cert: ' + document.getElementById('t-cert').value,
-        'Notes: ' + document.getElementById('t-notes').value,
-      ].join('\n');
-      window.location.href = 'mailto:training@purutuladhar.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(body);
+    async function handleSubmit(e, form) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        btn.textContent = 'Sent ✓';
+        form.reset();
+      } else {
+        btn.textContent = 'Failed — try again';
+        btn.disabled = false;
+      }
     }
   </script>
 </body>
