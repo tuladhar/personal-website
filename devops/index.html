@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="I help Nepal companies hire the right DevOps engineer — and stick around for 3 months to make sure it works. By Puru Tuladhar, CNCF Kubestronaut.">
+  <title>DevOps Nepal – Puru Tuladhar</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    header nav a {
+      font-size: 14px;
+      color: #888;
+      text-decoration: none;
+    }
+    header nav a:hover { color: #333; }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111;
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .intro {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    ol, ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+      color: #444;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 15px;
+    }
+    .pricing-table th {
+      text-align: left;
+      padding: 8px 12px;
+      background: #f7f7f7;
+      border: 1px solid #e5e5e5;
+      font-weight: 700;
+      color: #111;
+    }
+    .pricing-table td {
+      padding: 8px 12px;
+      border: 1px solid #e5e5e5;
+      color: #444;
+      vertical-align: top;
+    }
+    .pricing-table tr:hover td { background: #fafafa; }
+
+    .note {
+      font-size: 14px;
+      color: #888;
+      font-style: italic;
+    }
+
+    .form-section label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 4px;
+      margin-top: 1rem;
+    }
+    .form-section input,
+    .form-section textarea,
+    .form-section select {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 8px 10px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      outline: none;
+    }
+    .form-section input:focus,
+    .form-section textarea:focus,
+    .form-section select:focus {
+      border-color: #0066cc;
+    }
+    .form-section textarea { resize: vertical; min-height: 80px; }
+
+    .form-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #eee;
+    }
+    .form-tab {
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #888;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .form-tab.active {
+      color: #111;
+      border-bottom: 2px solid #111;
+    }
+
+    .form-panel { display: none; }
+    .form-panel.active { display: block; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background: #111;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn:hover { background: #333; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+      color: #888;
+    }
+    footer a { color: #888; }
+    footer a:hover { color: #333; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav><a href="/">← purutuladhar.com</a></nav>
+  </header>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <img src="/avatar.png" alt="Puru Tuladhar" class="avatar">
+    <h1>I help Nepal companies hire &amp; grow DevOps engineers.</h1>
+    <p>
+      Hi, I'm Puru. I'm a DevOps engineer, <a href="https://www.credly.com/badges/bd57b314-30a5-48e0-836a-19f9cf6ddf61" target="_blank">CNCF Kubestronaut</a>,
+      <a href="https://www.credly.com/users/puru-tuladhar" target="_blank">AWS Certified Solutions Architect</a>,
+      and author of the <a href="https://cka.purutuladhar.com" target="_blank">CKA</a> and <a href="https://cks.purutuladhar.com" target="_blank">CKS Handbooks</a>.
+      I've spent 10+ years building infrastructure and systems on the internet.
+    </p>
+    <p>
+      I started this because I kept seeing the same thing: good companies in Nepal struggling to hire DevOps talent,
+      and good engineers struggling to grow without proper mentorship. Generic job boards don't solve either problem.
+      So I'm doing it myself — personally, not through an agency.
+    </p>
+  </div>
+
+  <!-- WHY ME -->
+  <div class="section">
+    <h2>Why me?</h2>
+    <p>
+      I'm not a recruiter. I'm not running an HR firm. I'm a working DevOps engineer who has done the job —
+      debugging pipelines at 2am, designing Kubernetes clusters from scratch, helping companies cut their AWS bills,
+      mentoring junior engineers who had no one to guide them.
+    </p>
+    <p>
+      When I match you with an engineer, I know what I'm looking for because I've been on both sides —
+      as the hire, and as the person building the team. When I mentor someone, I do it hands-on:
+      real code reviews, real architecture discussions, real feedback. Not slides and theory.
+    </p>
+    <p>
+      And because I only get paid after 3 months — after the hire sticks — my incentive is entirely
+      aligned with yours. I want it to work as much as you do.
+    </p>
+    <p class="note">
+      If you want a sense of how I think, I write about DevOps and cloud on
+      <a href="https://www.linkedin.com/in/ptuladhar3/recent-activity/articles/" target="_blank">LinkedIn</a>
+      and <a href="https://ptuladhar3.medium.com" target="_blank">Medium</a>.
+    </p>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <h2>How it works</h2>
+    <p>Simple. No contracts upfront, no agency fees, no middlemen.</p>
+    <ol>
+      <li><strong>We talk.</strong> You tell me your stack, your team, and what's broken. I ask questions. I want to understand the problem, not just collect a job spec.</li>
+      <li><strong>I find the right person — or validate yours.</strong> I can shortlist from engineers I know and have vetted. But if you've already found someone and just want a second opinion, I can technically interview and evaluate them for you. Either way, no one gets through without a real assessment.</li>
+      <li><strong>The hire starts. I stay involved.</strong> For the first 3 months, I check in, help the engineer ramp up, and keep you in the loop.</li>
+      <li><strong>At month 3, you pay.</strong> One month of the engineer's salary. Only if things are working out.</li>
+    </ol>
+    <p>
+      <strong>Want more?</strong> For an extra half month fee, I actively mentor your new hire throughout those 3 months —
+      weekly 1:1s, code and infra reviews, a clear growth roadmap. Especially useful if they're junior or stepping into DevOps for the first time.
+    </p>
+  </div>
+
+  <!-- PRICING -->
+  <div class="section">
+    <h2>Pricing</h2>
+    <p>Paid after 3 months of employment. Zero upfront.</p>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>What you get</th>
+          <th>Fee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Placement</strong><br>
+            I find the engineer, coordinate the process, and check in at 30 days.
+          </td>
+          <td>1 month of<br>engineer's salary</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Placement + Mentorship</strong><br>
+            Everything above, plus weekly 1:1s, infra/code reviews, and a monthly progress report to you.
+          </td>
+          <td>1.5 months of<br>engineer's salary</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">If the hire doesn't work out, we talk. I'm not going to chase an invoice for a placement that failed.</p>
+  </div>
+
+  <!-- WHO THIS IS FOR -->
+  <div class="section">
+    <h2>Who this is for</h2>
+    <p><strong>For companies:</strong></p>
+    <ul>
+      <li>You've tried job boards and got irrelevant CVs</li>
+      <li>You don't have strong DevOps experience internally to benchmark candidates</li>
+      <li>You need someone who can hit the ground running, not spend 6 months figuring things out</li>
+      <li>You're a startup, a small tech team, or a company scaling fast</li>
+    </ul>
+    <p><strong>For engineers:</strong></p>
+    <ul>
+      <li>You're junior or mid-level and want to grow fast in DevOps</li>
+      <li>You're a developer making the shift to DevOps and want structured guidance</li>
+      <li>You want someone in your corner who's done this — not a bootcamp, not YouTube tutorials</li>
+    </ul>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section form-section">
+    <h2>Get in touch</h2>
+    <p>Fill in whichever applies to you. I'll get back within 24–48 hours.</p>
+
+    <div class="form-tabs">
+      <button class="form-tab active" onclick="switchTab('company', this)">I'm hiring</button>
+      <button class="form-tab" onclick="switchTab('engineer', this)">I'm an engineer</button>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="form-panel active" id="panel-company">
+      <label>Company name</label>
+      <input type="text" id="c-company" placeholder="Acme Technologies">
+
+      <label>Your name &amp; role</label>
+      <input type="text" id="c-name" placeholder="Priya Shrestha, CTO">
+
+      <label>Email</label>
+      <input type="email" id="c-email" placeholder="priya@acme.com.np">
+
+      <label>What's your current tech stack?</label>
+      <input type="text" id="c-stack" placeholder="AWS, Kubernetes, Terraform, GitHub Actions...">
+
+      <label>What's the biggest DevOps problem you're facing right now?</label>
+      <textarea id="c-problem" placeholder="No CI/CD, manual deployments, scaling issues, no one owns infra..."></textarea>
+
+      <label>Which option interests you?</label>
+      <select id="c-option">
+        <option value="">Select...</option>
+        <option>Placement only</option>
+        <option>Placement + Mentorship</option>
+        <option>Not sure yet</option>
+      </select>
+
+      <button class="btn" onclick="submitForm('company')">Send →</button>
+    </div>
+
+    <!-- ENGINEER -->
+    <div class="form-panel" id="panel-engineer">
+      <label>Your name</label>
+      <input type="text" id="e-name" placeholder="Bikash Thapa">
+
+      <label>Email</label>
+      <input type="email" id="e-email" placeholder="bikash@gmail.com">
+
+      <label>Current role / experience level</label>
+      <input type="text" id="e-role" placeholder="Junior DevOps, 1 yr / transitioning from backend dev">
+
+      <label>Tools you're comfortable with</label>
+      <input type="text" id="e-tools" placeholder="Linux, Docker, basic AWS...">
+
+      <label>What do you want to get better at?</label>
+      <textarea id="e-goal" placeholder="Kubernetes, CI/CD pipelines, Terraform, cloud architecture..."></textarea>
+
+      <label>LinkedIn or GitHub (optional)</label>
+      <input type="url" id="e-link" placeholder="https://github.com/...">
+
+      <button class="btn" onclick="submitForm('engineer')">Send →</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      Made by <a href="/">Puru Tuladhar</a> ·
+      <a href="mailto:hello@purutuladhar.com">hello@purutuladhar.com</a> ·
+      <a href="https://www.linkedin.com/in/ptuladhar3/" target="_blank">LinkedIn</a> ·
+      <a href="https://x.com/ptuladhar3" target="_blank">X</a>
+    </p>
+  </footer>
+
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <script>
+    function switchTab(tab, btn) {
+      document.querySelectorAll('.form-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.form-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+    }
+
+    function submitForm(type) {
+      let subject, body;
+      if (type === 'company') {
+        subject = 'DevOps Hiring – ' + (document.getElementById('c-company').value || 'Inquiry');
+        body = [
+          'Company: ' + document.getElementById('c-company').value,
+          'Name/Role: ' + document.getElementById('c-name').value,
+          'Email: ' + document.getElementById('c-email').value,
+          'Stack: ' + document.getElementById('c-stack').value,
+          'Problem: ' + document.getElementById('c-problem').value,
+          'Option: ' + document.getElementById('c-option').value,
+        ].join('\n');
+      } else {
+        subject = 'DevOps Engineer – ' + (document.getElementById('e-name').value || 'Application');
+        body = [
+          'Name: ' + document.getElementById('e-name').value,
+          'Email: ' + document.getElementById('e-email').value,
+          'Role/Exp: ' + document.getElementById('e-role').value,
+          'Tools: ' + document.getElementById('e-tools').value,
+          'Goals: ' + document.getElementById('e-goal').value,
+          'Link: ' + document.getElementById('e-link').value,
+        ].join('\n');
+      }
+      window.location.href = 'mailto:hello@purutuladhar.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+    }
+  </script>
+</body>
+</html>
