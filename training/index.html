@@ -72,12 +72,50 @@
     }
     a:hover { text-decoration: underline; }
 
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
+    .page-banner {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0a3d2e, #1a6b4a, #2d9e6b);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.02) 0px,
+        rgba(255,255,255,0.02) 1px,
+        transparent 1px,
+        transparent 20px
+      );
+    }
+
+    .page-banner-text {
+      position: relative;
+      text-align: center;
+      color: #fff;
+    }
+
+    .page-banner-text .banner-icon {
+      font-size: 2.5rem;
       display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .page-banner-text .banner-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
     }
 
     .intro {
@@ -244,7 +282,12 @@
 
   <!-- INTRO -->
   <div class="intro">
-    <img src="/avatar.png" alt="Puru Tuladhar" class="avatar">
+    <div class="page-banner">
+      <div class="page-banner-text">
+        <span class="banner-icon">☸️</span>
+        <span class="banner-label">Kubernetes · CKA · CKAD · CKS · Nepal</span>
+      </div>
+    </div>
     <h1>Kubernetes training for teams and corporates in Nepal.</h1>
     <p>
       I run hands-on, instructor-led Kubernetes training programs for engineering teams —
