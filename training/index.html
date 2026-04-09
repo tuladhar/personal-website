@@ -12,15 +12,26 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --background: #ffffff;
+      --foreground: #111111;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --muted-bg: #f9fafb;
+      --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+      --radius: 8px;
+      --transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #fff;
-      color: #333;
+      font-family: var(--font-sans);
+      background: var(--background);
+      color: var(--foreground);
+      -webkit-font-smoothing: antialiased;
       font-size: 16px;
       line-height: 1.7;
       max-width: 680px;
@@ -30,34 +41,63 @@
 
     header {
       margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    header nav a {
+    header nav.back-nav a {
       font-size: 14px;
-      color: #888;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: color var(--transition), background-color var(--transition);
+    }
+    header nav.back-nav a:hover {
+      color: var(--foreground);
+      background-color: var(--muted-bg);
       text-decoration: none;
     }
-    header nav a:hover { color: #333; }
+
+    .page-identity {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      flex: 1;
+      justify-content: center;
+    }
+
+    .page-identity img {
+      width: 28px;
+      height: 28px;
+    }
 
     h1 {
       font-size: 22px;
       font-weight: 700;
-      color: #111;
+      color: var(--foreground);
       margin-bottom: 0.5rem;
       line-height: 1.3;
+      letter-spacing: -0.02em;
     }
 
     h2 {
       font-size: 18px;
       font-weight: 700;
-      color: #111;
+      color: var(--foreground);
       margin: 2.5rem 0 0.75rem;
+      letter-spacing: -0.01em;
     }
 
     h3 {
       font-size: 15px;
-      font-weight: 700;
-      color: #111;
+      font-weight: 600;
+      color: var(--foreground);
       margin: 1.25rem 0 0.4rem;
     }
 
@@ -67,27 +107,60 @@
     }
 
     a {
-      color: #0066cc;
+      color: #326CE5;
       text-decoration: none;
+      font-weight: 500;
+      transition: opacity var(--transition);
     }
-    a:hover { text-decoration: underline; }
+    a:hover { text-decoration: underline; opacity: 0.85; }
 
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      display: block;
+    .page-banner {
+      width: 100%;
+      border-radius: var(--radius);
+      margin-bottom: 1.75rem;
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+      background: var(--muted-bg);
+      border: 1px solid var(--border);
+    }
+
+    .page-banner-text {
+      color: var(--foreground);
+    }
+
+    .page-banner-text h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--foreground);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .page-banner-text p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .page-banner-text .banner-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
     .intro {
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--border);
       padding-bottom: 2rem;
       margin-bottom: 2rem;
     }
 
     .section {
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--border);
       padding-bottom: 2rem;
       margin-bottom: 2rem;
     }
@@ -110,17 +183,17 @@
     .cert-badge {
       display: inline-block;
       padding: 3px 10px;
-      border: 1px solid #ddd;
+      border: 1px solid var(--border);
       border-radius: 20px;
       font-size: 13px;
-      font-weight: 700;
-      color: #333;
-      background: #f9f9f9;
+      font-weight: 600;
+      color: var(--foreground);
+      background: var(--muted-bg);
     }
 
     .social-proof {
-      background: #f7f7f7;
-      border-left: 3px solid #111;
+      background: var(--muted-bg);
+      border-left: 3px solid var(--foreground);
       padding: 1rem 1.25rem;
       margin: 1rem 0;
       border-radius: 0 4px 4px 0;
@@ -132,7 +205,7 @@
     }
     .social-proof .source {
       font-size: 13px;
-      color: #888;
+      color: var(--muted);
       margin-top: 0.4rem;
     }
 
@@ -155,11 +228,11 @@
       top: 2px;
       width: 22px;
       height: 22px;
-      background: #111;
+      background: var(--foreground);
       color: #fff;
       border-radius: 50%;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 600;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -171,23 +244,23 @@
     }
     .module-list li {
       padding: 0.6rem 0;
-      border-bottom: 1px solid #f0f0f0;
+      border-bottom: 1px solid var(--border);
       color: #444;
     }
     .module-list li:last-child { border-bottom: none; }
-    .module-list li strong { color: #111; }
+    .module-list li strong { color: var(--foreground); }
 
     .note {
       font-size: 14px;
-      color: #888;
+      color: var(--muted);
       font-style: italic;
     }
 
     .form-section label {
       display: block;
       font-size: 14px;
-      font-weight: 700;
-      color: #333;
+      font-weight: 600;
+      color: var(--foreground);
       margin-bottom: 4px;
       margin-top: 1rem;
     }
@@ -195,61 +268,72 @@
     .form-section textarea,
     .form-section select {
       width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
       padding: 8px 10px;
       font-size: 14px;
-      font-family: 'Inter', sans-serif;
-      color: #333;
+      font-family: var(--font-sans);
+      color: var(--foreground);
+      background: var(--background);
       outline: none;
+      transition: border-color var(--transition);
     }
     .form-section input:focus,
     .form-section textarea:focus,
     .form-section select:focus {
-      border-color: #0066cc;
+      border-color: #326CE5;
     }
     .form-section textarea { resize: vertical; min-height: 80px; }
 
     .btn {
       display: inline-block;
       margin-top: 1rem;
-      padding: 10px 20px;
-      background: #111;
+      padding: 9px 20px;
+      background: var(--foreground);
       color: #fff;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sans);
+      transition: opacity var(--transition), transform var(--transition);
     }
-    .btn:hover { background: #333; }
+    .btn:hover { opacity: 0.85; }
+    .btn:active { transform: scale(0.97); }
 
     footer {
       margin-top: 3rem;
       padding-top: 1.5rem;
-      border-top: 1px solid #eee;
+      border-top: 1px solid var(--border);
       font-size: 14px;
-      color: #888;
+      color: var(--muted);
     }
-    footer a { color: #888; }
-    footer a:hover { color: #333; }
+    footer a { color: var(--muted); font-weight: 500; }
+    footer a:hover { color: var(--foreground); text-decoration: none; }
   </style>
 </head>
 <body>
 
   <header>
-    <nav><a href="/">← purutuladhar.com</a></nav>
+    <nav class="back-nav"><a href="/">← Back</a></nav>
+    <div class="page-identity">
+      <img src="/icons/training.png" alt="Training"/>Training
+    </div>
   </header>
 
   <!-- INTRO -->
   <div class="intro">
-    <img src="/avatar.png" alt="Puru Tuladhar" class="avatar">
-    <h1>Kubernetes training for teams and corporates in Nepal.</h1>
-    <p>
-      I run hands-on, instructor-led Kubernetes training programs for engineering teams —
-      built around real-world administration and aligned with CNCF certifications.
-    </p>
+    <div class="page-banner">
+      <div class="page-banner-text">
+        <span class="banner-label">☸️ &nbsp;Kubernetes · CKA · CKAD · CKS · Nepal</span>
+        <h1>Kubernetes training for teams and corporates in Nepal.</h1>
+        <p>
+          I run hands-on, instructor-led Kubernetes training programs for engineering teams —
+          built around real-world administration and aligned with CNCF certifications.
+        </p>
+      </div>
+    </div>
     <div class="cert-badges">
       <span class="cert-badge">CKA</span>
       <span class="cert-badge">CKAD</span>
