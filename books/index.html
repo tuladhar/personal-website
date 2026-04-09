@@ -1,49 +1,214 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Puru is an experienced DevOps Engineer, author of CKS Handbook, AWS Certified Solution Architect, CNCF Certified Kubestronaut, and a family man.">
-    <title>Puru Tuladhar – Personal Website</title>
-    <link rel="stylesheet" href="/styles.css"> <!-- Link to CSS stylesheet -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Books by Puru Tuladhar — CKA Handbook, CKS Handbook, AWS cheatsheets, Kamal 2 guide, and more.">
+  <title>Books – Puru Tuladhar</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --foreground: #111111;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --muted-bg: #f9fafb;
+      --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+      --radius: 8px;
+      --transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--background);
+      color: var(--foreground);
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header nav.back-nav a {
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: color var(--transition), background-color var(--transition);
+    }
+    header nav.back-nav a:hover {
+      color: var(--foreground);
+      background-color: var(--muted-bg);
+      text-decoration: none;
+    }
+
+    .page-identity {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      flex: 1;
+      justify-content: center;
+    }
+
+    .page-identity img {
+      width: 28px;
+      height: 28px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--foreground);
+      margin: 2.5rem 0 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    a {
+      color: #326CE5;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity var(--transition);
+    }
+    a:hover { text-decoration: underline; opacity: 0.85; }
+
+    .page-banner {
+      width: 100%;
+      border-radius: var(--radius);
+      margin-bottom: 1.75rem;
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+      background: var(--muted-bg);
+      border: 1px solid var(--border);
+    }
+
+    .page-banner-text {
+      color: var(--foreground);
+    }
+
+    .page-banner-text .banner-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .page-banner-text h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--foreground);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .page-banner-text p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .section {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    li small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); font-weight: 500; }
+    footer a:hover { color: var(--foreground); text-decoration: none; }
+  </style>
 </head>
 <body>
-    <header>
-        <!-- <h1><a style='color: #333' href="/">Puru Tuladhar – Personal Website</a></h1> -->
-        
-        <div class="menu-toggle" id="mobile-menu">
-            &#9776; <!-- Hamburger icon -->
-        </div>
-        
-        <center>
-            <nav>
-                <ul id="nav-links">
-                    <li><img src="/icons/home.png" width="45px"/>&nbsp;<a href="/index.html">Home</a></li>
-                    <li><img src="/icons/blogs.png" width="40px"/>&nbsp;<a href="/blogs">Blogs</a></li>
-                    <li><img src="/icons/books.png" width="40px"/>&nbsp;<a href="/books">Books</a></li>
-                    <li><img src="/icons/open-source.png" width="40px"/>&nbsp;<a href="/open-source">Open-source</a></li>
-                    <!-- <li><a href="resume.html">My Resume</a></li> -->
-                </ul>
-            </nav>
-        </center>
-    </header>
-    <main>
-        <h3 class="heading"><img src="/icons/books.png"/>&nbsp;Books</h3>
-        <ul>
-            <li><a href="https://cka.purutuladhar.com" target="_blank">Certified Kubernetes Administrator (CKA) Handbook</a><small>&nbsp;– New!</small></li>
-            <li><a href="https://cks.purutuladhar.com" target="_blank">Certified Kubernetes Security Specialist (CKS) Handbook</a><small>&nbsp;– 300+ copies sold.</small></li>
-            <li><a href="https://kamal.purutuladhar.com" target="_blank">A Beginner's Guide to Getting Started with Kamal 2</a><small>&nbsp;– 100+ copies sold.</small></li>
-            <li><a href="https://sap.purutuladhar.com" target="_blank">AWS Certified Solutions Architect Professional — Cheatsheet</a><small>&nbsp;– 75+ copies sold.</small></li>
-            <li><a href="https://saa.purutuladhar.com" target="_blank">AWS Certified Solution Architect Associate — Cheatsheet</a><small>&nbsp;– 50+ copies sold.</small></li>
-            <li><a href='https://cursor.purutuladhar.com'>A Beginner's Guide to Using Cursor — The AI Code Editor</a><small>&nbsp;– 15+ copies sold.</small></li>
-            <li><a href='https://awsmadesimple.purutuladhar.com'>AWS Made Simple — Your Quick Guide To The Cloud</a><small>&nbsp;– New!</small></li>
-        </ul>
-    </main>
-    <script src="/script.js"></script> <!-- Link to JavaScript file -->
-    <!-- Lucide icon library for web -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>lucide.createIcons();</script>    
-    <!-- 100% privacy-first analytics -->
-    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
+  <header>
+    <nav class="back-nav"><a href="/">← Back</a></nav>
+    <div class="page-identity">
+      <img src="/icons/books.png" alt="Books"/>Books
+    </div>
+  </header>
+
+  <div class="section">
+    <div class="page-banner">
+      <div class="page-banner-text">
+        <span class="banner-label">📚 &nbsp;Kubernetes · AWS · DevOps</span>
+        <h1>Books and guides I've written.</h1>
+        <p>Hands-on handbooks and cheatsheets for Kubernetes certifications, AWS, and DevOps tooling — used by thousands of engineers.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>All books</h2>
+    <ul>
+      <li><a href="https://cka.purutuladhar.com" target="_blank">Certified Kubernetes Administrator (CKA) Handbook</a> <small>– New!</small></li>
+      <li><a href="https://cks.purutuladhar.com" target="_blank">Certified Kubernetes Security Specialist (CKS) Handbook</a> <small>– 300+ copies sold.</small></li>
+      <li><a href="https://kamal.purutuladhar.com" target="_blank">A Beginner's Guide to Getting Started with Kamal 2</a> <small>– 100+ copies sold.</small></li>
+      <li><a href="https://sap.purutuladhar.com" target="_blank">AWS Certified Solutions Architect Professional — Cheatsheet</a> <small>– 75+ copies sold.</small></li>
+      <li><a href="https://saa.purutuladhar.com" target="_blank">AWS Certified Solution Architect Associate — Cheatsheet</a> <small>– 50+ copies sold.</small></li>
+      <li><a href="https://cursor.purutuladhar.com" target="_blank">A Beginner's Guide to Using Cursor — The AI Code Editor</a> <small>– 15+ copies sold.</small></li>
+      <li><a href="https://awsmadesimple.purutuladhar.com" target="_blank">AWS Made Simple — Your Quick Guide To The Cloud</a> <small>– New!</small></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>
+      Made by <a href="/">Puru Tuladhar</a> ·
+      <a href="mailto:hello@purutuladhar.com">hello@purutuladhar.com</a> ·
+      <a href="https://www.linkedin.com/in/ptuladhar3/" target="_blank">LinkedIn</a> ·
+      <a href="https://x.com/ptuladhar3" target="_blank">X</a>
+    </p>
+  </footer>
+
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
