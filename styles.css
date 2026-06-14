@@ -8,15 +8,21 @@
   --muted: #6b7280;
   --muted-bg: #f9fafb;
   --border: #e5e7eb;
+  --border-light: #f3f4f6;
   --primary: #326CE5;
+  --primary-light: #3b7de9;
+  --accent: #7c3aed;
+  --success: #10b981;
   --font-sans: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --radius-sm: 4px;
   --radius: 8px;
   --radius-lg: 12px;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-inset: 0 -4px 16px -4px rgba(0, 0, 0, 0.08);
   --transition: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-lg: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* General body styles */
@@ -43,6 +49,11 @@ header {
   background-color: var(--background);
   border-bottom: 1px solid var(--border);
   position: relative;
+  transition: box-shadow var(--transition);
+}
+
+header:hover {
+  box-shadow: var(--shadow-sm);
 }
 
 /* Sub-page header with back nav */
@@ -61,13 +72,13 @@ header nav.back-nav a {
   color: var(--muted);
   text-decoration: none;
   font-weight: 500;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 6px 12px;
+  border-radius: var(--radius);
   transition: color var(--transition), background-color var(--transition);
 }
 header nav.back-nav a:hover {
   color: var(--foreground);
-  background-color: var(--muted-bg);
+  background-color: var(--border-light);
   text-decoration: none;
 }
 
@@ -109,6 +120,12 @@ h1 {
   cursor: pointer;
   margin-left: auto;
   color: var(--foreground);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.menu-toggle:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
 }
 
 /* Close icon styles */
@@ -180,9 +197,9 @@ nav ul li {
   color: var(--muted);
   display: flex;
   align-items: center;
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  transition: color var(--transition), background-color var(--transition);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: color var(--transition), background-color var(--transition), transform var(--transition);
 }
 
 #nav-links li .lucide {
@@ -192,7 +209,8 @@ nav ul li {
 #nav-links a:hover {
   color: var(--foreground);
   text-decoration: none;
-  background-color: var(--muted-bg);
+  background-color: var(--border-light);
+  transform: translateY(-2px);
 }
 
 /* Navigation link styles */
@@ -258,6 +276,8 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  margin-top: 40px;
+  transition: border-color var(--transition);
 }
 
 /* Mobile Styles */
@@ -275,6 +295,7 @@ footer {
     transition: max-height 0.3s ease-in-out;
     overflow: hidden;
     max-height: 0;
+    box-shadow: var(--shadow);
   }
 
   nav.active {
@@ -332,12 +353,13 @@ a {
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
-  transition: color var(--transition), opacity var(--transition);
+  transition: color var(--transition), opacity var(--transition), text-decoration-color var(--transition);
 }
 
 a:hover {
   text-decoration: underline;
   opacity: 0.85;
+  color: var(--primary-light);
 }
 
 /* Custom link styles */
@@ -358,59 +380,111 @@ a:hover {
   height: 112px;
   border-radius: var(--radius);
   object-fit: cover;
-  #border: 1px solid var(--border);
-  #box-shadow: var(--shadow);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-lg), box-shadow var(--transition-lg);
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
 }
 
 a.github, a.twitter, a.cks-handbook, a.kubestronaut, a.aws-certified, a.linkedin, a.periodic-table {
-  padding: 1px 6px;
+  padding: 6px 12px;
   color: white;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   font-size: 0.92em;
   font-weight: 600;
   letter-spacing: 0.01em;
+  display: inline-block;
+  transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+  box-shadow: var(--shadow-sm);
 }
 
 a.github, a.twitter {
   background-color: #444;
 }
 
+a.github:hover, a.twitter:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
 .interactive {
-  background: linear-gradient(90deg, #a78bfa);
-  padding: 1px 6px;
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  padding: 6px 12px;
   color: white;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   margin-right: 5px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 .kubestronaut {
-  background-color: #326CE5;
-  padding: 1px 6px;
+  background: linear-gradient(135deg, #326CE5 0%, #3b7de9 100%);
+  padding: 6px 12px;
   color: white;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.kubestronaut:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 .periodic-table {
-  background-color: #FF9900;
-  padding: 1px 6px;
+  background: linear-gradient(135deg, #FF9900 0%, #ffb84d 100%);
+  padding: 6px 12px;
   color: white;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.periodic-table:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 a.cks-handbook {
-  background: linear-gradient(90deg, #a78bfa);
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
 }
 
-a.kubestronaut {
-  background-color: #326CE5;
+a.cks-handbook:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 a.aws-certified {
-  background-color: #FF9900;
+  background: linear-gradient(135deg, #FF9900 0%, #ffb84d 100%);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+a.aws-certified:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 a.linkedin {
-  background-color: #0A66C2;
+  background: linear-gradient(135deg, #0A66C2 0%, #1b7dd9 100%);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+a.linkedin:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
 
 .heading {
@@ -425,8 +499,16 @@ a.linkedin {
 
 .wave-emoji {
   font-size: 28px;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); }
 }
 
 .abandoned {
   text-decoration: line-through;
+  opacity: 0.6;
 }
