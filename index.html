@@ -3,121 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuladhar - DevOps Engineer & Cloud Architect</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Puru Tuladhar – CNCF Kubestronaut, DevOps consultant available for hire in Nepal, and Kubernetes trainer for teams. Author of CKA & CKS Handbook.">
+    <meta name="keywords" content="DevOps engineer Nepal, hire DevOps engineer Nepal, Kubernetes training Nepal, Kubernetes corporate training, CNCF Kubestronaut Nepal, Puru Tuladhar">
+    <title>Puru Tuladhar – DevOps Engineer, Kubernetes Trainer &amp; Consultant | Nepal</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Puru Tuladhar",
+      "url": "https://purutuladhar.com",
+      "jobTitle": "DevOps Engineer & Kubernetes Trainer",
+      "description": "CNCF Kubestronaut, AWS Certified Solutions Architect, author of CKA & CKS Handbook. Available for hire and corporate Kubernetes training in Nepal.",
+      "sameAs": [
+        "https://www.linkedin.com/in/ptuladhar3/",
+        "https://x.com/ptuladhar3"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hire DevOps Engineer",
+              "url": "https://purutuladhar.com/devops"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kubernetes Corporate Training",
+              "url": "https://purutuladhar.com/training"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> Font Awesome for icons -->
+
+    <!-- favicon -->
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Tuladhar</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header>
+        <!-- <h1><a style='color: #333' href="/">Puru Tuladhar – Personal Website</a></h1> -->
+        
+        <div class="menu-toggle" id="mobile-menu">
+            &#9776; <!-- Hamburger icon -->
         </div>
-    </nav>
+        
+        <center>
+            <nav>
+                <ul id="nav-links">
+                    <li><img src="/icons/home.png" width="45px"/>&nbsp;<a href="/index.html">Home</a></li>
+                    <li><img src="/icons/blogs.png" width="40px"/>&nbsp;<a href="/blogs">Blogs</a></li>
+                    <li><img src="/icons/books.png" width="40px"/>&nbsp;<a href="/books">Books</a></li>
+                    <li><img src="/icons/open-source.png" width="40px"/>&nbsp;<a href="/open-source">Open-source</a></li>
+                    <li><img src="/icons/devops-engineer.png" width="40px"/>&nbsp;<a href="/devops">Hire</a></li>
+                    <li><img src="/icons/training.png" width="40px"/>&nbsp;<a href="/training">Training</a></li>
+                    <!-- <li><a href="resume.html">My Resume</a></li> -->
+                </ul>
+            </nav>
+        </center>
+    </header>
+    <main>
+        <img style="width: 140px; height: 140px; margin-bottom: 10px" src="avatar.png" alt="Puru Tuladhar" class="avatar"> <!-- Profile image -->
+        <h2>Puru Tuladhar</h2>
+        <p><span class="wave-emoji">👋</span></span>&nbsp;<b class="hi">Hi there!</b> I am an experienced <b class="devops">DevOps Engineer</b>, author of <a class="aws-certified" href="https://claudecode.purutuladhar.com" target="_blank">Claude Code Handbook</a>, <a class="kubestronaut" href="https://cka.purutuladhar.com" target="_blank">CKA Handbook</a>, <a class="cks-handbook" href="https://cks.purutuladhar.com" target="_blank">CKS&nbsp;Handbook</a>, <a class="aws-certified" href="https://www.credly.com/users/puru-tuladhar" target="_blank">AWS Certified Solutions Architect</a>, <a class="kubestronaut" href="https://www.credly.com/badges/bd57b314-30a5-48e0-836a-19f9cf6ddf61" target="_blank">CNCF Kubestronaut</a> and family man.</p>
+        
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm Tuladhar</h1>
-                <p class="tagline">DevOps Engineer | Cloud Architect | Open Source Contributor</p>
-                <p class="description">Building scalable infrastructure, automating workflows, and sharing cloud-native knowledge with the community.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate DevOps engineer and cloud architect with a focus on AWS, Kubernetes, and cloud-native technologies. I love solving complex infrastructure challenges and sharing knowledge through open-source projects and educational content.</p>
-                    <p>My expertise includes:</p>
-                    <ul class="skills-list">
-                        <li>AWS Cloud Services & Architecture</li>
-                        <li>Kubernetes & Container Orchestration</li>
-                        <li>Infrastructure as Code (IaC)</li>
-                        <li>CI/CD Pipelines & GitHub Actions</li>
-                        <li>Cloud Security & Compliance</li>
-                        <li>Bash & Python Scripting</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>CKA Handbook</h3>
-                    <p>Comprehensive guide for Kubernetes certification exam preparation with hands-on labs and best practices.</p>
-                    <a href="https://github.com/tuladhar/cka-handbook" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>AWS Certified AI Practitioner Quiz</h3>
-                    <p>Free practice quiz for AWS Certified AI Practitioner (AIF-C01) certification exam.</p>
-                    <a href="https://github.com/tuladhar/aws-certified-ai-practitioner-practice-quiz" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Cloud Native Quiz</h3>
-                    <p>Test your cloud-native knowledge and prepare for cloud-native certifications.</p>
-                    <a href="https://github.com/tuladhar/cloud-native-quiz" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>AWS Backup & Recovery Scripts</h3>
-                    <p>Automated scripts for AWS backup and disaster recovery operations.</p>
-                    <a href="https://github.com/tuladhar/aws-backup-and-recovery-scripts" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Check Branch Protection</h3>
-                    <p>CLI tool to verify GitHub branch protection settings and enforce security policies.</p>
-                    <a href="https://github.com/tuladhar/check-branch-protection" class="project-link">View on GitHub →</a>
-                </div>
-                <div class="project-card">
-                    <h3>AWSCLI + Kubectl Docker Image</h3>
-                    <p>Lightweight Docker image with AWS CLI and Kubernetes client for cloud operations.</p>
-                    <a href="https://github.com/tuladhar/awscli-kubectl" class="project-link">View on GitHub →</a>
-                </div>
-            </div>
-            <div class="view-more">
-                <a href="https://github.com/tuladhar?tab=repositories" class="btn btn-primary">View All Projects on GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p class="contact-intro">I'm always interested in connecting with like-minded professionals and contributing to exciting projects.</p>
-            <div class="contact-links">
-                <a href="https://github.com/tuladhar" class="contact-btn">GitHub</a>
-                <a href="https://twitter.com/tuladhar" class="contact-btn">Twitter</a>
-                <a href="mailto:hi@tuladhar.com" class="contact-btn">Email</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Tuladhar. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        <p>I write regularly on <a class="linkedin" href="https://www.linkedin.com/in/ptuladhar3/recent-activity/articles/" target="_blank">LinkedIn</a> and <a target="'_blank" href="https://x.com/ptuladhar3" class="custom-link twitter">X</a>. I welcome emails at <a href="mailto:hello@purutuladhar.com">hello@purutuladhar.com</a>.</p>
+    </main>
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
+    <!-- Lucide icon library for web -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>

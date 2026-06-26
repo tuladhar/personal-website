@@ -1,47 +1,12 @@
-# Personal Website
+# Puru Tuladhar - Personal Website
 
-A modern, responsive personal website showcasing my work as a DevOps engineer and cloud architect.
+Welcome to repository that takes care of my personal website! 
 
-## Features
+This site is designed to showcase my work and interests, and it is powered by Cloudflare Pages.
 
-- 🎨 Modern, clean design with gradient backgrounds
-- 📱 Fully responsive for all devices
-- ⚡ Fast loading with vanilla JavaScript
-- 🎯 Smooth scrolling navigation
-- 💼 Sections for home, about, projects, and contact
-- 🔗 Links to GitHub projects and social profiles
+This website utilizes GitHub integration for automatic deployment. Every time I commit changes to the main branch, Cloudflare Pages automatically builds and deploys the changes. This seamless integration allows for efficient updates and management of my personal website.
 
-## Structure
+- Automatic Deployments: Changes are reflected on the live site immediately after pushing to the main branch.
+- Fast Performance: Hosted on Cloudflare’s edge network, ensuring quick loading times for visitors.
 
-- `index.html` - Main HTML file with page structure
-- `styles.css` - All styling and responsive design
-- `script.js` - JavaScript for interactivity
-- `README.md` - Documentation
-
-## Usage
-
-1. Clone the repository
-2. Open `index.html` in your browser
-3. Or deploy to GitHub Pages:
-   - Go to repository settings
-   - Enable GitHub Pages
-   - Select `main` branch as source
-
-## Customization
-
-Edit the following sections in `index.html`:
-
-- **Hero Section**: Update name, tagline, and description
-- **About Section**: Modify personal information and skills
-- **Projects Section**: Add or remove project cards
-- **Contact Section**: Update social media links and email
-
-## Color Scheme
-
-- Primary: `#2563eb` (Blue)
-- Secondary: `#667eea` to `#764ba2` (Purple Gradient)
-- Background: Light and dark variations
-
-## License
-
-Open source and available for personal use.
+For more details on how to set up a similar deployment process, you can refer to the [Cloudflare Git integration guide](https://developers.cloudflare.com/pages/get-started/git-integration/)
