@@ -1,0 +1,2163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Live DevOps, Kubernetes, AWS, and cloud training by Puru Tuladhar, a Nepal-based Kubestronaut offering virtual cohorts and corporate training."
+    />
+    <meta name="author" content="Puru Tuladhar" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#071225" />
+    <link rel="canonical" href="https://purutuladhar.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Puru Tuladhar" />
+    <meta
+      property="og:title"
+      content="Puru Tuladhar | DevOps &amp; Kubernetes Training"
+    />
+    <meta
+      property="og:description"
+      content="Live DevOps, Kubernetes, AWS, and cloud training for individuals and corporate teams."
+    />
+    <meta property="og:url" content="https://purutuladhar.com/" />
+    <meta
+      property="og:image"
+      content="https://purutuladhar.com/assets/puru-tuladhar.png"
+    />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta
+      property="og:image:alt"
+      content="Portrait of DevOps and Kubernetes trainer Puru Tuladhar"
+    />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@ptuladhar3" />
+    <meta
+      name="twitter:title"
+      content="Puru Tuladhar | DevOps &amp; Kubernetes Training"
+    />
+    <meta
+      name="twitter:description"
+      content="Live DevOps, Kubernetes, AWS, and cloud training for individuals and corporate teams."
+    />
+    <meta
+      name="twitter:image"
+      content="https://purutuladhar.com/assets/puru-tuladhar.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Portrait of DevOps and Kubernetes trainer Puru Tuladhar"
+    />
+
+    <title>Puru Tuladhar | DevOps &amp; Kubernetes Training</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://purutuladhar.com/#website",
+            "url": "https://purutuladhar.com/",
+            "name": "Puru Tuladhar",
+            "description": "DevOps, Kubernetes, AWS, and cloud training by Puru Tuladhar",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://purutuladhar.com/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://purutuladhar.com/#person",
+            "name": "Puru Tuladhar",
+            "url": "https://purutuladhar.com/",
+            "image": "https://purutuladhar.com/assets/puru-tuladhar.png",
+            "jobTitle": "Cloud Infrastructure Engineer",
+            "description": "DevOps and Kubernetes trainer, cloud infrastructure engineer, and Kubestronaut from Nepal.",
+            "sameAs": [
+              "https://www.linkedin.com/in/ptuladhar3"
+            ],
+            "knowsAbout": [
+              "DevOps",
+              "Kubernetes",
+              "Amazon Web Services",
+              "Cloud infrastructure",
+              "DevSecOps",
+              "Red Hat OpenShift"
+            ]
+          }
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: #050b14;
+        color: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        min-height: 100svh;
+        margin: 0;
+        background:
+          radial-gradient(
+            ellipse at 8% 12%,
+            rgb(0 208 106 / 11%),
+            transparent 30rem
+          ),
+          radial-gradient(
+            ellipse at 92% 5%,
+            rgb(50 108 229 / 20%),
+            transparent 38rem
+          ),
+          radial-gradient(
+            ellipse at 76% 78%,
+            rgb(14 165 233 / 8%),
+            transparent 34rem
+          ),
+          linear-gradient(160deg, #07111f 0%, #081426 48%, #050b14 100%);
+      }
+
+      main {
+        display: grid;
+        min-height: inherit;
+        place-items: center;
+        padding: clamp(3rem, 7vw, 6rem) 2rem;
+        text-align: center;
+      }
+
+      .content {
+        display: grid;
+        justify-items: center;
+        max-width: 54rem;
+        width: 100%;
+      }
+
+      .technology-marks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+
+      .technology-marks img {
+        display: block;
+        height: auto;
+      }
+
+      .devops-mark {
+        width: clamp(10rem, 30vw, 18rem);
+        animation: devops-flow 4s ease-in-out infinite;
+        filter: drop-shadow(0 0.75rem 2rem rgb(0 208 106 / 18%));
+      }
+
+      .kubernetes-mark {
+        z-index: 1;
+        width: clamp(7rem, 14vw, 10rem);
+        margin-left: clamp(-1.25rem, -2vw, -0.75rem);
+        animation: spin 24s linear infinite;
+        filter: drop-shadow(0 0.75rem 2rem rgb(50 108 229 / 35%));
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+
+      @keyframes devops-flow {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+
+        50% {
+          transform: translateY(-0.4rem) scale(1.025);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .devops-mark,
+        .kubernetes-mark {
+          animation: none;
+        }
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 750;
+        letter-spacing: -0.035em;
+        line-height: 1.16;
+        text-wrap: balance;
+      }
+
+      h1 span {
+        color: #60a5fa;
+      }
+
+      .instructor-name {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.22em;
+        white-space: nowrap;
+      }
+
+      .instructor-avatar {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        border: 0.04em solid #60a5fa;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 0.2em 0.55em rgb(50 108 229 / 32%);
+      }
+
+      .credentials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.65rem;
+        margin: 1.5rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .credentials li {
+        padding: 0.55rem 0.8rem;
+        border: 1px solid rgb(147 197 253 / 20%);
+        border-radius: 999px;
+        background: rgb(15 23 42 / 65%);
+        color: #dbeafe;
+        font-size: clamp(0.78rem, 1.6vw, 0.92rem);
+        font-weight: 650;
+        line-height: 1.35;
+        white-space: nowrap;
+      }
+
+      .credentials span {
+        margin-right: 0.35rem;
+      }
+
+      .credentials a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .credentials a:hover {
+        color: #fff;
+      }
+
+      .credentials a:focus-visible {
+        border-radius: 999px;
+        outline: 3px solid #bfdbfe;
+        outline-offset: 4px;
+      }
+
+      .training-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 3.25rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.25rem;
+        border: 1px solid transparent;
+        border-radius: 0.75rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.2;
+        text-decoration: none;
+        transition:
+          background-color 160ms ease,
+          border-color 160ms ease,
+          transform 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button:focus-visible {
+        outline: 3px solid #bfdbfe;
+        outline-offset: 3px;
+      }
+
+      .button-primary {
+        border-color: rgb(134 239 172 / 58%);
+        background: linear-gradient(145deg, #22c55e, #15803d);
+        box-shadow:
+          inset 0 1px rgb(255 255 255 / 14%),
+          0 0.75rem 2rem rgb(22 163 74 / 22%),
+          0 0 1.5rem rgb(34 197 94 / 10%);
+      }
+
+      .button-primary:hover {
+        border-color: #bbf7d0;
+        background: linear-gradient(145deg, #2fd16b, #16a34a);
+      }
+
+      .live-indicator {
+        width: 0.65rem;
+        height: 0.65rem;
+        margin-right: 0.55rem;
+        border: 1px solid rgb(255 255 255 / 72%);
+        border-radius: 50%;
+        background: #ef4444;
+        box-shadow: 0 0 0 0 rgb(239 68 68 / 55%);
+        animation: live-pulse 1.6s ease-out infinite;
+      }
+
+      @keyframes live-pulse {
+        70% {
+          box-shadow: 0 0 0 0.45rem rgb(239 68 68 / 0%);
+        }
+
+        100% {
+          box-shadow: 0 0 0 0 rgb(239 68 68 / 0%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .live-indicator {
+          animation: none;
+        }
+      }
+
+      .button-secondary {
+        border-color: #60a5fa;
+        background: rgb(15 23 42 / 70%);
+      }
+
+      .button-secondary:hover {
+        background: rgb(30 64 175 / 45%);
+      }
+
+      .news {
+        width: 100%;
+        margin-top: 4rem;
+        padding-top: 3rem;
+        border-top: 1px solid rgb(147 197 253 / 25%);
+      }
+
+      .section-heading {
+        max-width: 42rem;
+        margin: 0 auto 2rem;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        letter-spacing: -0.025em;
+      }
+
+      .section-heading p {
+        margin: 0.7rem 0 0;
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+
+      .news-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        text-align: left;
+      }
+
+      .news-card {
+        display: flex;
+        min-height: 15rem;
+        flex-direction: column;
+        padding: 1.5rem;
+        border: 1px solid rgb(147 197 253 / 20%);
+        border-radius: 1rem;
+        background:
+          radial-gradient(
+            circle at 100% 0%,
+            rgb(50 108 229 / 20%),
+            transparent 55%
+          ),
+          rgb(15 23 42 / 70%);
+        box-shadow: 0 1rem 3rem rgb(0 0 0 / 15%);
+      }
+
+      .news-label {
+        align-self: flex-start;
+        margin: 0 0 1rem;
+        padding: 0.35rem 0.65rem;
+        border: 1px solid rgb(96 165 250 / 30%);
+        border-radius: 999px;
+        background: rgb(30 64 175 / 22%);
+        color: #93c5fd;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .news-card h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        letter-spacing: -0.02em;
+        line-height: 1.35;
+      }
+
+      .news-card > p:not(.news-label),
+      .event-content > p:not(.news-label),
+      .speaker-invite-copy > p:not(.news-label) {
+        margin: 0.75rem 0 0;
+        color: #cbd5e1;
+        line-height: 1.65;
+      }
+
+      .news-card .proof-link {
+        margin-top: auto;
+        padding-top: 1.25rem;
+      }
+
+      .featured-event {
+        display: grid;
+        grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 1.2fr);
+        gap: 1.5rem;
+      }
+
+      .event-poster {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid rgb(196 255 0 / 35%);
+        border-radius: 0.75rem;
+        box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 28%);
+      }
+
+      .event-content {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+      }
+
+      .event-details {
+        display: grid;
+        gap: 0.65rem;
+        margin: 1.1rem 0 0;
+        padding: 0;
+        color: #dbeafe;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        list-style: none;
+      }
+
+      .event-details li {
+        display: grid;
+        grid-template-columns: 1.4rem 1fr;
+        gap: 0.45rem;
+      }
+
+      .event-details span {
+        text-align: center;
+      }
+
+      .speaker-invite {
+        position: relative;
+        display: grid;
+        min-height: 0;
+        overflow: hidden;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 2rem;
+        border-color: rgb(192 132 252 / 48%);
+        background:
+          radial-gradient(
+            circle at 100% 0%,
+            rgb(147 51 234 / 30%),
+            transparent 52%
+          ),
+          linear-gradient(145deg, rgb(76 29 149 / 42%), rgb(15 23 42 / 92%));
+        box-shadow:
+          0 1rem 3rem rgb(0 0 0 / 18%),
+          0 0 2.5rem rgb(168 85 247 / 10%);
+      }
+
+      .speaker-invite::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 0.25rem;
+        background: linear-gradient(90deg, #9333ea, #d8b4fe);
+        content: "";
+      }
+
+      .speaker-invite .news-label {
+        border-color: rgb(192 132 252 / 38%);
+        background: rgb(88 28 135 / 48%);
+        color: #e9d5ff;
+      }
+
+      .speaker-invite-copy {
+        max-width: 42rem;
+      }
+
+      .speaking-formats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .speaking-formats li {
+        padding: 0.45rem 0.65rem;
+        border: 1px solid rgb(216 180 254 / 24%);
+        border-radius: 999px;
+        background: rgb(88 28 135 / 28%);
+        color: #e9d5ff;
+        font-size: 0.78rem;
+        font-weight: 650;
+        line-height: 1.35;
+        white-space: nowrap;
+      }
+
+      .speaker-invite .proof-link {
+        margin: 0;
+        padding: 0;
+        color: #d8b4fe;
+        white-space: nowrap;
+      }
+
+      .speaker-invite .proof-link:hover {
+        color: #f3e8ff;
+      }
+
+      .public-gallery {
+        margin-top: 3rem;
+        text-align: left;
+      }
+
+      .public-gallery-heading {
+        margin-bottom: 1.25rem;
+      }
+
+      .public-gallery-heading h3 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .public-gallery-heading p {
+        max-width: 46rem;
+        margin: 0.4rem 0 0;
+        color: #94a3b8;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .public-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 1rem;
+      }
+
+      .event-gallery-card {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        border: 1px solid rgb(147 197 253 / 24%);
+        border-radius: 1rem;
+        background: rgb(15 23 42 / 72%);
+        color: #f8fafc;
+        cursor: pointer;
+        font: inherit;
+        text-align: left;
+        transition:
+          border-color 160ms ease,
+          box-shadow 160ms ease,
+          transform 160ms ease;
+      }
+
+      .event-gallery-card:hover {
+        border-color: #60a5fa;
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 24%);
+      }
+
+      .event-gallery-card:focus-visible {
+        outline: 3px solid #bfdbfe;
+        outline-offset: 3px;
+      }
+
+      .event-gallery-card img {
+        display: block;
+        width: 100%;
+        height: clamp(12rem, 25vw, 15rem);
+        border-bottom: 1px solid rgb(147 197 253 / 18%);
+        object-fit: cover;
+      }
+
+      .event-gallery-card-copy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .event-gallery-card-copy strong {
+        display: block;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+
+      .event-gallery-card-copy span {
+        flex: 0 0 auto;
+        color: #93c5fd;
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .event-gallery-dialog {
+        width: min(72rem, calc(100% - 2rem));
+        max-width: none;
+        max-height: calc(100dvh - 2rem);
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid rgb(147 197 253 / 28%);
+        border-radius: 1.1rem;
+        background: #0b1220;
+        color: #f8fafc;
+        box-shadow: 0 2rem 6rem rgb(0 0 0 / 55%);
+      }
+
+      .event-gallery-dialog::backdrop {
+        background: rgb(2 6 23 / 86%);
+        backdrop-filter: blur(0.35rem);
+      }
+
+      .event-gallery-dialog[open] {
+        animation: event-dialog-in 180ms ease-out;
+      }
+
+      @keyframes event-dialog-in {
+        from {
+          opacity: 0;
+          transform: translateY(0.75rem) scale(0.985);
+        }
+      }
+
+      .event-gallery-modal {
+        display: grid;
+        max-height: calc(100dvh - 2rem);
+        grid-template-rows: auto minmax(0, 1fr) auto;
+      }
+
+      .event-gallery-modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.15rem;
+        border-bottom: 1px solid rgb(147 197 253 / 18%);
+      }
+
+      .event-gallery-modal-header h2 {
+        margin: 0.2rem 0 0;
+        font-size: clamp(1.05rem, 2vw, 1.35rem);
+        line-height: 1.35;
+      }
+
+      .event-gallery-counter {
+        margin: 0;
+        color: #93c5fd;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .event-gallery-close,
+      .event-gallery-navigation {
+        display: grid;
+        place-items: center;
+        border: 1px solid rgb(147 197 253 / 28%);
+        border-radius: 999px;
+        background: rgb(15 23 42 / 88%);
+        color: #f8fafc;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      .event-gallery-close {
+        width: 2.5rem;
+        height: 2.5rem;
+        flex: 0 0 auto;
+        font-size: 1.35rem;
+      }
+
+      .event-gallery-stage {
+        position: relative;
+        display: grid;
+        min-height: 18rem;
+        place-items: center;
+        overflow: hidden;
+        background: #020617;
+      }
+
+      .event-gallery-stage img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: 68vh;
+        object-fit: contain;
+      }
+
+      .event-gallery-navigation {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.3rem;
+        transform: translateY(-50%);
+      }
+
+      .event-gallery-navigation:hover,
+      .event-gallery-close:hover {
+        border-color: #60a5fa;
+        background: #172554;
+      }
+
+      .event-gallery-navigation:focus-visible,
+      .event-gallery-close:focus-visible {
+        outline: 3px solid #bfdbfe;
+        outline-offset: 2px;
+      }
+
+      .event-gallery-navigation[disabled] {
+        display: none;
+      }
+
+      .event-gallery-previous {
+        left: 1rem;
+      }
+
+      .event-gallery-next {
+        right: 1rem;
+      }
+
+      .event-gallery-caption {
+        min-height: 3.4rem;
+        margin: 0;
+        padding: 0.9rem 1.15rem;
+        color: #cbd5e1;
+        font-size: 0.88rem;
+        line-height: 1.55;
+      }
+
+      .clients {
+        width: 100%;
+        margin-top: 4rem;
+        padding-top: 3rem;
+        border-top: 1px solid rgb(147 197 253 / 25%);
+      }
+
+      .clients h2 {
+        margin: 0 0 2rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        letter-spacing: -0.025em;
+      }
+
+      .client-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        text-align: left;
+      }
+
+      .client-card {
+        position: relative;
+        overflow: hidden;
+        padding: 1.25rem;
+        border: 1px solid rgb(147 197 253 / 20%);
+        border-radius: 1rem;
+        background: rgb(15 23 42 / 65%);
+        box-shadow: 0 1rem 3rem rgb(0 0 0 / 15%);
+      }
+
+      .fonepay-card {
+        border-color: rgb(228 29 37 / 50%);
+        background:
+          radial-gradient(
+            circle at 100% 0%,
+            rgb(228 29 37 / 28%),
+            transparent 52%
+          ),
+          linear-gradient(145deg, rgb(61 12 20 / 78%), rgb(15 23 42 / 92%));
+        box-shadow:
+          0 1rem 3rem rgb(0 0 0 / 20%),
+          0 0 2.5rem rgb(228 29 37 / 10%);
+      }
+
+      .fonepay-card::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 0.25rem;
+        background: #e41d25;
+        content: "";
+      }
+
+      .fonepay-card .client-logo {
+        box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 22%);
+      }
+
+      .fonepay-card h3 {
+        color: #ff8b90;
+      }
+
+      .fonepay-card .proof-link {
+        color: #ff9ca1;
+      }
+
+      .fonepay-card .proof-link:hover {
+        color: #ffe4e6;
+      }
+
+      .kskl-card {
+        border-color: rgb(53 113 159 / 60%);
+        background:
+          radial-gradient(
+            circle at 100% 0%,
+            rgb(53 113 159 / 32%),
+            transparent 52%
+          ),
+          radial-gradient(
+            circle at 0% 100%,
+            rgb(239 120 39 / 14%),
+            transparent 45%
+          ),
+          linear-gradient(145deg, rgb(10 40 67 / 82%), rgb(15 23 42 / 92%));
+        box-shadow:
+          0 1rem 3rem rgb(0 0 0 / 20%),
+          0 0 2.5rem rgb(53 113 159 / 12%);
+      }
+
+      .kskl-card::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 0.25rem;
+        background: linear-gradient(90deg, #35719f 72%, #ef7827 72%);
+        content: "";
+      }
+
+      .kskl-card .client-logo {
+        box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 22%);
+      }
+
+      .kskl-card h3 {
+        color: #8ec9f3;
+      }
+
+      .kskl-card .proof-link {
+        color: #ffad75;
+      }
+
+      .kskl-card .proof-link:hover {
+        color: #ffdcc4;
+      }
+
+      .genese-card {
+        border-color: rgb(24 111 124 / 65%);
+        background:
+          radial-gradient(
+            circle at 100% 0%,
+            rgb(24 111 124 / 34%),
+            transparent 52%
+          ),
+          linear-gradient(145deg, rgb(8 58 67 / 82%), rgb(15 23 42 / 92%));
+        box-shadow:
+          0 1rem 3rem rgb(0 0 0 / 20%),
+          0 0 2.5rem rgb(24 111 124 / 12%);
+      }
+
+      .genese-card::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 0.25rem;
+        background: linear-gradient(90deg, #186f7c, #71c7c9);
+        content: "";
+      }
+
+      .genese-card .client-logo {
+        box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 22%);
+      }
+
+      .genese-card h3 {
+        color: #8ddade;
+      }
+
+      .kings-card {
+        border-color: rgb(245 158 11 / 52%);
+        background:
+          radial-gradient(
+            circle at 100% 0%,
+            rgb(245 158 11 / 24%),
+            transparent 52%
+          ),
+          linear-gradient(145deg, rgb(69 42 12 / 72%), rgb(15 23 42 / 92%));
+        box-shadow:
+          0 1rem 3rem rgb(0 0 0 / 20%),
+          0 0 2.5rem rgb(245 158 11 / 10%);
+      }
+
+      .kings-card::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 0.25rem;
+        background: linear-gradient(90deg, #f59e0b, #fde68a);
+        content: "";
+      }
+
+      .kings-card h3 {
+        color: #fcd34d;
+      }
+
+      .client-logo {
+        display: block;
+        width: 100%;
+        height: 7rem;
+        margin-bottom: 1.25rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        background: #fff;
+        object-fit: contain;
+      }
+
+      .client-wordmark {
+        display: grid;
+        width: 100%;
+        height: 7rem;
+        margin-bottom: 1.25rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        background: #fff;
+        color: #1e293b;
+        font-size: clamp(1.2rem, 3vw, 1.75rem);
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        place-items: center;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .client-card h3 {
+        margin: 0 0 0.65rem;
+        font-size: 1.2rem;
+      }
+
+      .client-card p {
+        margin: 0;
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        line-height: 1.65;
+      }
+
+      .proof-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #93c5fd;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-underline-offset: 0.2em;
+      }
+
+      .proof-link:hover {
+        color: #dbeafe;
+      }
+
+      .proof-link:focus-visible {
+        border-radius: 0.2rem;
+        outline: 3px solid #bfdbfe;
+        outline-offset: 3px;
+      }
+
+      .training-gallery {
+        margin-top: 3rem;
+      }
+
+      .gallery-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .gallery-heading h3 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .gallery-controls {
+        display: flex;
+        gap: 0.6rem;
+      }
+
+      .gallery-button {
+        display: grid;
+        width: 2.75rem;
+        height: 2.75rem;
+        padding: 0;
+        place-items: center;
+        border: 1px solid rgb(147 197 253 / 35%);
+        border-radius: 50%;
+        background: rgb(15 23 42 / 70%);
+        color: white;
+        cursor: pointer;
+        font: inherit;
+        font-size: 1.25rem;
+      }
+
+      .gallery-button:hover {
+        border-color: #60a5fa;
+        background: #1e3a8a;
+      }
+
+      .gallery-button:focus-visible {
+        outline: 3px solid #bfdbfe;
+        outline-offset: 3px;
+      }
+
+      .gallery-track {
+        display: grid;
+        grid-auto-columns: calc((100% - 3.75rem) / 4);
+        grid-auto-flow: column;
+        gap: 1.25rem;
+        overflow-x: hidden;
+        padding: 0.25rem 0 1rem;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+      }
+
+      .gallery-track img {
+        display: block;
+        width: 100%;
+        height: 12rem;
+        padding: 0.4rem;
+        border: 1px solid rgb(147 197 253 / 18%);
+        border-radius: 0.75rem;
+        background: rgb(15 23 42 / 65%);
+        object-fit: contain;
+        scroll-snap-align: start;
+      }
+
+      .work-history {
+        width: 100%;
+        margin-top: 4rem;
+        padding-top: 3rem;
+        border-top: 1px solid rgb(147 197 253 / 25%);
+      }
+
+      .work-history h2 {
+        margin: 0;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        letter-spacing: -0.025em;
+      }
+
+      .work-history > p {
+        max-width: 42rem;
+        margin: 0.7rem auto 2rem;
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+        text-align: left;
+      }
+
+      .work-card {
+        --work-theme: #0ea5e9;
+        --work-theme-light: #7dd3fc;
+        --work-theme-rgb: 14 165 233;
+        --work-deep-rgb: 12 74 110;
+        --work-heading: #bae6fd;
+
+        position: relative;
+        min-height: 12rem;
+        overflow: hidden;
+        padding: 1rem;
+        border: 1px solid rgb(var(--work-theme-rgb) / 48%);
+        border-radius: 1rem;
+        background:
+          radial-gradient(
+            circle at 100% 0%,
+            rgb(var(--work-theme-rgb) / 28%),
+            transparent 52%
+          ),
+          linear-gradient(
+            145deg,
+            rgb(var(--work-deep-rgb) / 64%),
+            rgb(15 23 42 / 92%)
+          );
+        box-shadow:
+          0 1rem 3rem rgb(0 0 0 / 18%),
+          0 0 2.5rem rgb(var(--work-theme-rgb) / 10%);
+      }
+
+      .work-card::before {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 0.25rem;
+        background: linear-gradient(
+          90deg,
+          var(--work-theme),
+          var(--work-theme-light)
+        );
+        content: "";
+      }
+
+      .company-wordmark {
+        display: grid;
+        height: 5.5rem;
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        border-radius: 0.75rem;
+        background: #fff;
+        color: var(--work-theme);
+        font-size: clamp(1rem, 2vw, 1.35rem);
+        font-weight: 850;
+        letter-spacing: -0.04em;
+        line-height: 1.15;
+        box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 20%);
+        place-items: center;
+        text-align: center;
+      }
+
+      .company-logo {
+        display: block;
+        width: 100%;
+        height: 5.5rem;
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        border-radius: 0.75rem;
+        background: #fff;
+        box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 20%);
+        object-fit: contain;
+      }
+
+      .company-logo-frame {
+        display: grid;
+        width: 100%;
+        height: 5.5rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        background: #fff;
+        box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 20%);
+        place-items: center;
+      }
+
+      .company-logo-frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .appstractor-logo {
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .worldwide-logo {
+        transform: scale(1.45);
+      }
+
+      .leapfrog-card {
+        --work-theme: #16a34a;
+        --work-theme-light: #86efac;
+        --work-theme-rgb: 34 197 94;
+        --work-deep-rgb: 6 78 59;
+        --work-heading: #bbf7d0;
+      }
+
+      .covergo-card {
+        --work-theme: #07589f;
+        --work-theme-light: #60a5fa;
+        --work-theme-rgb: 7 88 159;
+        --work-deep-rgb: 7 48 89;
+        --work-heading: #bfdbfe;
+      }
+
+      .giant-swarm-card {
+        --work-theme: #ff6b22;
+        --work-theme-light: #fdba74;
+        --work-theme-rgb: 255 107 34;
+        --work-deep-rgb: 67 36 22;
+        --work-heading: #fed7aa;
+      }
+
+      .cloudhero-card {
+        --work-theme: #06b6d4;
+        --work-theme-light: #67e8f9;
+        --work-theme-rgb: 6 182 212;
+        --work-deep-rgb: 21 94 117;
+        --work-heading: #cffafe;
+      }
+
+      .appstractor-card {
+        --work-theme: #6366f1;
+        --work-theme-light: #a5b4fc;
+        --work-theme-rgb: 99 102 241;
+        --work-deep-rgb: 49 46 129;
+        --work-heading: #c7d2fe;
+      }
+
+      .worldwide-card {
+        --work-theme: #d97706;
+        --work-theme-light: #fcd34d;
+        --work-theme-rgb: 245 158 11;
+        --work-deep-rgb: 120 53 15;
+        --work-heading: #fde68a;
+      }
+
+      .work-card h3 {
+        margin: 0 0 0.65rem;
+        color: var(--work-heading);
+        font-size: 1.05rem;
+        line-height: 1.3;
+      }
+
+      .work-card .work-role {
+        color: #f8fafc;
+        font-size: 0.88rem;
+        font-weight: 750;
+      }
+
+      .work-card .work-dates {
+        margin-top: 0.3rem;
+        color: #94a3b8;
+        font-size: 0.86rem;
+      }
+
+      .site-footer {
+        display: flex;
+        width: min(54rem, calc(100% - 4rem));
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 0 auto;
+        padding: 1.5rem 0 2.5rem;
+        border-top: 1px solid rgb(147 197 253 / 25%);
+        color: #94a3b8;
+        font-size: 0.9rem;
+      }
+
+      .site-footer p {
+        margin: 0;
+      }
+
+      .site-footer a {
+        color: #93c5fd;
+        font-weight: 700;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.22em;
+      }
+
+      .site-footer a:hover {
+        color: #dbeafe;
+      }
+
+      .site-footer a:focus-visible {
+        border-radius: 0.2rem;
+        outline: 3px solid #bfdbfe;
+        outline-offset: 3px;
+      }
+
+      .work-card p {
+        margin: 0;
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        line-height: 1.65;
+      }
+
+      @media (max-width: 42rem) {
+        .news-grid,
+        .client-grid,
+        .work-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .featured-event {
+          grid-template-columns: 1fr;
+        }
+
+        .speaker-invite {
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
+        }
+
+        .speaker-invite .proof-link {
+          white-space: normal;
+        }
+
+        .public-gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-track {
+          grid-auto-columns: 100%;
+        }
+
+        .event-gallery-dialog {
+          width: calc(100% - 1rem);
+          max-height: calc(100dvh - 1rem);
+        }
+
+        .event-gallery-modal {
+          max-height: calc(100dvh - 1rem);
+        }
+
+        .event-gallery-stage {
+          min-height: 13rem;
+        }
+
+        .event-gallery-navigation {
+          width: 2.65rem;
+          height: 2.65rem;
+        }
+
+        .event-gallery-previous {
+          left: 0.5rem;
+        }
+
+        .event-gallery-next {
+          right: 0.5rem;
+        }
+
+        .site-footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (min-width: 42.01rem) and (max-width: 52rem) {
+        .work-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <div class="technology-marks">
+          <img
+            class="devops-mark"
+            src="assets/devops-logo.png"
+            alt="DevOps"
+            width="1982"
+            height="1020"
+          />
+          <img
+            class="kubernetes-mark"
+            src="assets/kubernetes-logo.png"
+            alt="Kubernetes"
+            width="960"
+            height="933"
+          />
+        </div>
+        <h1>
+          DevOps &amp; Kubernetes Training by
+          <span class="instructor-name">
+            <img
+              class="instructor-avatar"
+              src="assets/puru-tuladhar.png"
+              alt=""
+              width="400"
+              height="400"
+            />
+            Puru Tuladhar
+          </span>
+        </h1>
+        <ul class="credentials" aria-label="Professional credentials">
+          <li><span aria-hidden="true">🌟</span>10+ Years in DevOps</li>
+          <li><span aria-hidden="true">⚓</span>5× Kubernetes Certified</li>
+          <li><span aria-hidden="true">☁️</span>3× AWS Certified</li>
+          <li>
+            <a
+              href="https://www.credly.com/badges/bd57b314-30a5-48e0-836a-19f9cf6ddf61"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Puru Tuladhar’s Kubestronaut credential on Credly"
+            >
+              <span aria-hidden="true">🥇</span>Kubestronaut from Nepal ↗
+            </a>
+          </li>
+        </ul>
+        <div class="training-options" aria-label="Training options">
+          <a
+            class="button button-primary"
+            href="virtual-cohort.html"
+          >
+            <span class="live-indicator" aria-hidden="true"></span>
+            Join Live Virtual Cohort
+          </a>
+          <a
+            class="button button-secondary"
+            href="mailto:training@purutuladhar.com?subject=In-Person%20Corporate%20Training%20Inquiry"
+          >
+            Book Corporate Training
+          </a>
+        </div>
+        <section class="news" aria-labelledby="news-title">
+          <div class="section-heading">
+            <h2 id="news-title">In the News</h2>
+            <p>
+              Follow upcoming talks, conference appearances, workshops, and
+              community events.
+            </p>
+          </div>
+          <div class="news-grid">
+            <article class="news-card featured-event">
+              <img
+                class="event-poster"
+                src="assets/events/devops-on-aws-2026.png"
+                alt="DevOps on AWS: From Commit to Confidence event poster"
+                width="800"
+                height="1000"
+                loading="lazy"
+              />
+              <div class="event-content">
+                <p class="news-label">Upcoming Talk</p>
+                <h3>DevOps on AWS: From Commit to Confidence</h3>
+                <p>
+                  Puru joins a five-speaker lineup to present the CI/CD session
+                  at this full-day AWS Pathway event.
+                </p>
+                <ul class="event-details">
+                  <li>
+                    <span aria-hidden="true">📅</span>
+                    <time datetime="2026-08-01">Saturday, August 1, 2026</time>
+                  </li>
+                  <li>
+                    <span aria-hidden="true">🕚</span>
+                    <time datetime="2026-08-01T11:00:00+05:45">
+                      11:00 AM–5:00 PM NPT
+                    </time>
+                  </li>
+                  <li>
+                    <span aria-hidden="true">📍</span>
+                    <span>
+                      Advanced College of Engineering and Management,
+                      Kathmandu
+                    </span>
+                  </li>
+                </ul>
+                <a
+                  class="proof-link"
+                  href="https://www.linkedin.com/feed/update/urn:li:share:7486284399421034496/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register for the event ↗
+                </a>
+              </div>
+            </article>
+            <article class="news-card speaker-invite">
+              <div class="speaker-invite-copy">
+                <p class="news-label">Speaking</p>
+                <h3>Invite Puru to your event</h3>
+                <p>
+                  Looking for a speaker on DevOps, Kubernetes, cloud-native
+                  engineering, or platform operations? Get in touch to discuss
+                  your audience and event.
+                </p>
+                <ul class="speaking-formats" aria-label="Available event formats">
+                  <li>🎤 Conference talks</li>
+                  <li>🧑‍💻 Technical workshops</li>
+                  <li>💬 Panels and discussions</li>
+                  <li>📸 Community events</li>
+                </ul>
+              </div>
+              <a
+                class="proof-link"
+                href="mailto:invite@purutuladhar.com?subject=Speaking%20Invitation%20for%20Puru%20Tuladhar"
+              >
+                Send a speaking invitation ↗
+              </a>
+            </article>
+          </div>
+          <div class="public-gallery" aria-labelledby="public-gallery-title">
+            <div class="public-gallery-heading">
+              <h3 id="public-gallery-title">Talks &amp; Events Gallery</h3>
+              <p>
+                Explore photos grouped by event. Select an event to open its
+                gallery and browse every photo.
+              </p>
+            </div>
+            <div
+              class="public-gallery-grid"
+              aria-label="Talks and public event galleries"
+            >
+              <button
+                class="event-gallery-card"
+                type="button"
+                data-event-gallery="aws-community-day-nepal"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="assets/events/1781158812743.jpeg"
+                  alt=""
+                  width="800"
+                  height="533"
+                  loading="lazy"
+                />
+                <span class="event-gallery-card-copy">
+                  <strong>AWS Community Day Nepal 2026</strong>
+                  <span>4 photos →</span>
+                </span>
+              </button>
+              <button
+                class="event-gallery-card"
+                type="button"
+                data-event-gallery="event-name-pending"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="assets/events/1780916889487.jpeg"
+                  alt=""
+                  width="1287"
+                  height="1536"
+                  loading="lazy"
+                />
+                <span class="event-gallery-card-copy">
+                  <strong>CNCF Kathmandu</strong>
+                  <span>1 photo →</span>
+                </span>
+              </button>
+              <button
+                class="event-gallery-card"
+                type="button"
+                data-event-gallery="grafana-101"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="assets/events/1781433931324.jpeg"
+                  alt=""
+                  width="1280"
+                  height="1707"
+                  loading="lazy"
+                />
+                <span class="event-gallery-card-copy">
+                  <strong
+                    >Grafana 101: Your First 30 Minutes with Grafana</strong
+                  >
+                  <span>3 photos →</span>
+                </span>
+              </button>
+              <button
+                class="event-gallery-card"
+                type="button"
+                data-event-gallery="build-localhost-kathmandu"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="assets/events/1782071771602.jpeg"
+                  alt=""
+                  width="1599"
+                  height="899"
+                  loading="lazy"
+                />
+                <span class="event-gallery-card-copy">
+                  <strong>BUILD //localhost:Kathmandu</strong>
+                  <span>5 photos →</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="clients" aria-labelledby="clients-title">
+          <h2 id="clients-title">Teams I’ve Trained</h2>
+          <div class="client-grid">
+            <article class="client-card fonepay-card">
+              <img
+                class="client-logo"
+                src="assets/fonepay-logo.png"
+                alt="Fonepay"
+                width="600"
+                height="300"
+                loading="lazy"
+              />
+              <h3>Fonepay</h3>
+              <p>
+                I partnered with Fonepay’s DevOps team to strengthen its
+                cloud-native expertise through practical, hands-on Kubernetes
+                training—supporting the resilient Kubernetes platform that
+                powers Nepal’s largest digital payment network.
+              </p>
+              <a
+                class="proof-link"
+                href="https://www.linkedin.com/posts/fonepaynepal_learning-technical-fonepay-activity-7444243625338896385-YaFj?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGvhdlEBkf19oAqDYoKM2BMmfUYEUHDiZMs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Training highlights on LinkedIn ↗
+              </a>
+            </article>
+            <article class="client-card kskl-card">
+              <img
+                class="client-logo"
+                src="assets/kskl-logo.png"
+                alt="Credit Information Bureau of Nepal"
+                width="313"
+                height="70"
+                loading="lazy"
+              />
+              <h3>Karja Suchana Kendra Limited (KSKL)</h3>
+              <p>
+                I partnered with KSKL’s Infrastructure Department to build
+                production-ready Kubernetes and OpenShift administration skills
+                through practical, hands-on training—strengthening the
+                infrastructure behind Nepal’s national credit information
+                ecosystem.
+              </p>
+              <a
+                class="proof-link"
+                href="https://www.linkedin.com/posts/ptuladhar3_kubernetes-openshift-cka-share-7485749856263725056-JURC/?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGvhdlEBkf19oAqDYoKM2BMmfUYEUHDiZMs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Training highlights on LinkedIn ↗
+              </a>
+            </article>
+            <article class="client-card genese-card">
+              <img
+                class="client-logo"
+                src="assets/genese-logo.png"
+                alt="Genese Solution"
+                width="200"
+                height="200"
+                loading="lazy"
+              />
+              <h3>Genese Solution</h3>
+              <p>
+                I collaborated with the Genese Solution team to design and
+                deliver comprehensive DevSecOps training for cross-department
+                teams at Dangote Group. The program strengthened participants’
+                ability to integrate security throughout the DevOps lifecycle
+                through industry best practices, effective knowledge transfer,
+                and a security-first mindset.
+              </p>
+            </article>
+            <article class="client-card kings-card">
+              <div class="client-wordmark">King’s College</div>
+              <h3>King’s College</h3>
+              <p>
+                I facilitated the MSAI workshop “The 10x Engineer is Real, and
+                They’re Powered by AI” for students, developers, and technology
+                enthusiasts. The practical session explored how AI can serve as
+                an engineering teammate across coding, debugging,
+                documentation, testing, and the wider software-development
+                workflow.
+              </p>
+              <a
+                class="proof-link"
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7471953281913860096/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Workshop highlights on LinkedIn ↗
+              </a>
+            </article>
+          </div>
+          <div class="training-gallery">
+            <div class="gallery-heading">
+              <h3>Training Gallery</h3>
+              <div class="gallery-controls" aria-label="Gallery controls">
+                <button
+                  class="gallery-button"
+                  type="button"
+                  data-gallery-direction="-1"
+                  data-gallery-target="training-gallery-track"
+                  aria-label="Previous training photo"
+                >
+                  ←
+                </button>
+                <button
+                  class="gallery-button"
+                  type="button"
+                  data-gallery-direction="1"
+                  data-gallery-target="training-gallery-track"
+                  aria-label="Next training photo"
+                >
+                  →
+                </button>
+              </div>
+            </div>
+            <div
+              class="gallery-track"
+              id="training-gallery-track"
+              tabindex="0"
+              aria-label="Client training photos"
+            >
+              <img
+                src="assets/fonepay/1774845983486.jpeg"
+                alt="Fonepay team during a Kubernetes training session"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/fonepay/1774845983770.jpeg"
+                alt="Fonepay learner receiving a training certificate"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/fonepay/1774845983834.jpeg"
+                alt="Fonepay learners completing hands-on exercises"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/fonepay/1774845984085.jpeg"
+                alt="Fonepay learner after completing Kubernetes training"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/fonepay/1774845984333.jpeg"
+                alt="Fonepay learner receiving a Kubernetes certificate"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/fonepay/1774845984407.jpeg"
+                alt="Fonepay learner with a training certificate"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/fonepay/1774845984645.jpeg"
+                alt="Fonepay Kubernetes training group"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/fonepay/1774845984662.jpeg"
+                alt="Fonepay learner celebrating training completion"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/fonepay/1774845985425.jpeg"
+                alt="Fonepay team in a hands-on Kubernetes session"
+                width="1280"
+                height="1707"
+                loading="lazy"
+              />
+              <img
+                src="assets/kskl/1784741843724.jpeg"
+                alt="Credit Information Bureau Kubernetes training group"
+                width="1280"
+                height="960"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="work-history" aria-labelledby="work-history-title">
+          <h2 id="work-history-title">Companies I’ve Worked With</h2>
+          <p>
+            Organizations that have been part of my professional journey in
+            cloud infrastructure and DevOps.
+          </p>
+          <div class="work-grid">
+            <article class="work-card covergo-card">
+              <img
+                class="company-logo"
+                src="assets/covergo-logo.png"
+                alt="CoverGo"
+                width="1024"
+                height="536"
+                loading="lazy"
+              />
+              <h3>CoverGo</h3>
+              <p class="work-role">Cloud Infrastructure Engineer</p>
+              <p class="work-dates">
+                <time datetime="2025">2025</time>–Present
+              </p>
+            </article>
+            <article class="work-card giant-swarm-card">
+              <img
+                class="company-logo"
+                src="assets/giant-swarm-logo.png"
+                alt="Giant Swarm"
+                width="738"
+                height="216"
+                loading="lazy"
+              />
+              <h3>Giant Swarm</h3>
+              <p class="work-role">Kubernetes Solution Architect</p>
+              <p class="work-dates">
+                <time datetime="2022">2022</time>–<time datetime="2024">2024</time>
+              </p>
+            </article>
+            <article class="work-card cloudhero-card">
+              <img
+                class="company-logo"
+                src="assets/cloudhero-logo.png"
+                alt="CloudHero"
+                width="300"
+                height="117"
+                loading="lazy"
+              />
+              <h3>CloudHero</h3>
+              <p class="work-role">DevOps Engineer</p>
+              <p class="work-dates">
+                <time datetime="2020">2020</time>–<time datetime="2022">2022</time>
+              </p>
+            </article>
+            <article class="work-card">
+              <img
+                class="company-logo"
+                src="assets/cloudfactory-logo.png"
+                alt="CloudFactory"
+                width="599"
+                height="333"
+                loading="lazy"
+              />
+              <h3>CloudFactory</h3>
+              <p class="work-role">DevOps Engineer</p>
+              <p class="work-dates">
+                <time datetime="2017">2017</time>–<time datetime="2022">2022</time>
+              </p>
+            </article>
+            <article class="work-card appstractor-card">
+              <img
+                class="company-logo appstractor-logo"
+                src="assets/appstractor-logo.png"
+                alt="Appstractor"
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+              <h3>Appstractor</h3>
+              <p class="work-role">Systems Administrator</p>
+              <p class="work-dates">
+                <time datetime="2014">2014</time>–<time datetime="2016">2016</time>
+              </p>
+            </article>
+            <article class="work-card worldwide-card">
+              <div class="company-logo-frame">
+                <img
+                  class="worldwide-logo"
+                  src="assets/world-wide-web-hosting-logo.png"
+                  alt="World Wide Web Hosting"
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                />
+              </div>
+              <h3>World Wide Web Hosting</h3>
+              <p class="work-role">Systems Administrator</p>
+              <p class="work-dates">
+                <time datetime="2014">2014</time>–<time datetime="2016">2016</time>
+              </p>
+            </article>
+            <article class="work-card leapfrog-card">
+              <img
+                class="company-logo"
+                src="assets/leapfrog-logo.png"
+                alt="Leapfrog"
+                width="1200"
+                height="628"
+                loading="lazy"
+              />
+              <h3>Leapfrog</h3>
+              <p class="work-role">DevOps Engineer</p>
+              <p class="work-dates">
+                <time datetime="2013">2013</time>–<time datetime="2014">2014</time>
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <dialog
+      class="event-gallery-dialog"
+      id="event-gallery-dialog"
+      aria-labelledby="event-gallery-title"
+      aria-describedby="event-gallery-caption"
+    >
+      <div class="event-gallery-modal">
+        <header class="event-gallery-modal-header">
+          <div>
+            <p class="event-gallery-counter" id="event-gallery-counter">
+              Photo 1 of 1
+            </p>
+            <h2 id="event-gallery-title">Event gallery</h2>
+          </div>
+          <button
+            class="event-gallery-close"
+            type="button"
+            data-event-gallery-close
+            aria-label="Close event gallery"
+          >
+            ×
+          </button>
+        </header>
+        <div class="event-gallery-stage">
+          <button
+            class="event-gallery-navigation event-gallery-previous"
+            type="button"
+            data-event-gallery-previous
+            aria-label="Previous photo"
+          >
+            ←
+          </button>
+          <img
+            id="event-gallery-image"
+            src="assets/events/1777384302616.jpeg"
+            alt=""
+            width="800"
+            height="800"
+          />
+          <button
+            class="event-gallery-navigation event-gallery-next"
+            type="button"
+            data-event-gallery-next
+            aria-label="Next photo"
+          >
+            →
+          </button>
+        </div>
+        <p class="event-gallery-caption" id="event-gallery-caption"></p>
+      </div>
+    </dialog>
+    <footer class="site-footer">
+      <p>&copy; 2026 Puru Tuladhar. All rights reserved.</p>
+      <a
+        href="https://www.linkedin.com/in/ptuladhar3"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Connect on LinkedIn ↗
+      </a>
+    </footer>
+    <script>
+      const eventGalleries = {
+        "aws-community-day-nepal": {
+          title: "AWS Community Day Nepal 2026",
+          images: [
+            {
+              src: "assets/events/1777384302616.jpeg",
+              alt: "Puru Tuladhar featured as a speaker at AWS Community Day Nepal 2026",
+              caption:
+                "Speaker announcement for Modern DevOps with Claude Code.",
+            },
+            {
+              src: "assets/events/1778492613545.jpeg",
+              alt: "Cloud and Platform Engineering at Scale speaker lineup",
+              caption:
+                "Cloud and Platform Engineering at Scale speaker lineup.",
+            },
+            {
+              src: "assets/events/1779081672344.jpeg",
+              alt: "Puru Tuladhar with attendees at AWS Community Day Nepal 2026",
+              caption: "With attendees and members of the technology community.",
+            },
+            {
+              src: "assets/events/1781158812743.jpeg",
+              alt: "Puru Tuladhar speaking at the AWS Community Day Nepal 2026 podium",
+              caption: "Delivering a conference presentation at the podium.",
+            },
+          ],
+        },
+        "event-name-pending": {
+          title: "CNCF Kathmandu",
+          images: [
+            {
+              src: "assets/events/1780916889487.jpeg",
+              alt: "Puru Tuladhar presenting a token of appreciation as the event organizer",
+              caption:
+                "Presenting a token of appreciation as the event organizer.",
+            },
+          ],
+        },
+        "grafana-101": {
+          title: "Grafana 101: Your First 30 Minutes with Grafana",
+          images: [
+            {
+              src: "assets/events/1781277602719.jpeg",
+              alt: "Grafana 101 event announcement featuring Puru Tuladhar",
+              caption: "Event announcement for the Grafana 101 session.",
+            },
+            {
+              src: "assets/events/1781377056040.jpeg",
+              alt: "Puru Tuladhar receiving recognition after the Grafana 101 session",
+              caption: "Recognition following the community session.",
+            },
+            {
+              src: "assets/events/1781433931324.jpeg",
+              alt: "Puru Tuladhar delivering a hands-on Grafana workshop",
+              caption: "A hands-on introduction to monitoring with Grafana.",
+            },
+          ],
+        },
+        "build-localhost-kathmandu": {
+          title: "BUILD //localhost:Kathmandu",
+          images: [
+            {
+              src: "assets/events/1781936491773.jpeg",
+              alt: "BUILD localhost Kathmandu speaker announcement",
+              caption:
+                "Speaker announcement for BUILD //localhost:Kathmandu.",
+            },
+            {
+              src: "assets/events/1781972847349.jpeg",
+              alt: "Puru Tuladhar presenting at BUILD localhost Kathmandu",
+              caption: "Delivering a technical presentation to the community.",
+            },
+            {
+              src: "assets/events/1781972855226.jpeg",
+              alt: "Puru Tuladhar with BUILD localhost Kathmandu participants",
+              caption: "With participants after the community session.",
+            },
+            {
+              src: "assets/events/1782071771602.jpeg",
+              alt: "Group photo from BUILD localhost Kathmandu",
+              caption: "Community group photo at the event.",
+            },
+            {
+              src: "assets/events/1782071778733.jpeg",
+              alt: "Puru Tuladhar receiving a speaker appreciation plaque",
+              caption: "Receiving a speaker appreciation plaque.",
+            },
+          ],
+        },
+      };
+
+      const eventGalleryDialog = document.getElementById(
+        "event-gallery-dialog",
+      );
+      const eventGalleryTitle = document.getElementById("event-gallery-title");
+      const eventGalleryCounter = document.getElementById(
+        "event-gallery-counter",
+      );
+      const eventGalleryImage = document.getElementById("event-gallery-image");
+      const eventGalleryCaption = document.getElementById(
+        "event-gallery-caption",
+      );
+      const eventGalleryPrevious = document.querySelector(
+        "[data-event-gallery-previous]",
+      );
+      const eventGalleryNext = document.querySelector(
+        "[data-event-gallery-next]",
+      );
+      let activeEventGallery = null;
+      let activeEventPhoto = 0;
+
+      const renderEventPhoto = () => {
+        const event = eventGalleries[activeEventGallery];
+        const photo = event.images[activeEventPhoto];
+        const hasMultiplePhotos = event.images.length > 1;
+
+        eventGalleryTitle.textContent = event.title;
+        eventGalleryCounter.textContent = `Photo ${activeEventPhoto + 1} of ${
+          event.images.length
+        }`;
+        eventGalleryImage.src = photo.src;
+        eventGalleryImage.alt = photo.alt;
+        eventGalleryCaption.textContent = photo.caption;
+        eventGalleryPrevious.disabled = !hasMultiplePhotos;
+        eventGalleryNext.disabled = !hasMultiplePhotos;
+      };
+
+      const moveEventPhoto = (direction) => {
+        const images = eventGalleries[activeEventGallery].images;
+        activeEventPhoto =
+          (activeEventPhoto + direction + images.length) % images.length;
+        renderEventPhoto();
+      };
+
+      document.querySelectorAll("[data-event-gallery]").forEach((button) => {
+        button.addEventListener("click", () => {
+          activeEventGallery = button.dataset.eventGallery;
+          activeEventPhoto = 0;
+          renderEventPhoto();
+          eventGalleryDialog.showModal();
+        });
+      });
+
+      eventGalleryPrevious.addEventListener("click", () => moveEventPhoto(-1));
+      eventGalleryNext.addEventListener("click", () => moveEventPhoto(1));
+      document
+        .querySelector("[data-event-gallery-close]")
+        .addEventListener("click", () => eventGalleryDialog.close());
+
+      eventGalleryDialog.addEventListener("click", (event) => {
+        if (event.target === eventGalleryDialog) {
+          eventGalleryDialog.close();
+        }
+      });
+
+      eventGalleryDialog.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+          moveEventPhoto(-1);
+        }
+
+        if (event.key === "ArrowRight") {
+          moveEventPhoto(1);
+        }
+      });
+
+      document.querySelectorAll("[data-gallery-direction]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const gallery = document.getElementById(button.dataset.galleryTarget);
+          const direction = Number(button.dataset.galleryDirection);
+          const photo = gallery.firstElementChild;
+          const gap = Number.parseFloat(getComputedStyle(gallery).columnGap);
+
+          gallery.scrollBy({
+            left: direction * (photo.offsetWidth + gap),
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
