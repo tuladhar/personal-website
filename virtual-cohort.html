@@ -555,24 +555,6 @@
       white-space: nowrap;
     }
 
-    .catalog-heading {
-      max-width: 44rem;
-      margin: 0 auto 2rem;
-      text-align: center;
-    }
-
-    .catalog-heading h2 {
-      margin: 0;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      letter-spacing: -0.035em;
-    }
-
-    .catalog-heading p {
-      margin: 0.85rem 0 0;
-      color: #94a3b8;
-      line-height: 1.65;
-    }
-
     .training-catalog {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -791,40 +773,7 @@
     .training-card .button {
       width: 100%;
       margin-top: 1rem;
-    }
-
-    .next-cohort-date {
-      margin: 0.75rem 0 0;
-      padding: 0.55rem 0.7rem;
-      border: 1px solid rgb(var(--theme-rgb) / 55%);
-      border-radius: 0.6rem;
-      background: rgb(var(--theme-rgb) / 20%);
-      color: var(--theme-heading);
-      font-size: 0.86rem;
-      font-weight: 850;
-      letter-spacing: 0.01em;
-      text-align: center;
-      animation: cohort-date-pulse 2.8s ease-in-out infinite;
-    }
-
-    @keyframes cohort-date-pulse {
-
-      0%,
-      100% {
-        background: rgb(var(--theme-rgb) / 18%);
-        transform: scale(1);
-      }
-
-      50% {
-        background: rgb(var(--theme-rgb) / 32%);
-        transform: scale(1.02);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .next-cohort-date {
-        animation: none;
-      }
+      font-size: 1.5rem;
     }
 
     .pricing-note {
@@ -927,13 +876,6 @@
       line-height: 1.6;
     }
 
-    .modal-course-details {
-      margin: 0.8rem 0 0;
-      color: var(--theme-light);
-      font-weight: 750;
-      line-height: 1.6;
-    }
-
     .modal-section {
       margin-top: 1.5rem;
       padding-top: 1.5rem;
@@ -970,7 +912,7 @@
       position: absolute;
       left: 0;
       color: var(--theme-light);
-      content: "✓";
+      content: "•";
       font-weight: 900;
     }
 
@@ -1032,25 +974,17 @@
     }
 
     .modal-actions {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 1rem;
       margin-top: 1.5rem;
     }
 
-    .modal-actions p {
-      margin: 0;
-      color: #86efac;
-      font-size: 0.85rem;
-      line-height: 1.45;
-    }
-
     .modal-actions .button {
+      width: 100%;
+      min-height: 4rem;
       margin: 0;
       background: var(--theme-button);
       border: 0;
       cursor: pointer;
+      font-size: 1.5rem;
     }
 
     .modal-actions .button:hover {
@@ -1121,7 +1055,6 @@
 
       .hero h1,
       .hero-copy,
-      .catalog-heading,
       #training,
       .training-catalog,
       .training-card {
@@ -1132,10 +1065,6 @@
 
       .hero h1 {
         font-size: clamp(2rem, 10vw, 2.4rem);
-      }
-
-      .catalog-heading h2 {
-        font-size: clamp(1.7rem, 8vw, 2rem);
       }
 
       .training-card h3 {
@@ -1162,14 +1091,6 @@
 
       .training-card {
         min-height: 0;
-      }
-
-      .modal-actions {
-        grid-template-columns: 1fr;
-      }
-
-      .modal-actions .button {
-        width: 100%;
       }
 
       .choice {
@@ -1200,10 +1121,10 @@
   <main class="page-shell">
     <section class="hero">
       <p class="eyebrow">Live, instructor-led virtual cohorts</p>
-      <h1>Choose the training that moves your career forward</h1>
+      <h1>Learn from an Industry Expert</h1>
       <p class="hero-copy">
-        Build practical skills through guided labs and real projects, from
-        DevOps fundamentals to a job-ready career path.
+        Get trained by Nepal’s first Kubestronaut—an industry expert with 10+
+        years of DevOps experience.
       </p>
       <p class="powered-by">
         Training powered by
@@ -1221,15 +1142,7 @@
       <a class="button" href="#training">Explore Training</a>
     </section>
 
-    <section id="training" aria-labelledby="training-title">
-      <div class="catalog-heading">
-        <h2 id="training-title">Virtual Training Cohorts</h2>
-        <p>
-          Select a course to review the curriculum, choose a preferred
-          training slot, and continue enrollment through WhatsApp.
-        </p>
-      </div>
-
+    <section id="training" aria-label="Virtual training courses">
       <div class="training-catalog">
         <article class="training-card themed-training-card devops-beginners-card">
           <p class="course-type">Foundation · 1 week (10 hours)</p>
@@ -1238,18 +1151,18 @@
             Learn DevOps by doing, not just by reading or watching. Discover if a career in DevOps is right for you.
           </p>
           <ul class="course-includes">
-            <li>Linux and networking fundamentals
-            <li>Cloud, Docker, and automation basics
+            <li>Aligned with <a href="https://roadmap.sh/devops" target="_blank" rel="noopener noreferrer">roadmap.sh
+                DevOps roadmap</a></li>
+            <li>No prior DevOps experience required</li>
             <li>Live online classes via Google Meet</li>
           </ul>
           <button class="button" type="button" data-course="devops-beginners">
-            Join Virtual Cohort
+            Enroll Now
           </button>
-          <p class="next-cohort-date">📅 Next cohort: Aug 9 - Aug 14, 2026</p>
         </article>
 
         <article class="training-card themed-training-card devops-career-card">
-          <p class="course-type">Career Path · 10 WEEKS (90 HOURS)</p>
+          <p class="course-type">Career Path · 10 WEEKS (60 HOURS)</p>
           <h3>DevOps as Career</h3>
           <p>
             Become a job-ready DevOps Engineer through hands-on, real-world training. Learn by doing.
@@ -1257,31 +1170,31 @@
           <ul class="course-includes">
             <li>Aligned with <a href="https://roadmap.sh/devops" target="_blank" rel="noopener noreferrer">roadmap.sh
                 DevOps roadmap</a></li>
-            <li>Labs and cloud access provided</li>
+            <li>Hands-on labs powered by <a href="https://labs.iximiuz.com/" target="_blank"
+                rel="noopener noreferrer">iximiuzLabs</a></li>
             <li>Live online classes via Google Meet</li>
           </ul>
           <button class="button" type="button" data-course="devops-career">
-            Join Virtual Cohort
+            Enroll Now
           </button>
-          <p class="next-cohort-date">📅 Next cohort: Sept 1 - Nov 10, 2026</p>
         </article>
 
         <article class="training-card themed-training-card cka-card">
-          <p class="course-type">SKILLS PATH · 10 WEEKS (90 HOURS)</p>
+          <p class="course-type">SKILLS PATH · 10 WEEKS (60 HOURS)</p>
           <h3>Kubernetes Administrator (CKA)</h3>
           <p>
             Build practical Kubernetes administration skills with an
             exam-aligned curriculum and hands-on labs.
           </p>
           <ul class="course-includes">
-            <li>Aligned with CNCF official CKA domains</li>
-            <li>Labs provided · 1 CKA mock exam included</li>
+            <li>Aligned with <a href="https://www.cncf.io/training/certification/cka/" target="_blank"
+                rel="noopener noreferrer">CNCF official CKA domains</a></li>
+            <li>1 CKA mock exam included</li>
             <li>Live online classes via Google Meet</li>
           </ul>
           <button class="button" type="button" data-course="cka">
-            Join Virtual Cohort
+            Enroll Now
           </button>
-          <p class="next-cohort-date">📅 Next cohort: Sept 1 - Nov 11, 2026</p>
         </article>
 
         <article hidden class="training-card themed-training-card cks-card">
@@ -1296,7 +1209,7 @@
             <li>Timed mock exam</li>
           </ul>
           <button class="button" type="button" data-course="cks">
-            Join Virtual Cohort
+            Enroll Now
           </button>
         </article>
 
@@ -1313,7 +1226,7 @@
             <li>Certification mock exam</li>
           </ul>
           <button class="button" type="button" data-course="aws-cloudops">
-            Join Virtual Cohort
+            Enroll Now
           </button>
         </article>
 
@@ -1330,7 +1243,7 @@
             <li>Certification mock exam</li>
           </ul>
           <button class="button" type="button" data-course="aws-devops-pro">
-            Join Virtual Cohort
+            Enroll Now
           </button>
         </article>
 
@@ -1347,7 +1260,7 @@
             <li>Timed mock exam</li>
           </ul>
           <button class="button" type="button" data-course="rhcsa">
-            Join Virtual Cohort
+            Enroll Now
           </button>
         </article>
 
@@ -1364,7 +1277,7 @@
             <li>Timed mock exam</li>
           </ul>
           <button class="button" type="button" data-course="ex280">
-            Join Virtual Cohort
+            Enroll Now
           </button>
         </article>
       </div>
@@ -1403,7 +1316,11 @@
       </div>
 
       <p class="modal-audience" id="modal-audience"></p>
-      <p class="modal-course-details" id="modal-course-details"></p>
+
+      <section class="modal-section" aria-labelledby="details-title">
+        <h3 id="details-title">Training details</h3>
+        <ul class="modal-curriculum" id="modal-course-details"></ul>
+      </section>
 
       <section class="modal-section" aria-labelledby="included-title">
         <h3 id="included-title">What’s in the training</h3>
@@ -1437,11 +1354,7 @@
         </p>
 
         <div class="modal-actions">
-          <p>
-            Your course and preferred slot will be sent directly to Puru
-            Tuladhar WhatsApp Business for confirmation.
-          </p>
-          <button class="button" type="submit">Enroll on WhatsApp</button>
+          <button class="button" type="submit">Enroll Now</button>
         </div>
       </form>
     </div>
@@ -1457,17 +1370,18 @@
         title: "DevOps for Complete Beginners",
         audience:
           "A learn-by-doing foundation for complete beginners. No setup is required: all labs are provided, and classes run online through Google Meet. A stable internet connection is required.",
-        details:
-          "Maximum 10 people per training group · 2 hours per day for 1 week (5 days)",
+        details: [
+          "Duration: 1 week (Wednesday–Tuesday)",
+          "Total classes: 5",
+          "Session length: 2 hours",
+          "Maximum group size: 5 participants",
+        ],
         curriculum: [
-          "Linux fundamentals and the command line",
-          "Version control with Git",
-          "Networking basics",
-          "Introduction to cloud and virtualization",
-          "Containerization fundamentals",
-          "Automation fundamentals",
-          "Hands-on labs with no local setup required",
-          "Virtual exam at the end of the course",
+          "Day 1: DevOps principles, the software delivery lifecycle, and Linux fundamentals",
+          "Day 2: Git, GitHub collaboration, and Bash/Python automation basics",
+          "Day 3: Networking, web fundamentals, and application connectivity",
+          "Day 4: Cloud computing, virtualization, and containers with Docker",
+          "Day 5: CI/CD concepts and an end-to-end software delivery workflow",
         ],
       },
       "devops-career": {
@@ -1475,21 +1389,23 @@
         title: "DevOps as Career",
         audience:
           "A small-group, job-ready DevOps program for serious learners who want to continue with DevOps as career path.",
-        details:
-          "Maximum 10 people per training group · 90 hours total · 3 hours per session, 3 sessions per week for 10 weeks total.",
+        details: [
+          "Duration: 10 weeks",
+          "Total training time: 60 hours",
+          "Schedule: 3 sessions per week",
+          "Session length: 2 hours",
+        ],
         curriculum: [
-          "DevOps fundamentals, collaboration, and lifecycle",
-          "Linux administration and Bash/Python scripting",
-          "Git and version-control workflows",
-          "Networking and system administration",
-          "Cloud computing and cloud-native architecture",
-          "Containers with Docker and orchestration with Kubernetes",
-          "CI/CD pipelines and release automation",
-          "Infrastructure as Code with Terraform",
-          "Configuration management with Ansible",
-          "Monitoring, observability, and centralized logging",
-          "Security practices and DevSecOps",
-          "Real-world projects, and job-readiness practice",
+          "Week 1: DevOps principles, culture, software delivery, and Git workflows",
+          "Week 2: Linux system administration and command-line proficiency",
+          "Week 3: Networking fundamentals and Bash/Python automation",
+          "Week 4: Cloud computing fundamentals and AWS infrastructure",
+          "Week 5: Containerization and image management with Docker",
+          "Week 6: Container orchestration and administration with Kubernetes",
+          "Week 7: Continuous integration and delivery pipelines",
+          "Week 8: Infrastructure as Code with Terraform",
+          "Week 9: Configuration management with Ansible",
+          "Week 10: Observability, incident response, security, and secrets management",
         ],
       },
       cka: {
@@ -1497,18 +1413,23 @@
         title: "Certified Kubernetes Administrator Training",
         audience:
           "A practical, exam-aligned Kubernetes administration course following the current CKA domains and competencies. Labs are provided, and one official CKA mock exam is included.",
-        details:
-          "Maximum 10 persons per training group · 90 hours total · 3 hours per session, 3 session per week for 10 weeks total.",
+        details: [
+          "Duration: 10 weeks",
+          "Total training time: 60 hours",
+          "Schedule: 3 sessions per week",
+          "Session length: 2 hours",
+        ],
         curriculum: [
-          "Storage (10%): storage classes, volume types, access modes, PVs, and PVCs",
-          "Troubleshooting (30%): clusters, nodes, components, resources, logs, services, and networking",
-          "Workloads and Scheduling (15%): deployments, rollouts, ConfigMaps, Secrets, autoscaling, admission, and scheduling",
-          "Cluster Architecture, Installation and Configuration (25%): RBAC, kubeadm, lifecycle, HA control planes, Helm, Kustomize, CNI/CSI/CRI, CRDs, and operators",
-          "Services and Networking (20%): pod connectivity, NetworkPolicies, service types, Gateway API, Ingress, and CoreDNS",
-          "Command-line administration with kubectl",
-          "Hands-on labs mapped to each CKA domain",
-          "Timed practice tasks and exam workflow",
-          "One official CKA mock exam included",
+          "Week 1: Kubernetes architecture, cluster components, and kubectl workflows",
+          "Week 2: Cluster installation and configuration with kubeadm",
+          "Week 3: RBAC, Helm, Kustomize, CRDs, and operators",
+          "Week 4: Workloads, scheduling, configuration, and application lifecycle management",
+          "Week 5: Services, cluster networking, DNS, and connectivity",
+          "Week 6: Ingress, Gateway API, and NetworkPolicy administration",
+          "Week 7: Storage classes, persistent volumes, and application data",
+          "Week 8: Cluster maintenance, upgrades, backups, and node administration",
+          "Week 9: Troubleshooting clusters, nodes, workloads, services, and networking",
+          "Week 10: Timed practice, official CKA mock exam, and exam strategy with a CNCF Kubestronaut",
         ],
       },
       cks: {
@@ -1611,6 +1532,10 @@
     const modalCourseDetails = document.querySelector("#modal-course-details");
     const modalCurriculum = document.querySelector("#modal-curriculum");
     let selectedCourse = null;
+    const getCourseDetails = (course) =>
+      Array.isArray(course.details)
+        ? course.details
+        : [course.details].filter(Boolean);
 
     document.querySelectorAll("[data-course]").forEach((button) => {
       button.addEventListener("click", () => {
@@ -1633,7 +1558,14 @@
         modalCategory.textContent = selectedCourse.category;
         modalTitle.textContent = selectedCourse.title;
         modalAudience.textContent = selectedCourse.audience;
-        modalCourseDetails.textContent = selectedCourse.details || "";
+        const courseDetails = getCourseDetails(selectedCourse);
+        modalCourseDetails.replaceChildren(
+          ...courseDetails.map((item) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = item;
+            return listItem;
+          }),
+        );
         modalCurriculum.replaceChildren(
           ...selectedCourse.curriculum.map((item) => {
             const listItem = document.createElement("li");
@@ -1670,7 +1602,7 @@
         `Course category: ${selectedCourse.category}`,
         `Training: ${selectedCourse.title}`,
         `Preferred slot: ${formData.get("slot")}`,
-        `Course details: ${selectedCourse.details}`,
+        `Course details: ${getCourseDetails(selectedCourse).join("; ")}`,
         `Included topics: ${selectedCourse.curriculum.join("; ")}`,
         "",
         "Please confirm my seat and the next enrollment steps.",

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Live DevOps, Kubernetes, AWS, and cloud training by Puru Tuladhar, a Nepal-based Kubestronaut offering virtual cohorts and corporate training."
+      content="Puru Tuladhar is Nepal’s first Kubestronaut and a DevOps expert with 10+ years of experience across Kubernetes, AWS, and cloud infrastructure."
     />
     <meta name="author" content="Puru Tuladhar" />
     <meta
@@ -27,11 +27,11 @@
     <meta property="og:site_name" content="Puru Tuladhar" />
     <meta
       property="og:title"
-      content="Puru Tuladhar | DevOps &amp; Kubernetes Training"
+      content="Puru Tuladhar | DevOps Expert &amp; Nepal’s First Kubestronaut"
     />
     <meta
       property="og:description"
-      content="Live DevOps, Kubernetes, AWS, and cloud training for individuals and corporate teams."
+      content="Puru Tuladhar is Nepal’s first Kubestronaut and a DevOps expert with 10+ years of experience across Kubernetes, AWS, and cloud infrastructure."
     />
     <meta property="og:url" content="https://purutuladhar.com/" />
     <meta
@@ -42,18 +42,18 @@
     <meta property="og:image:height" content="400" />
     <meta
       property="og:image:alt"
-      content="Portrait of DevOps and Kubernetes trainer Puru Tuladhar"
+      content="Portrait of DevOps expert and Kubestronaut Puru Tuladhar"
     />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@ptuladhar3" />
     <meta
       name="twitter:title"
-      content="Puru Tuladhar | DevOps &amp; Kubernetes Training"
+      content="Puru Tuladhar | DevOps Expert &amp; Nepal’s First Kubestronaut"
     />
     <meta
       name="twitter:description"
-      content="Live DevOps, Kubernetes, AWS, and cloud training for individuals and corporate teams."
+      content="Puru Tuladhar is Nepal’s first Kubestronaut and a DevOps expert with 10+ years of experience across Kubernetes, AWS, and cloud infrastructure."
     />
     <meta
       name="twitter:image"
@@ -61,10 +61,10 @@
     />
     <meta
       name="twitter:image:alt"
-      content="Portrait of DevOps and Kubernetes trainer Puru Tuladhar"
+      content="Portrait of DevOps expert and Kubestronaut Puru Tuladhar"
     />
 
-    <title>Puru Tuladhar | DevOps &amp; Kubernetes Training</title>
+    <title>Puru Tuladhar | DevOps Expert &amp; Nepal’s First Kubestronaut</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -74,7 +74,7 @@
             "@id": "https://purutuladhar.com/#website",
             "url": "https://purutuladhar.com/",
             "name": "Puru Tuladhar",
-            "description": "DevOps, Kubernetes, AWS, and cloud training by Puru Tuladhar",
+            "description": "Puru Tuladhar is Nepal’s first Kubestronaut and a DevOps expert with 10+ years of experience across Kubernetes, AWS, and cloud infrastructure.",
             "inLanguage": "en",
             "publisher": {
               "@id": "https://purutuladhar.com/#person"
@@ -87,7 +87,7 @@
             "url": "https://purutuladhar.com/",
             "image": "https://purutuladhar.com/assets/puru-tuladhar.png",
             "jobTitle": "Cloud Infrastructure Engineer",
-            "description": "DevOps and Kubernetes trainer, cloud infrastructure engineer, and Kubestronaut from Nepal.",
+            "description": "Puru Tuladhar is Nepal’s first Kubestronaut and a DevOps expert with 10+ years of experience across Kubernetes, AWS, and cloud infrastructure.",
             "sameAs": [
               "https://www.linkedin.com/in/ptuladhar3"
             ],
@@ -182,6 +182,13 @@
         filter: drop-shadow(0 0.75rem 2rem rgb(50 108 229 / 35%));
       }
 
+      .linux-mark {
+        width: clamp(4.5rem, 10vw, 7rem);
+        margin-left: clamp(0.75rem, 2vw, 1.25rem);
+        animation: linux-bounce 3.5s ease-in-out infinite;
+        filter: drop-shadow(0 0.75rem 1.5rem rgb(250 204 21 / 22%));
+      }
+
       @keyframes spin {
         to {
           transform: rotate(1turn);
@@ -199,9 +206,21 @@
         }
       }
 
+      @keyframes linux-bounce {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-3deg);
+        }
+
+        50% {
+          transform: translateY(-0.55rem) rotate(3deg);
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .devops-mark,
-        .kubernetes-mark {
+        .kubernetes-mark,
+        .linux-mark {
           animation: none;
         }
       }
@@ -314,17 +333,17 @@
       }
 
       .button-primary {
-        border-color: rgb(134 239 172 / 58%);
-        background: linear-gradient(145deg, #22c55e, #15803d);
+        border-color: rgb(147 197 253 / 58%);
+        background: linear-gradient(145deg, #2563eb, #1e40af);
         box-shadow:
-          inset 0 1px rgb(255 255 255 / 14%),
-          0 0.75rem 2rem rgb(22 163 74 / 22%),
-          0 0 1.5rem rgb(34 197 94 / 10%);
+          inset 0 1px rgb(255 255 255 / 12%),
+          0 0.75rem 2rem rgb(37 99 235 / 22%),
+          0 0 1.5rem rgb(96 165 250 / 8%);
       }
 
       .button-primary:hover {
-        border-color: #bbf7d0;
-        background: linear-gradient(145deg, #2fd16b, #16a34a);
+        border-color: #bfdbfe;
+        background: linear-gradient(145deg, #3b82f6, #1d4ed8);
       }
 
       .live-indicator {
@@ -333,18 +352,18 @@
         margin-right: 0.55rem;
         border: 1px solid rgb(255 255 255 / 72%);
         border-radius: 50%;
-        background: #ef4444;
-        box-shadow: 0 0 0 0 rgb(239 68 68 / 55%);
+        background: #bfdbfe;
+        box-shadow: 0 0 0 0 rgb(147 197 253 / 48%);
         animation: live-pulse 1.6s ease-out infinite;
       }
 
       @keyframes live-pulse {
         70% {
-          box-shadow: 0 0 0 0.45rem rgb(239 68 68 / 0%);
+          box-shadow: 0 0 0 0.45rem rgb(147 197 253 / 0%);
         }
 
         100% {
-          box-shadow: 0 0 0 0 rgb(239 68 68 / 0%);
+          box-shadow: 0 0 0 0 rgb(147 197 253 / 0%);
         }
       }
 
@@ -411,20 +430,6 @@
         box-shadow: 0 1rem 3rem rgb(0 0 0 / 15%);
       }
 
-      .news-label {
-        align-self: flex-start;
-        margin: 0 0 1rem;
-        padding: 0.35rem 0.65rem;
-        border: 1px solid rgb(96 165 250 / 30%);
-        border-radius: 999px;
-        background: rgb(30 64 175 / 22%);
-        color: #93c5fd;
-        font-size: 0.72rem;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
       .news-card h3 {
         margin: 0;
         font-size: 1.25rem;
@@ -432,9 +437,9 @@
         line-height: 1.35;
       }
 
-      .news-card > p:not(.news-label),
-      .event-content > p:not(.news-label),
-      .speaker-invite-copy > p:not(.news-label) {
+      .news-card > p,
+      .event-content > p,
+      .speaker-invite-copy > p {
         margin: 0.75rem 0 0;
         color: #cbd5e1;
         line-height: 1.65;
@@ -442,7 +447,6 @@
 
       .news-card .proof-link {
         margin-top: auto;
-        padding-top: 1.25rem;
       }
 
       .featured-event {
@@ -516,14 +520,23 @@
         content: "";
       }
 
-      .speaker-invite .news-label {
-        border-color: rgb(192 132 252 / 38%);
-        background: rgb(88 28 135 / 48%);
-        color: #e9d5ff;
-      }
-
       .speaker-invite-copy {
         max-width: 42rem;
+      }
+
+      .speaker-invite-action {
+        display: grid;
+        width: clamp(13rem, 24vw, 18rem);
+        gap: 0.85rem;
+      }
+
+      .speaker-invite-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid rgb(216 180 254 / 30%);
+        border-radius: 0.75rem;
+        box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 24%);
       }
 
       .speaking-formats {
@@ -548,13 +561,17 @@
       }
 
       .speaker-invite .proof-link {
+        width: 100%;
         margin: 0;
-        padding: 0;
+        border-color: rgb(216 180 254 / 48%);
+        background: rgb(88 28 135 / 48%);
         color: #d8b4fe;
         white-space: nowrap;
       }
 
       .speaker-invite .proof-link:hover {
+        border-color: #e9d5ff;
+        background: rgb(107 33 168 / 65%);
         color: #f3e8ff;
       }
 
@@ -564,6 +581,10 @@
       }
 
       .public-gallery-heading {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
         margin-bottom: 1.25rem;
       }
 
@@ -582,9 +603,19 @@
 
       .public-gallery-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-columns: calc((100% - 2rem) / 3);
+        grid-auto-flow: column;
         align-items: start;
         gap: 1rem;
+        overflow-x: auto;
+        padding: 0.25rem 0 1rem;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+      }
+
+      .public-gallery-grid::-webkit-scrollbar {
+        display: none;
       }
 
       .event-gallery-card {
@@ -603,6 +634,7 @@
           border-color 160ms ease,
           box-shadow 160ms ease,
           transform 160ms ease;
+        scroll-snap-align: start;
       }
 
       .event-gallery-card:hover {
@@ -625,21 +657,21 @@
       }
 
       .event-gallery-card-copy {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
+        display: grid;
+        gap: 0.4rem;
         padding: 1rem;
       }
 
       .event-gallery-card-copy strong {
         display: block;
+        overflow: hidden;
         font-size: 0.95rem;
         line-height: 1.4;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       .event-gallery-card-copy span {
-        flex: 0 0 auto;
         color: #93c5fd;
         font-size: 0.82rem;
         font-weight: 700;
@@ -791,17 +823,51 @@
         border-top: 1px solid rgb(147 197 253 / 25%);
       }
 
+      .clients-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
       .clients h2 {
-        margin: 0 0 2rem;
+        margin: 0;
         font-size: clamp(1.5rem, 3vw, 2rem);
         letter-spacing: -0.025em;
       }
 
+      .client-carousel-controls,
+      .event-carousel-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .client-carousel-status,
+      .event-carousel-status {
+        min-width: 5.5rem;
+        color: #94a3b8;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-align: right;
+      }
+
       .client-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-columns: calc((100% - 1.25rem) / 2);
+        grid-auto-flow: column;
         gap: 1.25rem;
+        overflow-x: auto;
+        padding: 0.25rem 0 1rem;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
         text-align: left;
+      }
+
+      .client-grid::-webkit-scrollbar {
+        display: none;
       }
 
       .client-card {
@@ -812,6 +878,7 @@
         border-radius: 1rem;
         background: rgb(15 23 42 / 65%);
         box-shadow: 0 1rem 3rem rgb(0 0 0 / 15%);
+        scroll-snap-align: start;
       }
 
       .fonepay-card {
@@ -845,10 +912,14 @@
       }
 
       .fonepay-card .proof-link {
+        border-color: rgb(255 139 144 / 48%);
+        background: rgb(127 29 29 / 42%);
         color: #ff9ca1;
       }
 
       .fonepay-card .proof-link:hover {
+        border-color: #fecdd3;
+        background: rgb(153 27 27 / 58%);
         color: #ffe4e6;
       }
 
@@ -888,10 +959,14 @@
       }
 
       .kskl-card .proof-link {
+        border-color: rgb(255 173 117 / 48%);
+        background: rgb(124 45 18 / 38%);
         color: #ffad75;
       }
 
       .kskl-card .proof-link:hover {
+        border-color: #fed7aa;
+        background: rgb(154 52 18 / 54%);
         color: #ffdcc4;
       }
 
@@ -991,23 +1066,90 @@
         line-height: 1.65;
       }
 
-      .proof-link {
-        display: inline-block;
-        margin-top: 1rem;
+      .client-description {
+        text-wrap: pretty;
+      }
+
+      .client-description-toggle {
+        display: inline;
+        margin-left: 0.3rem;
+        padding: 0;
+        border: 0;
+        background: transparent;
         color: #93c5fd;
-        font-size: 0.9rem;
-        font-weight: 700;
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.85rem;
+        font-weight: 750;
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
         text-underline-offset: 0.2em;
       }
 
-      .proof-link:hover {
+      .client-description-toggle:hover {
         color: #dbeafe;
       }
 
-      .proof-link:focus-visible {
+      .client-description-toggle:focus-visible {
         border-radius: 0.2rem;
         outline: 3px solid #bfdbfe;
         outline-offset: 3px;
+      }
+
+      .proof-link {
+        display: inline-flex;
+        min-height: 2.75rem;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-start;
+        margin-top: 1rem;
+        padding: 0.65rem 1rem;
+        border: 1px solid rgb(147 197 253 / 42%);
+        border-radius: 0.65rem;
+        background: rgb(30 64 175 / 28%);
+        box-shadow: 0 0.5rem 1.25rem rgb(0 0 0 / 12%);
+        color: #93c5fd;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          background-color 160ms ease,
+          border-color 160ms ease,
+          color 160ms ease,
+          transform 160ms ease;
+      }
+
+      .proof-link:hover {
+        border-color: #93c5fd;
+        background: rgb(30 64 175 / 48%);
+        color: #dbeafe;
+        transform: translateY(-2px);
+      }
+
+      .proof-link:focus-visible {
+        outline: 3px solid #bfdbfe;
+        outline-offset: 3px;
+      }
+
+      .client-card .proof-link {
+        display: inline;
+        min-height: 0;
+        margin-top: 0.75rem;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        color: #93c5fd;
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.2em;
+      }
+
+      .client-card .proof-link:hover {
+        background: transparent;
+        color: #dbeafe;
+        transform: none;
       }
 
       .training-gallery {
@@ -1055,6 +1197,11 @@
       .gallery-button:focus-visible {
         outline: 3px solid #bfdbfe;
         outline-offset: 3px;
+      }
+
+      .gallery-button:disabled {
+        cursor: not-allowed;
+        opacity: 0.38;
       }
 
       .gallery-track {
@@ -1315,9 +1462,36 @@
 
       @media (max-width: 42rem) {
         .news-grid,
-        .client-grid,
         .work-grid {
           grid-template-columns: 1fr;
+        }
+
+        .clients-heading {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .client-carousel-controls {
+          width: 100%;
+          justify-content: flex-end;
+        }
+
+        .public-gallery-heading {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .event-carousel-controls {
+          width: 100%;
+          justify-content: flex-end;
+        }
+
+        .public-gallery-grid {
+          grid-auto-columns: 100%;
+        }
+
+        .client-grid {
+          grid-auto-columns: 100%;
         }
 
         .featured-event {
@@ -1333,8 +1507,8 @@
           white-space: normal;
         }
 
-        .public-gallery-grid {
-          grid-template-columns: 1fr;
+        .speaker-invite-action {
+          width: 100%;
         }
 
         .gallery-track {
@@ -1398,9 +1572,16 @@
             width="960"
             height="933"
           />
+          <img
+            class="linux-mark"
+            src="assets/linux-logo.png"
+            alt="Linux"
+            width="429"
+            height="512"
+          />
         </div>
         <h1>
-          DevOps &amp; Kubernetes Training by
+          DevOps &amp; Kubernetes
           <span class="instructor-name">
             <img
               class="instructor-avatar"
@@ -1433,7 +1614,7 @@
             href="virtual-cohort.html"
           >
             <span class="live-indicator" aria-hidden="true"></span>
-            Limited Seats Available 
+            Get Trained — Limited Seats Available
           </a>
           <a
             class="button button-secondary"
@@ -1461,7 +1642,6 @@
                 loading="lazy"
               />
               <div class="event-content">
-                <p class="news-label">Upcoming Talk</p>
                 <h3>DevOps on AWS: From Commit to Confidence</h3>
                 <p>
                   Puru joins a five-speaker lineup to present the CI/CD session
@@ -1498,7 +1678,6 @@
             </article>
             <article class="news-card speaker-invite">
               <div class="speaker-invite-copy">
-                <p class="news-label">Speaking</p>
                 <h3>Invite Puru to your event</h3>
                 <p>
                   Looking for a speaker on DevOps, Kubernetes, cloud-native
@@ -1512,26 +1691,98 @@
                   <li>📸 Community events</li>
                 </ul>
               </div>
-              <a
-                class="proof-link"
-                href="mailto:invite@purutuladhar.com?subject=Speaking%20Invitation%20for%20Puru%20Tuladhar"
-              >
-                Send a speaking invitation ↗
-              </a>
+              <div class="speaker-invite-action">
+                <a
+                  class="proof-link"
+                  href="mailto:invite@purutuladhar.com?subject=Speaking%20Invitation%20for%20Puru%20Tuladhar"
+                >
+                  Send a speaking invitation ↗
+                </a>
+                <img
+                  class="speaker-invite-image"
+                  src="assets/speaking-invitation.webp"
+                  alt="Media interviewing a speaker at an event"
+                  width="960"
+                  height="639"
+                  loading="lazy"
+                />
+              </div>
             </article>
           </div>
           <div class="public-gallery" aria-labelledby="public-gallery-title">
             <div class="public-gallery-heading">
-              <h3 id="public-gallery-title">Talks &amp; Events Gallery</h3>
-              <p>
-                Explore photos grouped by event. Select an event to open its
-                gallery and browse every photo.
-              </p>
+              <div>
+                <h3 id="public-gallery-title">Talks &amp; Events Gallery</h3>
+                <p>
+                  Explore photos grouped by event. Select an event to open its
+                  gallery and browse every photo.
+                </p>
+              </div>
+              <div class="event-carousel-controls" aria-label="Event carousel controls">
+                <span class="event-carousel-status" id="event-carousel-status" aria-live="polite"></span>
+                <button
+                  class="gallery-button"
+                  type="button"
+                  data-event-carousel-direction="-1"
+                  aria-controls="event-carousel-track"
+                  aria-label="Previous events"
+                >
+                  ←
+                </button>
+                <button
+                  class="gallery-button"
+                  type="button"
+                  data-event-carousel-direction="1"
+                  aria-controls="event-carousel-track"
+                  aria-label="Next events"
+                >
+                  →
+                </button>
+              </div>
             </div>
             <div
               class="public-gallery-grid"
+              id="event-carousel-track"
               aria-label="Talks and public event galleries"
             >
+              <button
+                class="event-gallery-card"
+                type="button"
+                data-event-gallery="build-localhost-kathmandu"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="assets/events/1782071771602.jpeg"
+                  alt=""
+                  width="1599"
+                  height="899"
+                  loading="lazy"
+                />
+                <span class="event-gallery-card-copy">
+                  <strong>BUILD //localhost:Kathmandu</strong>
+                  <span>5 photos →</span>
+                </span>
+              </button>
+              <button
+                class="event-gallery-card"
+                type="button"
+                data-event-gallery="grafana-101"
+                aria-haspopup="dialog"
+              >
+                <img
+                  src="assets/events/1781433931324.jpeg"
+                  alt=""
+                  width="1280"
+                  height="1707"
+                  loading="lazy"
+                />
+                <span class="event-gallery-card-copy">
+                  <strong
+                    >Grafana 101: Your First 30 Minutes with Grafana</strong
+                  >
+                  <span>3 photos →</span>
+                </span>
+              </button>
               <button
                 class="event-gallery-card"
                 type="button"
@@ -1568,50 +1819,35 @@
                   <span>1 photo →</span>
                 </span>
               </button>
-              <button
-                class="event-gallery-card"
-                type="button"
-                data-event-gallery="grafana-101"
-                aria-haspopup="dialog"
-              >
-                <img
-                  src="assets/events/1781433931324.jpeg"
-                  alt=""
-                  width="1280"
-                  height="1707"
-                  loading="lazy"
-                />
-                <span class="event-gallery-card-copy">
-                  <strong
-                    >Grafana 101: Your First 30 Minutes with Grafana</strong
-                  >
-                  <span>3 photos →</span>
-                </span>
-              </button>
-              <button
-                class="event-gallery-card"
-                type="button"
-                data-event-gallery="build-localhost-kathmandu"
-                aria-haspopup="dialog"
-              >
-                <img
-                  src="assets/events/1782071771602.jpeg"
-                  alt=""
-                  width="1599"
-                  height="899"
-                  loading="lazy"
-                />
-                <span class="event-gallery-card-copy">
-                  <strong>BUILD //localhost:Kathmandu</strong>
-                  <span>5 photos →</span>
-                </span>
-              </button>
             </div>
           </div>
         </section>
         <section class="clients" aria-labelledby="clients-title">
-          <h2 id="clients-title">Teams I’ve Trained</h2>
-          <div class="client-grid">
+          <div class="clients-heading">
+            <h2 id="clients-title">Teams I’ve Trained</h2>
+            <div class="client-carousel-controls" aria-label="Team carousel controls">
+              <span class="client-carousel-status" id="client-carousel-status" aria-live="polite"></span>
+              <button
+                class="gallery-button"
+                type="button"
+                data-client-direction="-1"
+                aria-controls="client-carousel-track"
+                aria-label="Previous teams"
+              >
+                ←
+              </button>
+              <button
+                class="gallery-button"
+                type="button"
+                data-client-direction="1"
+                aria-controls="client-carousel-track"
+                aria-label="Next teams"
+              >
+                →
+              </button>
+            </div>
+          </div>
+          <div class="client-grid" id="client-carousel-track">
             <article class="client-card fonepay-card">
               <img
                 class="client-logo"
@@ -1634,7 +1870,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Training highlights on LinkedIn ↗
+                LinkedIn
               </a>
             </article>
             <article class="client-card kskl-card">
@@ -1660,7 +1896,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Training highlights on LinkedIn ↗
+                LinkedIn
               </a>
             </article>
             <article class="client-card genese-card">
@@ -1699,7 +1935,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Workshop highlights on LinkedIn ↗
+                LinkedIn
               </a>
             </article>
           </div>
@@ -1741,13 +1977,6 @@
                 loading="lazy"
               />
               <img
-                src="assets/fonepay/1774845983770.jpeg"
-                alt="Fonepay learner receiving a training certificate"
-                width="1280"
-                height="1707"
-                loading="lazy"
-              />
-              <img
                 src="assets/fonepay/1774845983834.jpeg"
                 alt="Fonepay learners completing hands-on exercises"
                 width="1280"
@@ -1755,36 +1984,8 @@
                 loading="lazy"
               />
               <img
-                src="assets/fonepay/1774845984085.jpeg"
-                alt="Fonepay learner after completing Kubernetes training"
-                width="1280"
-                height="1707"
-                loading="lazy"
-              />
-              <img
-                src="assets/fonepay/1774845984333.jpeg"
-                alt="Fonepay learner receiving a Kubernetes certificate"
-                width="1280"
-                height="1707"
-                loading="lazy"
-              />
-              <img
-                src="assets/fonepay/1774845984407.jpeg"
-                alt="Fonepay learner with a training certificate"
-                width="1280"
-                height="1707"
-                loading="lazy"
-              />
-              <img
                 src="assets/fonepay/1774845984645.jpeg"
                 alt="Fonepay Kubernetes training group"
-                width="1280"
-                height="1707"
-                loading="lazy"
-              />
-              <img
-                src="assets/fonepay/1774845984662.jpeg"
-                alt="Fonepay learner celebrating training completion"
                 width="1280"
                 height="1707"
                 loading="lazy"
@@ -1838,7 +2039,7 @@
                 loading="lazy"
               />
               <h3>Giant Swarm</h3>
-              <p class="work-role">Kubernetes Solution Architect</p>
+              <p class="work-role">Solution Architect</p>
               <p class="work-dates">
                 <time datetime="2022">2022</time>–<time datetime="2024">2024</time>
               </p>
@@ -1893,13 +2094,13 @@
                 <img
                   class="worldwide-logo"
                   src="assets/world-wide-web-hosting-logo.png"
-                  alt="World Wide Web Hosting"
+                  alt="WWW Hosting"
                   width="200"
                   height="200"
                   loading="lazy"
                 />
               </div>
-              <h3>World Wide Web Hosting</h3>
+              <h3>WWW Hosting</h3>
               <p class="work-role">Systems Administrator</p>
               <p class="work-dates">
                 <time datetime="2014">2014</time>–<time datetime="2016">2016</time>
@@ -2165,6 +2366,193 @@
           });
         });
       });
+
+      const eventTrack = document.getElementById("event-carousel-track");
+      const eventCards = Array.from(eventTrack.children);
+      const eventStatus = document.getElementById("event-carousel-status");
+      const eventPrevious = document.querySelector(
+        '[data-event-carousel-direction="-1"]',
+      );
+      const eventNext = document.querySelector(
+        '[data-event-carousel-direction="1"]',
+      );
+      let eventStartIndex = 0;
+
+      const getVisibleEventCount = () =>
+        window.matchMedia("(max-width: 42rem)").matches ? 1 : 3;
+
+      const updateEventCarouselStatus = () => {
+        const visibleCount = getVisibleEventCount();
+        const maximumStart = Math.max(0, eventCards.length - visibleCount);
+        eventStartIndex = Math.min(eventStartIndex, maximumStart);
+        const visibleEnd = Math.min(
+          eventStartIndex + visibleCount,
+          eventCards.length,
+        );
+        eventStatus.textContent = `${eventStartIndex + 1}–${visibleEnd} of ${eventCards.length}`;
+        eventPrevious.disabled = eventStartIndex === 0;
+        eventNext.disabled = eventStartIndex === maximumStart;
+      };
+
+      const updateEventCarousel = (behavior = "smooth") => {
+        updateEventCarouselStatus();
+        const firstCardOffset = eventCards[0]?.offsetLeft ?? 0;
+        const targetOffset = eventCards[eventStartIndex]?.offsetLeft ?? firstCardOffset;
+
+        eventTrack.scrollTo({
+          left: targetOffset - firstCardOffset,
+          behavior,
+        });
+      };
+
+      document
+        .querySelectorAll("[data-event-carousel-direction]")
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            const visibleCount = getVisibleEventCount();
+            const direction = Number(button.dataset.eventCarouselDirection);
+            const maximumStart = Math.max(0, eventCards.length - visibleCount);
+            eventStartIndex = Math.max(
+              0,
+              Math.min(
+                eventStartIndex + direction * visibleCount,
+                maximumStart,
+              ),
+            );
+            updateEventCarousel();
+          });
+        });
+
+      let eventScrollTimer;
+      eventTrack.addEventListener(
+        "scroll",
+        () => {
+          window.clearTimeout(eventScrollTimer);
+          eventScrollTimer = window.setTimeout(() => {
+            const firstCardOffset = eventCards[0]?.offsetLeft ?? 0;
+            const currentOffset = eventTrack.scrollLeft + firstCardOffset;
+            eventStartIndex = eventCards.reduce((nearestIndex, card, index) =>
+              Math.abs(card.offsetLeft - currentOffset) <
+              Math.abs(eventCards[nearestIndex].offsetLeft - currentOffset)
+                ? index
+                : nearestIndex, 0);
+            updateEventCarouselStatus();
+          }, 120);
+        },
+        { passive: true },
+      );
+
+      const clientTrack = document.getElementById("client-carousel-track");
+      const clientCards = Array.from(clientTrack.children);
+      const clientStatus = document.getElementById("client-carousel-status");
+      const clientPrevious = document.querySelector('[data-client-direction="-1"]');
+      const clientNext = document.querySelector('[data-client-direction="1"]');
+      let clientStartIndex = 0;
+
+      clientCards.forEach((card, index) => {
+        const description = card.querySelector("p");
+        if (!description) return;
+
+        description.classList.add("client-description");
+        if (!description.id) {
+          description.id = `client-description-${index + 1}`;
+        }
+
+        const fullDescription = description.textContent.trim();
+        const previewLimit = 150;
+        if (fullDescription.length <= previewLimit) return;
+
+        const previewDescription = `${fullDescription
+          .slice(0, previewLimit)
+          .replace(/\s+\S*$/, "")}…`;
+        const toggle = document.createElement("button");
+        toggle.className = "client-description-toggle";
+        toggle.type = "button";
+        toggle.setAttribute("aria-expanded", "false");
+
+        const renderDescription = (isExpanded) => {
+          description.replaceChildren(
+            document.createTextNode(
+              isExpanded ? fullDescription : previewDescription,
+            ),
+            toggle,
+          );
+          toggle.textContent = isExpanded ? "Show less" : "Read more";
+          toggle.setAttribute("aria-expanded", String(isExpanded));
+        };
+
+        toggle.addEventListener("click", () => {
+          renderDescription(toggle.getAttribute("aria-expanded") !== "true");
+        });
+
+        renderDescription(false);
+      });
+
+      const getVisibleClientCount = () =>
+        window.matchMedia("(max-width: 42rem)").matches ? 1 : 2;
+
+      const updateClientCarouselStatus = () => {
+        const visibleCount = getVisibleClientCount();
+        const maximumStart = Math.max(0, clientCards.length - visibleCount);
+        clientStartIndex = Math.min(clientStartIndex, maximumStart);
+        const visibleEnd = Math.min(
+          clientStartIndex + visibleCount,
+          clientCards.length,
+        );
+        clientStatus.textContent = `${clientStartIndex + 1}–${visibleEnd} of ${clientCards.length}`;
+        clientPrevious.disabled = clientStartIndex === 0;
+        clientNext.disabled = clientStartIndex === maximumStart;
+      };
+
+      const updateClientCarousel = (behavior = "smooth") => {
+        updateClientCarouselStatus();
+        const firstCardOffset = clientCards[0]?.offsetLeft ?? 0;
+        const targetOffset = clientCards[clientStartIndex]?.offsetLeft ?? firstCardOffset;
+
+        clientTrack.scrollTo({
+          left: targetOffset - firstCardOffset,
+          behavior,
+        });
+      };
+
+      document.querySelectorAll("[data-client-direction]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const visibleCount = getVisibleClientCount();
+          const direction = Number(button.dataset.clientDirection);
+          const maximumStart = Math.max(0, clientCards.length - visibleCount);
+          clientStartIndex = Math.max(
+            0,
+            Math.min(clientStartIndex + direction * visibleCount, maximumStart),
+          );
+          updateClientCarousel();
+        });
+      });
+
+      let clientScrollTimer;
+      clientTrack.addEventListener(
+        "scroll",
+        () => {
+          window.clearTimeout(clientScrollTimer);
+          clientScrollTimer = window.setTimeout(() => {
+            const firstCardOffset = clientCards[0]?.offsetLeft ?? 0;
+            const currentOffset = clientTrack.scrollLeft + firstCardOffset;
+            clientStartIndex = clientCards.reduce((nearestIndex, card, index) =>
+              Math.abs(card.offsetLeft - currentOffset) <
+              Math.abs(clientCards[nearestIndex].offsetLeft - currentOffset)
+                ? index
+                : nearestIndex, 0);
+            updateClientCarouselStatus();
+          }, 120);
+        },
+        { passive: true },
+      );
+
+      window.addEventListener("resize", () => {
+        updateEventCarousel("auto");
+        updateClientCarousel("auto");
+      });
+      updateEventCarousel("auto");
+      updateClientCarousel("auto");
     </script>
   </body>
 </html>
