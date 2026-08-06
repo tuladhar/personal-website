@@ -631,6 +631,15 @@
       background: var(--theme-button-hover);
     }
 
+    .themed-training-card .button:disabled,
+    .themed-training-card .button:disabled:hover {
+      background: #64748b;
+      color: #cbd5e1;
+      cursor: not-allowed;
+      opacity: 0.7;
+      transform: none;
+    }
+
     .devops-beginners-card {
       --theme: #22c55e;
       --theme-light: #86efac;
@@ -1156,8 +1165,8 @@
             <li>No prior DevOps experience required</li>
             <li>Live online classes via Google Meet</li>
           </ul>
-          <button class="button" type="button" data-course="devops-beginners">
-            Enroll Now
+          <button class="button" type="button" data-course="devops-beginners" disabled>
+            Coming soon...
           </button>
         </article>
 
@@ -1192,8 +1201,8 @@
             <li>1 CKA mock exam included</li>
             <li>Live online classes via Google Meet</li>
           </ul>
-          <button class="button" type="button" data-course="cka">
-            Enroll Now
+          <button class="button" type="button" data-course="cka" disabled>
+            Coming soon...
           </button>
         </article>
 
