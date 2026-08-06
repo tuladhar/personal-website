@@ -1328,29 +1328,8 @@
       </section>
 
       <form id="enrollment-form">
-        <fieldset>
-          <legend>Available training slots</legend>
-          <label class="choice">
-            <input type="radio" name="slot" value="Morning shift" required />
-            <span>
-              <strong>Morning shift</strong>
-              <small>See the course details for hours and frequency.</small>
-            </span>
-            <span class="choice-status">Limited seats available</span>
-          </label>
-          <label class="choice">
-            <input type="radio" name="slot" value="Evening shift" />
-            <span>
-              <strong>Evening shift</strong>
-              <small>See the course details for hours and frequency.</small>
-            </span>
-            <span class="choice-status">Limited seats available</span>
-          </label>
-        </fieldset>
-
         <p class="modal-footnote">
-          Choose a preferred slot. Final dates and seat availability will be
-          confirmed later.
+          Final dates and seat availability will be confirmed later.
         </p>
 
         <div class="modal-actions">
@@ -1368,6 +1347,8 @@
       "devops-beginners": {
         category: "DevOps Foundation · 1 week",
         title: "DevOps for Complete Beginners",
+        enrollUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLSe14UCW62zXIwRePvr4M255b9LJzMLtMkRYr9SpeSecXV9GAA/viewform?usp=dialog",
         audience:
           "A learn-by-doing foundation for complete beginners. No setup is required: all labs are provided, and classes run online through Google Meet. A stable internet connection is required.",
         details: [
@@ -1387,6 +1368,8 @@
       "devops-career": {
         category: "DevOps Career Path",
         title: "DevOps as Career",
+        enrollUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLSd4FgHOnubVLkubUat4IIm24iH6CAWcXbaqhEsFBtK6qQc0LA/viewform?usp=dialog",
         audience:
           "A small-group, job-ready DevOps program for serious learners who want to continue with DevOps as career path.",
         details: [
@@ -1411,6 +1394,8 @@
       cka: {
         category: "Kubernetes · CKA",
         title: "Certified Kubernetes Administrator Training",
+        enrollUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLSfdcY1dNcG2gJp-itv2D-rJaSSvqIMc4FsPHNPjhS0sNsXqUw/viewform?usp=dialog",
         audience:
           "A practical, exam-aligned Kubernetes administration course following the current CKA domains and competencies. Labs are provided, and one official CKA mock exam is included.",
         details: [
@@ -1591,17 +1576,20 @@
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      if (!form.reportValidity() || !selectedCourse) {
+      if (!selectedCourse) {
         return;
       }
 
-      const formData = new FormData(form);
+      if (selectedCourse.enrollUrl) {
+        window.open(selectedCourse.enrollUrl, "_blank", "noopener,noreferrer");
+        return;
+      }
+
       const message = [
         "Hello Puru, I’d like to enroll in a virtual cohort.",
         "",
         `Course category: ${selectedCourse.category}`,
         `Training: ${selectedCourse.title}`,
-        `Preferred slot: ${formData.get("slot")}`,
         `Course details: ${getCourseDetails(selectedCourse).join("; ")}`,
         `Included topics: ${selectedCourse.curriculum.join("; ")}`,
         "",
