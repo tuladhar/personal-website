@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shop the Omarchy T-shirt by Puru Tuladhar for NPR 2,500. Available in sizes XS to 2XL."
+    />
+    <meta name="author" content="Puru Tuladhar" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#050b14" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link rel="canonical" href="https://purutuladhar.com/merch/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Puru Tuladhar" />
+    <meta property="og:title" content="Merch | Puru Tuladhar" />
+    <meta
+      property="og:description"
+      content="The Omarchy T-shirt is available for NPR 2,500 in sizes XS to 2XL."
+    />
+    <meta property="og:url" content="https://purutuladhar.com/merch/" />
+
+    <title>Merch | Puru Tuladhar</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: #050b14;
+        color: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background:
+          radial-gradient(circle at 8% 8%, rgb(0 208 106 / 11%), transparent 28rem),
+          radial-gradient(circle at 94% 10%, rgb(50 108 229 / 22%), transparent 34rem),
+          linear-gradient(160deg, #07111f 0%, #081426 48%, #050b14 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site-header,
+      main,
+      .site-footer {
+        width: min(72rem, calc(100% - 3rem));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 1.5rem;
+      }
+
+      .brand {
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        text-decoration: none;
+      }
+
+      .back-link {
+        color: #93c5fd;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .brand:hover,
+      .back-link:hover {
+        color: #fff;
+      }
+
+      .brand:focus-visible,
+      .back-link:focus-visible,
+      .order-button:focus-visible {
+        border-radius: 0.4rem;
+        outline: 3px solid #bfdbfe;
+        outline-offset: 4px;
+      }
+
+      main {
+        padding: clamp(3rem, 7vw, 6.5rem) 0 clamp(4rem, 8vw, 7rem);
+      }
+
+      .intro {
+        max-width: 46rem;
+        margin-bottom: clamp(2.5rem, 6vw, 5rem);
+      }
+
+      .eyebrow {
+        margin: 0 0 0.9rem;
+        color: #60a5fa;
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.6rem, 8vw, 5.75rem);
+        letter-spacing: -0.06em;
+        line-height: 0.98;
+        text-wrap: balance;
+      }
+
+      .intro-copy {
+        max-width: 38rem;
+        margin: 1.4rem 0 0;
+        color: #aebdd0;
+        font-size: clamp(1rem, 2vw, 1.18rem);
+        line-height: 1.7;
+        text-wrap: pretty;
+      }
+
+      .product {
+        display: grid;
+        grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
+        overflow: hidden;
+        border: 1px solid rgb(147 197 253 / 20%);
+        border-radius: 1.4rem;
+        background: rgb(15 23 42 / 72%);
+        box-shadow: 0 2rem 5rem rgb(0 0 0 / 22%);
+      }
+
+      .product-visual {
+        position: relative;
+        display: grid;
+        min-height: 40rem;
+        overflow: hidden;
+        place-items: center;
+        background: #000;
+      }
+
+      .product-visual::before {
+        position: absolute;
+        inset: 1.2rem;
+        border: 1px solid rgb(255 255 255 / 6%);
+        border-radius: 0.9rem;
+        content: "";
+      }
+
+      .shirt-image {
+        position: relative;
+        display: block;
+        width: min(100%, 42rem);
+        height: 100%;
+        max-height: 42rem;
+        object-fit: contain;
+      }
+
+      .preview-note {
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.4rem;
+        margin: 0;
+        color: #64748b;
+        font-size: 0.72rem;
+        font-weight: 750;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .product-details {
+        display: flex;
+        flex-direction: column;
+        padding: clamp(2rem, 5vw, 4rem);
+      }
+
+      .status {
+        align-self: flex-start;
+        margin: 0 0 1.1rem;
+        padding: 0.4rem 0.65rem;
+        border: 1px solid rgb(74 222 128 / 35%);
+        border-radius: 999px;
+        background: rgb(22 101 52 / 24%);
+        color: #86efac;
+        font-size: 0.72rem;
+        font-weight: 850;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        letter-spacing: -0.045em;
+        line-height: 1.05;
+      }
+
+      .price {
+        margin: 1rem 0 0;
+        color: #93c5fd;
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .description {
+        margin: 1.7rem 0 0;
+        color: #cbd5e1;
+        line-height: 1.7;
+      }
+
+      .specs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.65rem;
+        margin: 1.8rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .specs li {
+        padding: 0.8rem;
+        border: 1px solid rgb(147 197 253 / 14%);
+        border-radius: 0.65rem;
+        background: rgb(2 6 23 / 25%);
+        color: #dbeafe;
+        font-size: 0.84rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .size-chart {
+        margin-top: clamp(3.5rem, 8vw, 7rem);
+        padding-top: 2rem;
+        border-top: 1px solid rgb(147 197 253 / 18%);
+      }
+
+      .size-chart-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .size-chart-header p {
+        margin: 0;
+        color: #75869c;
+        font-size: 0.84rem;
+      }
+
+      .size-table-wrap {
+        overflow: hidden;
+        border: 1px solid rgb(147 197 253 / 20%);
+        border-radius: 1rem;
+        background: rgb(15 23 42 / 72%);
+      }
+
+      .size-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      .size-table th,
+      .size-table td {
+        padding: 1rem;
+        border-bottom: 1px solid rgb(147 197 253 / 14%);
+      }
+
+      .size-table th {
+        background: rgb(30 64 175 / 18%);
+        color: #dbeafe;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .size-table td {
+        color: #cbd5e1;
+        font-weight: 650;
+      }
+
+      .size-table tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .order-button {
+        display: inline-flex;
+        min-height: 3.4rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+        padding: 0.9rem 1.25rem;
+        border: 1px solid rgb(147 197 253 / 58%);
+        border-radius: 0.75rem;
+        background: linear-gradient(145deg, #2563eb, #1e40af);
+        box-shadow: 0 0.8rem 2rem rgb(37 99 235 / 22%);
+        color: #fff;
+        font-weight: 800;
+        text-decoration: none;
+        transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      }
+
+      .order-button:hover {
+        border-color: #bfdbfe;
+        background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+        transform: translateY(-2px);
+      }
+
+      .order-note {
+        margin: 0.85rem 0 0;
+        color: #75869c;
+        font-size: 0.78rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .next-drop {
+        margin-top: clamp(3.5rem, 8vw, 7rem);
+        padding-top: 2rem;
+        border-top: 1px solid rgb(147 197 253 / 18%);
+      }
+
+      .next-drop p {
+        margin: 0.55rem 0 0;
+        color: #75869c;
+        line-height: 1.65;
+      }
+
+      .site-footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.5rem 0 2.5rem;
+        border-top: 1px solid rgb(147 197 253 / 18%);
+        color: #64748b;
+        font-size: 0.82rem;
+      }
+
+      .site-footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 48rem) {
+        .product {
+          grid-template-columns: 1fr;
+        }
+
+        .product-visual {
+          min-height: 28rem;
+        }
+
+        .order-button {
+          margin-top: 2.2rem;
+        }
+      }
+
+      @media (max-width: 30rem) {
+        .site-header,
+        main,
+        .site-footer {
+          width: min(100% - 2rem, 72rem);
+        }
+
+        .specs {
+          grid-template-columns: 1fr;
+        }
+
+        .site-footer {
+          flex-direction: column;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .order-button {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../">Puru Tuladhar</a>
+      <a class="back-link" href="../">← Back home</a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="merch-title">
+        <p class="eyebrow">Merch / Drop 001</p>
+        <h1 id="merch-title">Gear for people who ship.</h1>
+        <p class="intro-copy">
+          Simple, wearable pieces inspired by the tools and communities behind
+          modern infrastructure. Starting with Omarchy.
+        </p>
+      </section>
+
+      <article class="product">
+        <div class="product-visual">
+          <img
+            class="shirt-image"
+            src="../assets/merch/omarchy-tshirt.png"
+            alt="Black Omarchy T-shirt with a white Omarchy wordmark"
+            width="2048"
+            height="2048"
+          />
+          <p class="preview-note">Design preview</p>
+        </div>
+
+        <div class="product-details">
+          <p class="status">First drop</p>
+          <h2>Omarchy T-shirt</h2>
+          <p class="price">NPR 2,500</p>
+          <p class="description">
+            A minimal black tee for Omarchy users and Linux enthusiasts. Check
+            the size chart below before placing your order.
+          </p>
+          <ul class="specs" aria-label="Planned product details">
+            <li>Unisex fit</li>
+            <li>Black</li>
+            <li>Sizes XS–2XL</li>
+            <li>Limited first run</li>
+          </ul>
+          <a
+            class="order-button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf9MdQ1nJ-FMVSXNoTFNSEZaxt0s6nClCYVenX3jA3xrxZUbA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Order via Google Form ↗
+          </a>
+          <p class="order-note">
+            Currently available for delivery within Nepal only. No international shipping.
+          </p>
+        </div>
+      </article>
+
+      <section class="size-chart" id="size-chart" aria-labelledby="size-chart-title">
+        <div class="size-chart-header">
+          <div>
+            <p class="eyebrow">Find your fit</p>
+            <h2 id="size-chart-title">Size chart</h2>
+          </div>
+          <p>Measurements are in inches.</p>
+        </div>
+        <div class="size-table-wrap">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th scope="col">Size</th>
+                <th scope="col">Length</th>
+                <th scope="col">Width</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>XS</td><td>27</td><td>16.5</td></tr>
+              <tr><td>S</td><td>28</td><td>18</td></tr>
+              <tr><td>M</td><td>29</td><td>20</td></tr>
+              <tr><td>L</td><td>30</td><td>22</td></tr>
+              <tr><td>XL</td><td>31</td><td>24</td></tr>
+              <tr><td>2XL</td><td>32</td><td>26</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="next-drop" aria-labelledby="next-drop-title">
+        <p class="eyebrow">What’s next</p>
+        <h2 id="next-drop-title">DevOps &amp; Kubernetes</h2>
+        <p>More designs are planned. For now, the Omarchy tee is the only drop.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Puru Tuladhar.</p>
+      <p>Built for the community.</p>
+    </footer>
+  </body>
+</html>
