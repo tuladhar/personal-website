@@ -236,9 +236,7 @@
       }
 
       .size-chart {
-        margin-top: clamp(3.5rem, 8vw, 7rem);
-        padding-top: 2rem;
-        border-top: 1px solid rgb(147 197 253 / 18%);
+        width: 100%;
       }
 
       .size-chart-header {
@@ -246,7 +244,8 @@
         align-items: end;
         justify-content: space-between;
         gap: 1rem;
-        margin-bottom: 1.25rem;
+        padding: 1.4rem 1.5rem 1.2rem;
+        border-bottom: 1px solid rgb(147 197 253 / 18%);
       }
 
       .size-chart-header p {
@@ -255,11 +254,14 @@
         font-size: 0.84rem;
       }
 
+      .size-chart-header .eyebrow {
+        margin-bottom: 0.5rem;
+        color: #60a5fa;
+      }
+
       .size-table-wrap {
         overflow: hidden;
-        border: 1px solid rgb(147 197 253 / 20%);
-        border-radius: 1rem;
-        background: rgb(15 23 42 / 72%);
+        background: rgb(15 23 42 / 42%);
       }
 
       .size-table {
@@ -291,12 +293,62 @@
         border-bottom: 0;
       }
 
+      .size-chart-dialog {
+        width: min(42rem, calc(100% - 2rem));
+        max-height: calc(100dvh - 2rem);
+        overflow: auto;
+        padding: 0;
+        border: 1px solid rgb(147 197 253 / 28%);
+        border-radius: 1rem;
+        background: #0b1527;
+        box-shadow: 0 2rem 6rem rgb(0 0 0 / 55%);
+        color: #f8fafc;
+      }
+
+      .size-chart-dialog::backdrop {
+        background: rgb(2 6 23 / 82%);
+        backdrop-filter: blur(0.25rem);
+      }
+
+      .size-chart-close {
+        display: grid;
+        width: 2.5rem;
+        height: 2.5rem;
+        flex: 0 0 auto;
+        padding: 0;
+        place-items: center;
+        border: 1px solid rgb(147 197 253 / 28%);
+        border-radius: 999px;
+        background: rgb(15 23 42 / 88%);
+        color: #f8fafc;
+        cursor: pointer;
+        font: inherit;
+        font-size: 1.25rem;
+      }
+
+      .size-chart-close:hover {
+        border-color: #60a5fa;
+        background: #172554;
+      }
+
+      .size-chart-close:focus-visible,
+      .size-chart-button:focus-visible {
+        outline: 3px solid #bfdbfe;
+        outline-offset: 3px;
+      }
+
+      .product-actions {
+        display: grid;
+        gap: 0.75rem;
+        margin-top: 2rem;
+      }
+
       .order-button {
         display: inline-flex;
         min-height: 3.4rem;
         align-items: center;
         justify-content: center;
-        margin-top: auto;
+        margin-top: 0;
         padding: 0.9rem 1.25rem;
         border: 1px solid rgb(147 197 253 / 58%);
         border-radius: 0.75rem;
@@ -312,6 +364,24 @@
         border-color: #bfdbfe;
         background: linear-gradient(145deg, #3b82f6, #1d4ed8);
         transform: translateY(-2px);
+      }
+
+      .size-chart-button {
+        min-height: 3.15rem;
+        padding: 0.8rem 1.25rem;
+        border: 1px solid rgb(147 197 253 / 35%);
+        border-radius: 0.75rem;
+        background: rgb(15 23 42 / 72%);
+        color: #dbeafe;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        transition: background-color 160ms ease, border-color 160ms ease;
+      }
+
+      .size-chart-button:hover {
+        border-color: #60a5fa;
+        background: rgb(30 64 175 / 38%);
       }
 
       .order-note {
@@ -356,10 +426,6 @@
         .product-visual {
           min-height: 28rem;
         }
-
-        .order-button {
-          margin-top: 2.2rem;
-        }
       }
 
       @media (max-width: 30rem) {
@@ -371,6 +437,10 @@
 
         .specs {
           grid-template-columns: 1fr;
+        }
+
+        .size-chart-header {
+          align-items: flex-start;
         }
 
         .site-footer {
@@ -394,10 +464,11 @@
     <main>
       <section class="intro" aria-labelledby="merch-title">
         <p class="eyebrow">Merch / Drop 001</p>
-        <h1 id="merch-title">Gear for people who ship.</h1>
+        <h1 id="merch-title">Wear your infrastructure passion.</h1>
         <p class="intro-copy">
-          Simple, wearable pieces inspired by the tools and communities behind
-          modern infrastructure. Starting with Omarchy.
+          Merch for Linux, DevOps, Kubernetes, and open-source enthusiasts—the
+          people who build, automate, and keep systems running. Starting with
+          Omarchy.
         </p>
       </section>
 
@@ -419,7 +490,7 @@
           <p class="price">NPR 2,500</p>
           <p class="description">
             A minimal black tee for Omarchy users and Linux enthusiasts. Check
-            the size chart below before placing your order.
+            the size chart before placing your order.
           </p>
           <ul class="specs" aria-label="Planned product details">
             <li>Unisex fit</li>
@@ -427,27 +498,56 @@
             <li>Sizes XS–2XL</li>
             <li>Limited first run</li>
           </ul>
-          <a
-            class="order-button"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf9MdQ1nJ-FMVSXNoTFNSEZaxt0s6nClCYVenX3jA3xrxZUbA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Order via Google Form ↗
-          </a>
+          <div class="product-actions">
+            <a
+              class="order-button"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf9MdQ1nJ-FMVSXNoTFNSEZaxt0s6nClCYVenX3jA3xrxZUbA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Order
+            </a>
+            <button
+              class="size-chart-button"
+              type="button"
+              data-size-chart-open
+            >
+              View size chart
+            </button>
+          </div>
           <p class="order-note">
             Currently available for delivery within Nepal only. No international shipping.
           </p>
         </div>
       </article>
 
-      <section class="size-chart" id="size-chart" aria-labelledby="size-chart-title">
+      <section class="next-drop" aria-labelledby="next-drop-title">
+        <p class="eyebrow">What’s next</p>
+        <h2 id="next-drop-title">DevOps &amp; Kubernetes</h2>
+        <p>More designs are planned. For now, the Omarchy tee is the only drop.</p>
+      </section>
+    </main>
+
+    <dialog
+      class="size-chart-dialog"
+      data-size-chart-dialog
+      aria-labelledby="size-chart-title"
+    >
+      <section class="size-chart" id="size-chart">
         <div class="size-chart-header">
           <div>
             <p class="eyebrow">Find your fit</p>
             <h2 id="size-chart-title">Size chart</h2>
+            <p>Measurements are in inches.</p>
           </div>
-          <p>Measurements are in inches.</p>
+          <button
+            class="size-chart-close"
+            type="button"
+            data-size-chart-close
+            aria-label="Close size chart"
+          >
+            ×
+          </button>
         </div>
         <div class="size-table-wrap">
           <table class="size-table">
@@ -469,17 +569,24 @@
           </table>
         </div>
       </section>
-
-      <section class="next-drop" aria-labelledby="next-drop-title">
-        <p class="eyebrow">What’s next</p>
-        <h2 id="next-drop-title">DevOps &amp; Kubernetes</h2>
-        <p>More designs are planned. For now, the Omarchy tee is the only drop.</p>
-      </section>
-    </main>
+    </dialog>
 
     <footer class="site-footer">
       <p>&copy; 2026 Puru Tuladhar.</p>
       <p>Built for the community.</p>
     </footer>
+    <script>
+      const sizeChartDialog = document.querySelector("[data-size-chart-dialog]");
+      const sizeChartOpen = document.querySelector("[data-size-chart-open]");
+      const sizeChartClose = document.querySelector("[data-size-chart-close]");
+
+      sizeChartOpen.addEventListener("click", () => sizeChartDialog.showModal());
+      sizeChartClose.addEventListener("click", () => sizeChartDialog.close());
+      sizeChartDialog.addEventListener("click", (event) => {
+        if (event.target === sizeChartDialog) sizeChartDialog.close();
+      });
+
+      if (window.location.hash === "#size-chart") sizeChartDialog.showModal();
+    </script>
   </body>
 </html>
