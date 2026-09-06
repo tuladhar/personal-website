@@ -1534,6 +1534,35 @@
               </div>
             </article>
             <article class="news-card featured-event">
+              <img class="event-poster" src="assets/events/omarchy-kathmandu-2026.jpg"
+                alt="Omarchy Kathmandu first episode event poster" width="1024" height="576" loading="lazy" />
+              <div class="event-content">
+                <h3>The Vibes Around Linux Are Changing</h3>
+                <p>
+                  Kick-off session for first episode of Omarchy Kathmandu.
+                </p>
+                <ul class="event-details">
+                  <li>
+                    <span aria-hidden="true">📅</span>
+                    <time datetime="2026-09-04">Friday, September 4, 2026</time>
+                  </li>
+                  <li>
+                    <span aria-hidden="true">🕒</span>
+                    <time datetime="2026-09-04T15:00:00+05:45">
+                      3:00 PM–5:00 PM NPT
+                    </time>
+                  </li>
+                  <li>
+                    <span aria-hidden="true">📍</span>
+                    <span>StartSmall Pvt. Ltd.</span>
+                  </li>
+                </ul>
+                <a class="proof-link" href="https://luma.com/3160qt29" target="_blank" rel="noopener noreferrer">
+                  View event details ↗
+                </a>
+              </div>
+            </article>
+            <article class="news-card featured-event">
               <img class="event-poster" src="assets/events/devops-on-aws-2026.png"
                 alt="DevOps on AWS: From Commit to Confidence event poster" width="800" height="1000" loading="lazy" />
               <div class="event-content">
@@ -1615,6 +1644,14 @@
             </div>
           </div>
           <div class="public-gallery-grid" id="event-carousel-track" aria-label="Talks and public event galleries">
+            <button class="event-gallery-card" type="button" data-event-gallery="omarchy-kathmandu"
+              aria-haspopup="dialog">
+              <img src="assets/events/omarchy-kathmandu-group.jpg" alt="" width="1024" height="768" loading="lazy" />
+              <span class="event-gallery-card-copy">
+                <strong>Omarchy Kathmandu</strong>
+                <span>4 photos →</span>
+              </span>
+            </button>
             <button class="event-gallery-card" type="button" data-event-gallery="build-localhost-kathmandu"
               aria-haspopup="dialog">
               <img src="assets/events/1782071771602.jpeg" alt="" width="1599" height="899" loading="lazy" />
@@ -1671,7 +1708,7 @@
             <img class="company-logo" src="assets/kskl-logo.png" alt="Credit Information Bureau of Nepal" width="313"
               height="70" loading="lazy" />
             <h3>KSKL</h3>
-            <p class="work-role">Kubernetes Instructor</p>
+            <p class="work-role">K8s/OpenShift Instructor</p>
             <a class="work-linkedin"
               href="https://www.linkedin.com/posts/ptuladhar3_kubernetes-openshift-cka-share-7485749856263725056-JURC/?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAGvhdlEBkf19oAqDYoKM2BMmfUYEUHDiZMs"
               target="_blank" rel="noopener noreferrer">
@@ -1688,7 +1725,7 @@
           <article class="work-card kings-card">
             <div class="company-wordmark">King’s College</div>
             <h3>King’s College</h3>
-            <p class="work-role">Workshop Facilitator</p>
+            <p class="work-role">AI/DevOps Workshop</p>
             <a class="work-linkedin" href="https://www.linkedin.com/feed/update/urn:li:activity:7471953281913860096/"
               target="_blank" rel="noopener noreferrer">
               <img src="assets/linkedin.svg" alt="" width="24" height="24" />
@@ -1847,6 +1884,31 @@
   </footer>
   <script>
     const eventGalleries = {
+      "omarchy-kathmandu": {
+        title: "Omarchy Kathmandu",
+        images: [
+          {
+            src: "assets/events/omarchy-kathmandu-poster.jpg",
+            alt: "Omarchy Kathmandu Episode 1 event poster",
+            caption: "Episode 1 poster for Omarchy Kathmandu at StartSmall Pvt. Ltd.",
+          },
+          {
+            src: "assets/events/omarchy-kathmandu-agenda.jpg",
+            alt: "Agenda for Omarchy Kathmandu on 4 September 2026",
+            caption: "Session agenda for the first episode.",
+          },
+          {
+            src: "assets/events/omarchy-kathmandu-session.jpg",
+            alt: "Presenter walking through the Omarchy Kathmandu agenda on screen",
+            caption: "Walking through the Omarchy Kathmandu agenda.",
+          },
+          {
+            src: "assets/events/omarchy-kathmandu-group.jpg",
+            alt: "Group photo from Omarchy Kathmandu at StartSmall Pvt. Ltd.",
+            caption: "Community group photo at StartSmall Pvt. Ltd.",
+          },
+        ],
+      },
       "aws-community-day-nepal": {
         title: "AWS Community Day Nepal 2026",
         images: [
