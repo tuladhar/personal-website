@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#050b14" />
   <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="canonical" href="https://purutuladhar.com/virtual-cohort.html" />
+  <link rel="canonical" href="https://purutuladhar.com/private-training.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
@@ -19,7 +19,7 @@
   <meta property="og:title" content="DevOps Training Cohorts &amp; 1-to-1 Coaching | Puru Tuladhar" />
   <meta property="og:description"
     content="Explore live DevOps, Kubernetes, AWS, and Red Hat training cohorts with hands-on labs and mock assessments, or start personal 1-to-1 DevOps coaching and career mentorship." />
-  <meta property="og:url" content="https://purutuladhar.com/virtual-cohort.html" />
+  <meta property="og:url" content="https://purutuladhar.com/private-training.html" />
   <meta property="og:image" content="https://purutuladhar.com/assets/devops-logo.png" />
   <meta property="og:image:width" content="1982" />
   <meta property="og:image:height" content="1020" />
@@ -40,8 +40,8 @@
         "@graph": [
           {
             "@type": "CollectionPage",
-            "@id": "https://purutuladhar.com/virtual-cohort.html#webpage",
-            "url": "https://purutuladhar.com/virtual-cohort.html",
+            "@id": "https://purutuladhar.com/private-training.html#webpage",
+            "url": "https://purutuladhar.com/private-training.html",
             "name": "DevOps Training Cohorts and 1-to-1 Coaching",
             "description": "Live, instructor-led DevOps, Kubernetes, AWS, and Red Hat training cohorts, plus personal 1-to-1 DevOps coaching and career mentorship with Puru Tuladhar.",
             "inLanguage": "en",
@@ -52,7 +52,7 @@
               "@id": "https://purutuladhar.com/#person"
             },
             "mainEntity": {
-              "@id": "https://purutuladhar.com/virtual-cohort.html#courses"
+              "@id": "https://purutuladhar.com/private-training.html#courses"
             }
           },
           {
@@ -66,7 +66,7 @@
           },
           {
             "@type": "ItemList",
-            "@id": "https://purutuladhar.com/virtual-cohort.html#courses",
+            "@id": "https://purutuladhar.com/private-training.html#courses",
             "name": "Virtual Training Cohorts",
             "numberOfItems": 9,
             "itemListElement": [
@@ -222,36 +222,14 @@
     .site-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
       padding: 1.25rem 0;
-    }
-
-    .brand,
-    .back-link {
-      font-weight: 750;
-      text-decoration: none;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-    }
-
-    .brand img {
-      width: 2rem;
-      height: 2rem;
-      object-fit: contain;
-    }
-
-    .brand span {
-      color: #60a5fa;
     }
 
     .back-link {
       color: #bfdbfe;
       font-size: 0.92rem;
+      font-weight: 750;
+      text-decoration: none;
     }
 
     .back-link:hover {
@@ -792,6 +770,7 @@
       border-radius: 1rem;
       background: rgb(6 78 59 / 16%);
       text-align: center;
+      scroll-margin-top: 1.5rem;
     }
 
     .pricing-note h2 {
@@ -1020,10 +999,19 @@
     }
 
     .site-footer a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
       color: #93c5fd;
       font-weight: 700;
       text-decoration-thickness: 0.08em;
       text-underline-offset: 0.22em;
+    }
+
+    .site-footer a img {
+      display: block;
+      width: 1.1em;
+      height: 1.1em;
     }
 
     .site-footer a:hover {
@@ -1051,11 +1039,6 @@
     }
 
     @media (max-width: 35rem) {
-      .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
       .hero {
         width: 100%;
         min-width: 0;
@@ -1120,16 +1103,12 @@
 
 <body>
   <header class="page-shell site-header">
-    <a class="brand" href="index.html">
-      <img src="assets/kubernetes-logo.png" alt="" width="960" height="933" />
-      DevOps &amp; Kubernetes Training <span>by Puru</span>
-    </a>
     <a class="back-link" href="index.html">← Back to home</a>
   </header>
 
   <main class="page-shell">
     <section class="hero">
-      <p class="eyebrow">Live cohorts &amp; 1-to-1 coaching</p>
+      <p class="eyebrow">Virtual Training &amp; 1-on-1 Coaching</p>
       <h1>Learn from an Industry Expert</h1>
       <p class="hero-copy">
         Get trained by Nepal’s first Kubestronaut—an industry expert with 10+
@@ -1148,16 +1127,15 @@
           </span>
         </button>
       </p>
-      <a class="button" href="#training">Explore Training</a>
     </section>
 
     <section id="training" aria-label="Virtual training courses">
       <div class="training-catalog">
         <article class="training-card themed-training-card devops-career-card">
-          <p class="course-type">Career Path · 2 MONTHS</p>
+          <p class="course-type">Career Path</p>
           <h3>DevOps as Career</h3>
           <p>
-            Become a job-ready DevOps Engineer through hands-on training. Learn by doing.
+            Become a DevOps Engineer through hands-on training. Learn by doing.
           </p>
           <ul class="course-includes">
             <li>Aligned with <a href="https://roadmap.sh/devops" target="_blank" rel="noopener noreferrer">roadmap.sh
@@ -1166,43 +1144,47 @@
                 rel="noopener noreferrer">iximiuzLabs</a></li>
             <li>Live online classes via Google Meet</li>
           </ul>
-          <button class="button" type="button" data-course="devops-career">
+          <a class="button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd4FgHOnubVLkubUat4IIm24iH6CAWcXbaqhEsFBtK6qQc0LA/viewform?usp=dialog"
+            target="_blank" rel="noopener noreferrer">
             Enroll Now
-          </button>
+          </a>
         </article>
 
         <article class="training-card themed-training-card cka-card">
-          <p class="course-type">SKILLS PATH · 2 MONTHS</p>
+          <p class="course-type">SKILLS PATH</p>
           <h3>Kubernetes Administrator (CKA)</h3>
           <p>
-            Build practical Kubernetes administration skills with an
-            exam-aligned curriculum and hands-on labs.
+            Build hands-on Kubernetes administration skills based on the CKA
+            exam curriculum.
           </p>
           <ul class="course-includes">
             <li>Aligned with <a href="https://www.cncf.io/training/certification/cka/" target="_blank"
-                rel="noopener noreferrer">CNCF official CKA domains</a></li>
+                rel="noopener noreferrer">CNCF official CKA exam</a></li>
             <li>1 CKA mock exam included</li>
             <li>Live online classes via Google Meet</li>
           </ul>
-          <button class="button" type="button" data-course="cka">
+          <a class="button" href="https://forms.gle/MZ5j18nYRTQXWEqr5" target="_blank"
+            rel="noopener noreferrer">
             Enroll Now
-          </button>
+          </a>
         </article>
 
         <article class="training-card themed-training-card coaching-card">
-          <p class="course-type">Private Coaching · 2 MONTHS</p>
+          <p class="course-type">Private Coaching</p>
           <h3>DevOps Coaching &amp; Mentorship</h3>
           <p>
-            A private, 1-to-1 DevOps program built around your experience, skill gaps, and career goals.
+            A private program built around your experience, skill gaps, and career goals.
           </p>
           <ul class="course-includes">
             <li>Personalized roadmap</li>
-            <li>3 private 1-hour sessions per week</li>
+            <li>Dedicated 1-on-1 session/support</li>
             <li>Live online classes via Google Meet</li>
           </ul>
-          <button class="button" type="button" data-course="devops-coaching">
+          <a class="button" href="https://forms.gle/Z7Bqe951tXN8P1gs7" target="_blank"
+            rel="noopener noreferrer">
             Enroll Now
-          </button>
+          </a>
         </article>
 
         <article hidden class="training-card themed-training-card cks-card">
@@ -1291,7 +1273,7 @@
       </div>
     </section>
 
-    <section class="pricing-note">
+    <section class="pricing-note" id="on-site-training">
       <h2>Looking for On-site or Physical Training?</h2>
       <p>
         For private, corporate, or team-based training at your location,
@@ -1307,6 +1289,7 @@
   <footer class="page-shell site-footer">
     <p>&copy; 2026 Puru Tuladhar. All rights reserved.</p>
     <a href="https://www.linkedin.com/in/ptuladhar3" target="_blank" rel="noopener noreferrer">
+      <img src="assets/linkedin.svg" alt="" width="24" height="24" />
       Connect on LinkedIn ↗
     </a>
   </footer>
@@ -1411,8 +1394,7 @@
           "Best for aspiring and working engineers who want a personalized roadmap and direct expert feedback. Right for you if you're trying to enter a DevOps or cloud role, have experience but lack a clear learning path, are preparing for a technical interview or certification.",
         details: [
           "Duration: 2 months",
-          "Schedule: 3 private sessions per week",
-          "Session length: 1 hour",
+          "Schedule: Dedicated 1-on-1 session every week",
           "Format: 1-to-1, fully personalized",
         ],
         curriculum: [
