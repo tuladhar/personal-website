@@ -458,12 +458,19 @@
       line-height: 1.65;
     }
 
-    .news-card .proof-link {
-      margin-top: auto;
-    }
-
+    .event-content>.event-actions,
     .event-content>.proof-link {
       margin-top: 1.25rem;
+    }
+
+    .event-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .event-actions .proof-link {
+      margin-top: 0;
     }
 
     .featured-event {
@@ -1536,9 +1543,15 @@
                     <span>Leapfrog Connect, Dillibazar, Kathmandu</span>
                   </li>
                 </ul>
-                <a class="proof-link" href="https://luma.com/6w0rectq" target="_blank" rel="noopener noreferrer">
-                  View event details ↗
-                </a>
+                <div class="event-actions">
+                  <a class="proof-link" href="https://luma.com/6w0rectq" target="_blank" rel="noopener noreferrer">
+                    View event details ↗
+                  </a>
+                  <a class="proof-link" href="assets/slides/what-devs-should-know-about-devops.pdf" target="_blank"
+                    rel="noopener noreferrer">
+                    View slides ↗
+                  </a>
+                </div>
               </div>
             </article>
             <article class="news-card featured-event">
@@ -1567,9 +1580,15 @@
                     <span>StartSmall Pvt. Ltd.</span>
                   </li>
                 </ul>
-                <a class="proof-link" href="https://luma.com/3160qt29" target="_blank" rel="noopener noreferrer">
-                  View event details ↗
-                </a>
+                <div class="event-actions">
+                  <a class="proof-link" href="https://luma.com/3160qt29" target="_blank" rel="noopener noreferrer">
+                    View event details ↗
+                  </a>
+                  <a class="proof-link" href="assets/slides/omarchy-kathmandu.pdf" target="_blank"
+                    rel="noopener noreferrer">
+                    View slides ↗
+                  </a>
+                </div>
               </div>
             </article>
             <article class="news-card featured-event">
