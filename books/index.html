@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Handbooks by Puru Tuladhar for Kubernetes, CKA, CKS, and DevOps engineers." />
+  <meta name="author" content="Puru Tuladhar" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#050b14" />
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon.png" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <link rel="canonical" href="https://purutuladhar.com/books/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Puru Tuladhar" />
+  <meta property="og:title" content="Books | Puru Tuladhar" />
+  <meta property="og:description"
+    content="Practical handbooks for Kubernetes certification and DevOps workflows, written by Nepal’s first Kubestronaut." />
+  <meta property="og:url" content="https://purutuladhar.com/books/" />
+  <meta property="og:image" content="https://purutuladhar.com/assets/devops-logo.png" />
+  <meta property="og:image:width" content="1982" />
+  <meta property="og:image:height" content="1020" />
+  <meta property="og:image:alt" content="DevOps infinity loop representing continuous delivery" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@ptuladhar3" />
+  <meta name="twitter:title" content="Books | Puru Tuladhar" />
+  <meta name="twitter:description"
+    content="Instructor-written handbooks for Kubernetes certification and DevOps workflows." />
+  <meta name="twitter:image" content="https://purutuladhar.com/assets/devops-logo.png" />
+
+  <title>Books | Puru Tuladhar</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: #050b14;
+      color: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(ellipse at 8% 12%,
+          rgb(0 208 106 / 11%),
+          transparent 30rem),
+        radial-gradient(ellipse at 92% 5%,
+          rgb(50 108 229 / 20%),
+          transparent 38rem),
+        radial-gradient(ellipse at 76% 78%,
+          rgb(14 165 233 / 8%),
+          transparent 34rem),
+        linear-gradient(160deg, #07111f 0%, #081426 48%, #050b14 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      width: min(70rem, calc(100% - 2rem));
+      min-width: 0;
+      margin: 0 auto;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      padding: 1.25rem 0;
+    }
+
+    .back-link {
+      color: #bfdbfe;
+      font-size: 0.92rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: #fff;
+    }
+
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: #93c5fd;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .book-list {
+      margin: 1.5rem 0 4rem;
+    }
+
+    .book-row {
+      display: grid;
+      grid-template-columns: 13rem minmax(0, 1fr);
+      gap: clamp(1.5rem, 4vw, 3.5rem);
+      align-items: start;
+      padding: 2.5rem 0;
+      border-top: 1px solid rgb(147 197 253 / 25%);
+    }
+
+    .book-row:last-child {
+      border-bottom: 1px solid rgb(147 197 253 / 25%);
+    }
+
+    .book-visual {
+      display: grid;
+      min-height: 16rem;
+      place-items: center;
+      perspective: 900px;
+    }
+
+    .book-3d {
+      --cover: #1e3a8a;
+      --cover-deep: #0f172a;
+      --spine: #172554;
+      --ink: #eff6ff;
+
+      position: relative;
+      width: 10.5rem;
+      height: 15rem;
+      transform: rotateY(-22deg) rotateX(6deg);
+      transform-style: preserve-3d;
+      filter: drop-shadow(0.85rem 1.2rem 1.4rem rgb(0 0 0 / 45%));
+    }
+
+    .cks-cover {
+      --cover: #7f1d1d;
+      --cover-deep: #450a0a;
+      --spine: #991b1b;
+      --ink: #fee2e2;
+    }
+
+    .cka-cover {
+      --cover: #1d4ed8;
+      --cover-deep: #1e3a8a;
+      --spine: #1e40af;
+      --ink: #dbeafe;
+    }
+
+    .claude-cover {
+      --cover: #b45309;
+      --cover-deep: #78350f;
+      --spine: #92400e;
+      --ink: #ffedd5;
+    }
+
+    .book-front,
+    .book-spine,
+    .book-pages {
+      position: absolute;
+      inset: 0;
+      border-radius: 0.15rem 0.4rem 0.4rem 0.15rem;
+    }
+
+    .book-front {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.1rem 0.9rem 1rem;
+      background:
+        linear-gradient(145deg, rgb(255 255 255 / 10%), transparent 42%),
+        linear-gradient(180deg, var(--cover), var(--cover-deep));
+      box-shadow: inset -0.35rem 0 0.6rem rgb(0 0 0 / 28%);
+      color: var(--ink);
+      transform: translateZ(0.7rem);
+    }
+
+    .book-front-kicker,
+    .book-front-author {
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .book-front-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .book-spine {
+      width: 0.85rem;
+      background: linear-gradient(90deg, #0b1220, var(--spine) 40%, #111827);
+      transform: rotateY(-90deg) translateZ(0.42rem);
+      transform-origin: left center;
+    }
+
+    .book-pages {
+      right: auto;
+      left: 100%;
+      width: 0.7rem;
+      background:
+        repeating-linear-gradient(90deg,
+          #f8fafc 0 0.12rem,
+          #e2e8f0 0.12rem 0.18rem);
+      transform: rotateY(90deg);
+      transform-origin: left center;
+    }
+
+    .book-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 0.15rem;
+    }
+
+    .book-copy .eyebrow {
+      margin-bottom: 0.7rem;
+      text-align: left;
+    }
+
+    .book-copy h2 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3vw, 2.15rem);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      text-wrap: balance;
+    }
+
+    .book-author {
+      margin: 0.7rem 0 0;
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+
+    .book-author a {
+      color: #93c5fd;
+      font-weight: 650;
+      text-underline-offset: 0.18em;
+    }
+
+    .book-copy>p:not(.eyebrow):not(.book-author) {
+      max-width: 42rem;
+      margin: 1rem 0 0;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 3.4rem;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.6rem;
+      padding: 0.85rem 1.4rem;
+      border: 1px solid transparent;
+      border-radius: 0.75rem;
+      background: #326ce5;
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      transition:
+        background-color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .button:hover {
+      background: #2457bd;
+      transform: translateY(-2px);
+    }
+
+    .button:focus-visible,
+    a:focus-visible {
+      border-radius: 0.3rem;
+      outline: 3px solid #bfdbfe;
+      outline-offset: 3px;
+    }
+
+    .more-books {
+      max-width: 42rem;
+      margin: 0 auto 4rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .more-books a {
+      color: #93c5fd;
+      font-weight: 700;
+    }
+
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem 0 2.5rem;
+      border-top: 1px solid rgb(147 197 253 / 25%);
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+
+    .site-footer a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #93c5fd;
+      font-weight: 700;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.22em;
+    }
+
+    .site-footer a img {
+      display: block;
+      width: 1.1em;
+      height: 1.1em;
+    }
+
+    .site-footer a:hover {
+      color: #dbeafe;
+    }
+
+    .site-footer a:focus-visible {
+      border-radius: 0.2rem;
+      outline: 3px solid #bfdbfe;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 48rem) {
+      .book-row {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: left;
+      }
+
+      .book-copy {
+        width: 100%;
+      }
+
+      .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .book-3d {
+        transform: none;
+        filter: drop-shadow(0 1rem 1.2rem rgb(0 0 0 / 35%));
+      }
+
+      .button {
+        transition: none;
+      }
+
+      .button:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="page-shell site-header">
+    <a class="back-link" href="../index.html">← Back to home</a>
+  </header>
+
+  <main class="page-shell">
+    <section class="book-list" aria-label="Books">
+      <article class="book-row">
+        <div class="book-visual" aria-hidden="true">
+          <div class="book-3d cks-cover">
+            <div class="book-spine"></div>
+            <div class="book-pages"></div>
+            <div class="book-front">
+              <span class="book-front-kicker">CKS · 2nd Edition</span>
+              <span class="book-front-title">Kubernetes Security Handbook</span>
+              <span class="book-front-author">Puru Tuladhar</span>
+            </div>
+          </div>
+        </div>
+        <div class="book-copy">
+          <p class="eyebrow">CKS Handbook · 2nd Edition</p>
+          <h2>Certified Kubernetes Security Specialist</h2>
+          <p class="book-author">
+            By
+            <a href="https://www.linkedin.com/in/ptuladhar3" target="_blank" rel="noopener noreferrer">Puru Tuladhar</a>
+          </p>
+          <p>
+            The essential guide for mastering Kubernetes security and passing
+            the CKS exam with confidence. Practical, hands-on, and focused on
+            the real exam—no fluff.
+          </p>
+          <a class="button" href="https://cks.purutuladhar.com/" target="_blank" rel="noopener noreferrer">
+            Get the book
+          </a>
+        </div>
+      </article>
+
+      <article class="book-row">
+        <div class="book-visual" aria-hidden="true">
+          <div class="book-3d cka-cover">
+            <div class="book-spine"></div>
+            <div class="book-pages"></div>
+            <div class="book-front">
+              <span class="book-front-kicker">CKA</span>
+              <span class="book-front-title">Kubernetes Administrator Handbook</span>
+              <span class="book-front-author">Puru Tuladhar</span>
+            </div>
+          </div>
+        </div>
+        <div class="book-copy">
+          <p class="eyebrow">CKA Handbook</p>
+          <h2>Certified Kubernetes Administrator</h2>
+          <p class="book-author">
+            By
+            <a href="https://www.linkedin.com/in/ptuladhar3" target="_blank" rel="noopener noreferrer">Puru Tuladhar</a>
+          </p>
+          <p>
+            Hands-on preparation for the CKA exam, built around real cluster
+            work, terminal workflows, and the tasks you’ll face on exam day.
+          </p>
+          <a class="button" href="https://cka.purutuladhar.com/" target="_blank" rel="noopener noreferrer">
+            Get the book
+          </a>
+        </div>
+      </article>
+
+      <article class="book-row">
+        <div class="book-visual" aria-hidden="true">
+          <div class="book-3d claude-cover">
+            <div class="book-spine"></div>
+            <div class="book-pages"></div>
+            <div class="book-front">
+              <span class="book-front-kicker">DevOps · AI</span>
+              <span class="book-front-title">Claude Code Handbook</span>
+              <span class="book-front-author">Puru Tuladhar</span>
+            </div>
+          </div>
+        </div>
+        <div class="book-copy">
+          <p class="eyebrow">DevOps Handbook</p>
+          <h2>Claude Code Handbook for DevOps Engineers</h2>
+          <p class="book-author">
+            By
+            <a href="https://www.linkedin.com/in/ptuladhar3" target="_blank" rel="noopener noreferrer">Puru Tuladhar</a>
+          </p>
+          <p>
+            Practical patterns for using Claude in DevOps workflows. Written
+            for engineers who live in the terminal—not abstract theory, but
+            automation you can use today.
+          </p>
+          <a class="button" href="https://claudecode.purutuladhar.com/" target="_blank" rel="noopener noreferrer">
+            Get the book
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <p class="more-books">
+      More titles, cheatsheets, and early-access drafts are on
+      <a href="https://ptuladhar.gumroad.com/" target="_blank" rel="noopener noreferrer">Gumroad</a>.
+    </p>
+  </main>
+
+  <footer class="page-shell site-footer">
+    <p>&copy; 2026 Puru Tuladhar. All rights reserved.</p>
+    <a href="https://www.linkedin.com/in/ptuladhar3" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/linkedin.svg" alt="" width="24" height="24" />
+      Connect on LinkedIn ↗
+    </a>
+  </footer>
+</body>
+
+</html>
