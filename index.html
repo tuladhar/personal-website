@@ -34,6 +34,12 @@
   <meta name="twitter:image:alt" content="Portrait of DevOps expert and Kubestronaut Puru Tuladhar" />
 
   <title>Puru Tuladhar | DevOps Expert &amp; Nepal’s First Kubestronaut</title>
+
+  <!--
+    Tally popup for the "Train Your Team" CTA.
+    Form: https://tally.so/forms/KYbBvk/share
+  -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
   <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -269,6 +275,8 @@
       border: 1px solid transparent;
       border-radius: 0.75rem;
       color: white;
+      cursor: pointer;
+      font-family: inherit;
       font-size: 1rem;
       font-weight: 700;
       line-height: 1.2;
@@ -1469,12 +1477,14 @@
         </li>
       </ul>
       <div class="training-options" aria-label="Training options">
-        <a class="button button-primary" href="private-training.html">
-          Explore Private Training
+        <a class="button button-primary" href="lifetime-devops-consultation.html">
+          Lifetime DevOps Consultation
         </a>
-        <a class="button button-devops" href="private-training.html#on-site-training">
+        <button class="button button-devops" type="button" data-tally-open="KYbBvk"
+          data-tally-layout="modal" data-tally-width="700" data-tally-emoji-text="🧑‍🏫"
+          data-tally-emoji-animation="wave" data-track="team-training">
           Train Your Team
-        </a>
+        </button>
         <a class="button button-books" href="/books">
           Browse Books
         </a>
@@ -2281,6 +2291,20 @@
     });
     updateNewsCarousel("auto");
     updateEventCarousel("auto");
+  </script>
+  <script>
+    // Fallback: if the Tally widget is blocked or fails to load, fall back to
+    // email on click rather than leaving a dead button.
+    document.querySelectorAll("[data-tally-open]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        if (typeof window.Tally !== "undefined") {
+          return;
+        }
+        window.location.href =
+          "mailto:training@purutuladhar.com?subject=" +
+          encodeURIComponent("Team Training Inquiry");
+      });
+    });
   </script>
 </body>
 
