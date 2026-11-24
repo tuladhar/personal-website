@@ -1,0 +1,91 @@
+{
+  "source": "tuladhar/Python-for-SysAdmin@main",
+  "manifestHash": "56f300da",
+  "chapters": {
+    "set-up-your-lab": {
+      "file": "01-set-up-your-lab.md",
+      "title": "Set Up Your Lab",
+      "hash": "7f68889c",
+      "lastmod": "2026-11-20"
+    },
+    "standard-io": {
+      "file": "02-standard-io.md",
+      "title": "Standard Input, Output and Error",
+      "hash": "c25b6198",
+      "lastmod": "2026-11-20"
+    },
+    "working-with-files": {
+      "file": "03-working-with-files.md",
+      "title": "Working with Files",
+      "hash": "1e10f49e",
+      "lastmod": "2026-11-20"
+    },
+    "command-line-arguments": {
+      "file": "04-command-line-arguments.md",
+      "title": "Command-line Arguments",
+      "hash": "1449993b",
+      "lastmod": "2026-11-20"
+    },
+    "os": {
+      "file": "05-os-module.md",
+      "title": "The os Module",
+      "hash": "af5b5ad2",
+      "lastmod": "2026-11-20"
+    },
+    "sys": {
+      "file": "06-sys-module.md",
+      "title": "The sys Module",
+      "hash": "7ba1c73a",
+      "lastmod": "2026-11-20"
+    },
+    "shutil-and-glob": {
+      "file": "07-shutil-and-glob.md",
+      "title": "shutil and glob",
+      "hash": "90d6f087",
+      "lastmod": "2026-11-20"
+    },
+    "date-and-time": {
+      "file": "08-date-and-time.md",
+      "title": "Date and Time",
+      "hash": "fd4078df",
+      "lastmod": "2026-11-20"
+    },
+    "subprocess": {
+      "file": "09-subprocess.md",
+      "title": "Running Commands with subprocess",
+      "hash": "7d92cfe8",
+      "lastmod": "2026-11-20"
+    },
+    "argparse": {
+      "file": "10-argparse.md",
+      "title": "Building CLIs with argparse",
+      "hash": "2f8b5e38",
+      "lastmod": "2026-11-20"
+    },
+    "json": {
+      "file": "11-json.md",
+      "title": "Working with JSON",
+      "hash": "7c748949",
+      "lastmod": "2026-11-20"
+    },
+    "csv": {
+      "file": "12-csv.md",
+      "title": "Working with CSV",
+      "hash": "82c7924",
+      "lastmod": "2026-11-20"
+    },
+    "sqlite": {
+      "file": "13-sqlite.md",
+      "title": "SQLite: a Database in a File",
+      "hash": "b1ef750a",
+      "lastmod": "2026-11-20"
+    },
+    "socket": {
+      "file": "14-socket.md",
+      "title": "Network Checks with socket",
+      "hash": "89bfcb70",
+      "lastmod": "2026-11-20"
+    }
+  },
+  "homeLastmod": "2026-11-20"
+}
